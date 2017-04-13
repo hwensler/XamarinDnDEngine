@@ -17,12 +17,8 @@ namespace App11.Views {
     public partial class ItemsPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView ItemsListView;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(ItemsPage));
-            ItemsListView = this.FindByName<global::Xamarin.Forms.ListView>("ItemsListView");
         }
     }
 }

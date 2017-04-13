@@ -22307,10 +22307,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "c:\\users\\heath\\documents\\visual studio 2017\\Projects\\App11\\App11\\App11.UWP\\App11.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\heath\\Documents\\Visual Studio 2017\\Projects\\App11\\App11\\App11.UWP\\App11.UWP.csproj",
       "projectName": "App11.UWP",
-      "projectPath": "c:\\users\\heath\\documents\\visual studio 2017\\Projects\\App11\\App11\\App11.UWP\\App11.UWP.csproj",
-      "projectJsonPath": "c:\\users\\heath\\documents\\visual studio 2017\\Projects\\App11\\App11\\App11.UWP\\project.json",
+      "projectPath": "C:\\Users\\heath\\Documents\\Visual Studio 2017\\Projects\\App11\\App11\\App11.UWP\\App11.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\heath\\Documents\\Visual Studio 2017\\Projects\\App11\\App11\\App11.UWP\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

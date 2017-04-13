@@ -1,126 +1,55 @@
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\App11.Android.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\App11.Android.pdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\com.companyname.App11.apk
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\com.companyname.App11-Signed.apk
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\FormsViewGroup.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Design.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v4.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\FormsViewGroup.pdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\FormsViewGroup.dll.mdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.pdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.xml
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.xml
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.csprojResolveAssemblyReference.cache
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.App.xaml.g.cs
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.AboutPage.xaml.g.cs
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.ItemsPage.xaml.g.cs
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.ItemDetailPage.xaml.g.cs
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.NewItemPage.xaml.g.cs
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.dll
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.pdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\android\bin\com.companyname.App11.apk
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\layout\tabbar.xml
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\layout\toolbar.xml
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\values\styles.xml
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable\slideout.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-hdpi\profile_generic.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-mdpi\profile_generic.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-xhdpi\profile_generic.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-xxhdpi\profile_generic.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-xxxhdpi\profile_generic.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable\dnd.png
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\R.cs.flag
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\uploadflags.txt
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.dll.mdb
-c:\users\heath\documents\visual studio 2017\Projects\App11\App11\App11.Android\bin\Debug\App11.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\App11.Android.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\App11.Android.pdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\com.companyname.App11.apk
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\com.companyname.App11-Signed.apk
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\FormsViewGroup.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Design.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v4.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\FormsViewGroup.pdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\FormsViewGroup.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.csprojResolveAssemblyReference.cache
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.App.xaml.g.cs
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.Views.AboutPage.xaml.g.cs
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.Views.ItemsPage.xaml.g.cs
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.Views.ItemDetailPage.xaml.g.cs
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.Views.NewItemPage.xaml.g.cs
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.dll
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.pdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\bin\com.companyname.App11.apk
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\layout\tabbar.xml
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\layout\toolbar.xml
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\values\styles.xml
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable\slideout.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable-hdpi\profile_generic.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable-mdpi\profile_generic.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable-xhdpi\profile_generic.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable-xxhdpi\profile_generic.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable-xxxhdpi\profile_generic.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable\dnd.png
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\R.cs.flag
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\uploadflags.txt
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\App11.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Java.Interop.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Mono.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\mscorlib.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.ComponentModel.Composition.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.Core.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.Net.Http.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.Runtime.Serialization.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.ServiceModel.Internals.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\System.Xml.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\App11.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\Java.Interop.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\Mono.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\mscorlib.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.Core.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.Net.Http.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\System.Xml.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.dll.mdb
-C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\App11.Android.dll.mdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\App11.Android.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\App11.Android.pdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\com.companyname.App11.apk
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\com.companyname.App11-Signed.apk
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\FormsViewGroup.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\FormsViewGroup.pdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\FormsViewGroup.dll.mdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.csprojResolveAssemblyReference.cache
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.App.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.AboutPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.MenuPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.NewItemPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.ScorePage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.CharacterPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.InventoryPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.MonstersPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.ItemsPage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Droid.Views.BattlePage.xaml.g.cs
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.dll
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.pdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\android\bin\com.companyname.App11.apk
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\layout\tabbar.xml
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\layout\toolbar.xml
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\values\styles.xml
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable\slideout.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-hdpi\profile_generic.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-mdpi\profile_generic.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-xhdpi\profile_generic.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-xxhdpi\profile_generic.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable-xxxhdpi\profile_generic.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\res\drawable\dnd.png
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\R.cs.flag
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\uploadflags.txt
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\obj\Debug\App11.Android.dll.mdb
+C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.Android\bin\Debug\App11.Android.dll.mdb

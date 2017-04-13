@@ -21,7 +21,7 @@ namespace App11
             {
                 Children =
                 {
-                    new NavigationPage(new ItemsPage())
+                    new NavigationPage(new MenuPage())
                     {
                         Title = "Browse",
                         Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
