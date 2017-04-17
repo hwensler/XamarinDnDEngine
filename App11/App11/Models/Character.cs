@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Character1
+namespace Character
 {
     public abstract class Fighter
     {
