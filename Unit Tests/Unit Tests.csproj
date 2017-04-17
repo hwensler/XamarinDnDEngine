@@ -60,6 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\App11\App11.Android\App11.Android.csproj">
       <Project>{a7719619-8b28-4ddb-9a5a-7af7c366af28}</Project>
       <Name>App11.Android</Name>

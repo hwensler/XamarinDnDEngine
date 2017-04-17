@@ -8,27 +8,16 @@ using Xamarin.UITest.Queries;
 namespace Unit_Tests
 {
     [TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
+
     public class Tests
     {
-        IApp app;
-        Platform platform;
-
-        public Tests(Platform platform)
-        {
-            this.platform = platform;
-        }
-
-        [SetUp]
-        public void BeforeEachTest()
-        {
-            app = AppInitializer.StartApp(platform);
-        }
-
+        /**
+         * A test test. The simplest case.
+         * **/
         [Test]
-        public void AppLaunches()
-        {
-            app.Screenshot("First screen.");
+        public void DoesOneEqualOne (){
+            Assert.AreEqual(1, 1, "1 equals 1");
+
         }
     }
 }
