@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +22,7 @@ namespace Character1
         protected int level;
         public int Level { get { return level; } set { this.level = value; } }
 
-        public bool isAlive()
-        {
+        public bool isAlive() {
             if (hitPoints <= 0)
             {
                 return false;
@@ -54,9 +53,9 @@ namespace Character1
 
     }
 
+    
 
-
-    public class Monster : Fighter
+    public class Monster:Fighter
     {
         //monster constructor
         public Monster(int strength, int defense, int speed, int stackOrder, int hitPoints)
@@ -73,10 +72,10 @@ namespace Character1
     {
         //DISCUSSION NEEDED: Should level be made into a private variable, accesible only by experience? The problem we can run
         //into with public level variables is that if a level is added, experience is not necessarily adjusted alongside it.
-        private int experience = 0;
+        private int experience =0;
         public int Experience { get { return experience; } set { experience = value; } }
         //placholder until item implementation
-        List<DDItem> inventory = new List<DDItem>();
+        //List<DDItem> inventory = new List<DDItem> ();
 
         //Character constructor
         public Character(int strength, int defense, int speed, int stackOrder, int hitPoints)
