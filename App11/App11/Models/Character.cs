@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Character
+namespace App11.Models
 {
     public abstract class Fighter
     {
