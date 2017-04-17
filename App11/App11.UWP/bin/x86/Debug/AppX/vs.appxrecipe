@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>b0db6457-ac02-428a-bb97-2b5ddcae138b</PackageIdentityName>
     <PackageIdentityPublisher>CN=heath</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -25,16 +25,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-07T22:26:48.289</Modified>
+      <Modified>2017-04-17T23:10:00.981</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\bin\x86\Debug\App11.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\App11.UWP.exe">
       <PackagePath>entrypoint\App11.UWP.exe</PackagePath>
-      <Modified>2017-04-07T22:26:42.267</Modified>
+      <Modified>2017-04-17T23:09:56.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\heath\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -508,57 +508,57 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2017-01-31T19:27:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2017-04-07T03:17:52.765</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-04-07T03:17:52.769</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-04-07T03:17:52.803</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-04-07T03:17:52.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-04-07T03:17:52.807</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-04-07T03:17:52.809</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-04-07T03:17:52.811</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\dnd.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\dnd.png">
       <PackagePath>dnd.png</PackagePath>
       <Modified>2017-04-07T03:55:59.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\profile_generic.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\profile_generic.png">
       <PackagePath>profile_generic.png</PackagePath>
       <Modified>2017-04-07T03:17:52.865</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\slideout.png">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\slideout.png">
       <PackagePath>slideout.png</PackagePath>
       <Modified>2017-04-07T03:17:52.869</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2017-04-07T03:17:52.815</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\bin\x86\Debug\App11.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\App11.UWP.xr.xml">
       <PackagePath>App11.UWP.xr.xml</PackagePath>
       <Modified>2017-04-07T03:18:57.229</Modified>
     </AppxPackagedFile>
@@ -578,14 +578,14 @@
       <PackagePath>Xamarin.Forms.Platform.UAP\Properties\Xamarin.Forms.Platform.UAP.rd.xml</PackagePath>
       <Modified>2017-01-31T19:27:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-07T22:26:47.611</Modified>
+      <Modified>2017-04-17T23:10:00.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\heath\Documents\Visual Studio 2017\Projects\App11\App11\App11.UWP\bin\x86\Debug\Core\App11.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\Core\App11.UWP.exe">
       <PackagePath>App11.UWP.exe</PackagePath>
-      <Modified>2017-04-07T22:26:48.283</Modified>
+      <Modified>2017-04-17T23:10:00.975</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
