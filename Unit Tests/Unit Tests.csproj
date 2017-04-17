@@ -59,5 +59,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App11\App11.Android\App11.Android.csproj">
+      <Project>{a7719619-8b28-4ddb-9a5a-7af7c366af28}</Project>
+      <Name>App11.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
