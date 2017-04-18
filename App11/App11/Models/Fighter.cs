@@ -22,7 +22,7 @@ namespace App11.Models
         protected int level;
         public int Level { get { return level; } set { this.level = value; } }
 
-        public bool isAlive()
+        public bool IsAlive()
         {
             if (hitPoints <= 0)
             {
@@ -37,10 +37,10 @@ namespace App11.Models
         public int doDamage(Fighter defender, int damage)
         {
             //do the damage to the defender
-            defender.changeHP(-damage);
+            defender.ChangeHP(-damage);
             return defender.hitPoints;
         }
-        public void changeHP(int hpChange)
+        public void ChangeHP(int hpChange)
         {
             this.hitPoints += hpChange;
         }
