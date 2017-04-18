@@ -15,8 +15,10 @@ namespace Unit_Test
         Character testCharacter = new Character(10, 10, 10, 10, 10);
         
         [TestMethod]
-        public void TestMethod1()
+        public void AwardExpWorks() 
         {
-        }
+            testCharacter.AwardExp(50);
+            Assert.AreEqual(testCharacter.experience, 50);
+;        }
     }
 }
