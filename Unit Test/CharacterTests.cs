@@ -12,13 +12,22 @@ namespace Unit_Test
     [TestClass]
     public class CharacterTests
     {
+
         Character testCharacter = new Character(10, 10, 10, 10, 10);
-        
+
         [TestMethod]
-        public void AwardExpWorks() 
+        public void AwardExpWorks()
         {
             testCharacter.AwardExp(50);
-            Assert.AreEqual(testCharacter.experience, 50);
-;        }
+            Assert.AreEqual(testCharacter.Experience, 50);
+        }
+
+        [TestMethod]
+        public void LevelUpWorks()
+        {
+            testCharacter.AwardExp(1100);
+            Assert.AreEqual(testCharacter.Level, 11);
+        }
+
     }
 }
