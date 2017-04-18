@@ -39,5 +39,12 @@ namespace Unit_Test
             testMonster.AdjustStats(1, 0, 0);
             Assert.AreEqual(testMonster.Strength, 11);
         }
+
+        //tests that IsAlive works
+        [TestMethod]
+        public void IsAliveWorksWhenHPGreaterThanZero()
+        {
+            Assert.IsTrue(testMonster.IsAlive());
+        }
     }
 }
