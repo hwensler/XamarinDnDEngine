@@ -12,8 +12,7 @@ namespace App11.Models
     {
         //DISCUSSION NEEDED: Should level be made into a private variable, accesible only by experience? The problem we can run
         //into with public level variables is that if a level is added, experience is not necessarily adjusted alongside it.
-        private int experience =0;
-        public int Experience { get { return experience; } set { experience = value; } }
+        public int experience { get { return experience; } set { experience = value; } }
         //placholder until item implementation
         //List<DDItem> inventory = new List<DDItem> ();
 
@@ -25,15 +24,16 @@ namespace App11.Models
             this.speed = speed;
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
+            this.experience = 0;
         }
 
-        public void awardExp(int expAward)
+        public void AwardExp(int expAward)
         {
             this.experience += expAward;
-            this.levelUp();
+            this.LevelUp();
         }
         //placeholder level up logic using a new level every 100 xp points, we can of course revisit
-        public void levelUp()
+        public void LevelUp()
         {
             if (this.level < experience / 100)
             {
