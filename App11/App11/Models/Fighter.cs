@@ -34,7 +34,7 @@ namespace App11.Models
             }
         }
 
-        public int doDamage(Fighter defender, int damage)
+        public int DoDamage(Fighter defender, int damage)
         {
             //do the damage to the defender
             defender.ChangeHP(-damage);
