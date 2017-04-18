@@ -22,6 +22,14 @@ namespace Unit_Test
             Assert.AreEqual(testMonster.Strength, 10);
         }
 
+        //tests a setter
+        [TestMethod]
+        public void SetMonsterStrengthWorks()
+        {
+            testMonster.Strength = 15;
+            Assert.AreEqual(testMonster, 15);
+        }
+
         //test changing your own hp 
         [TestMethod]
         public void ChangeHPWorks()
