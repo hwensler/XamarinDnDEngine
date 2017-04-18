@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace App11.Models
+namespace Character1
 {
 
     public class Character : Fighter
