@@ -11,7 +11,7 @@ namespace Character1
         static void Main(string[] args)
         {
             Character char1 = new Character(1, 1, 1, 1, 10);
-            Monster monst1 = new Monster(1, 1, 1, 1, 10);
+            Monster monst1 = new Monster(1, 1, 1, 1, 10, 1);
 
             Console.WriteLine("Testing character strength getter = " + char1.Strength);
             Console.WriteLine("Testing character defense getter = " + char1.Defense);
