@@ -13,23 +13,6 @@ namespace Character1
             Character char1 = new Character(1, 1, 1, 1, 10);
             Monster monst1 = new Monster(1, 1, 1, 1, 10, 1);
 
-            Console.WriteLine("Testing character strength getter = " + char1.Strength);
-            Console.WriteLine("Testing character defense getter = " + char1.Defense);
-            Console.WriteLine("Testing character speed getter = " + char1.Speed);
-            Console.WriteLine("Testing character stackOrder getter = " + char1.StackOrder);
-            Console.WriteLine("Testing character hitPoints getter = " + char1.HitPoints +"\n");
-
-            Console.WriteLine("Testing monster strength getter = " + monst1.Strength);
-            Console.WriteLine("Testing monster defense getter = " + monst1.Defense);
-            Console.WriteLine("Testing monster speed getter = " + monst1.Speed);
-            Console.WriteLine("Testing monster stackOrder getter = " + monst1.StackOrder);
-            Console.WriteLine("Testing monster hitPoints getter = " + monst1.HitPoints+ "\n");
-
-            Console.WriteLine("Testing character strength setter = " + ++char1.Strength);
-            Console.WriteLine("Testing character defense setter = " + ++char1.Defense);
-            Console.WriteLine("Testing character speed setter = " + ++char1.Speed);
-            Console.WriteLine("Testing character stackOrder setter = " + ++char1.StackOrder);
-            Console.WriteLine("Testing character hitPoints setter = " + ++char1.HitPoints + "\n");
 
             monst1.Level = 2;
             char1.awardExp(200);
