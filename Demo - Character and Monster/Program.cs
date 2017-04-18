@@ -14,20 +14,6 @@ namespace Character1
             Monster monst1 = new Monster(1, 1, 1, 1, 10, 1);
 
 
-            monst1.Level = 2;
-            char1.awardExp(200);
-            Console.WriteLine("Testing character level setter = " + char1.Level);
-            Console.WriteLine("Testing monster level setter = " + monst1.Level + "\n");
-
-            Console.WriteLine("Testing character level up function, adding 100 xp to char, curr level = " +char1.Level);
-            char1.awardExp(100);
-            Console.WriteLine("New character level  = " + char1.Level + "\n");
-
-            char1.adjustStats(5, 5, 0);
-            monst1.adjustStats(5, 5, 0);
-            Console.WriteLine("Set monster and character attack and defense to 5 \n");
-
-
             Random rand = new Random();
             int die;
             bool turn = true;
