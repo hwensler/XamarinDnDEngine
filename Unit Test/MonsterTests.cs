@@ -14,7 +14,5 @@ namespace Unit_Test
         {
             Assert.AreEqual(testMonster.Strength, 1);
         }
-
-        public
     }
 }
