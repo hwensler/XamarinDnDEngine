@@ -46,5 +46,12 @@ namespace Unit_Test
         {
             Assert.IsTrue(testMonster.IsAlive());
         }
+
+        [TestMethod]
+        public void IsAliveWorksWhenHPEqualsZero()
+        {
+            testMonster.ChangeHP(-10);
+            Assert.IsFalse(testMonster.IsAlive());
+        }
     }
 }
