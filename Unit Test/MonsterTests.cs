@@ -27,7 +27,7 @@ namespace Unit_Test
         public void SetMonsterStrengthWorks()
         {
             testMonster.Strength = 15;
-            Assert.AreEqual(testMonster, 15);
+            Assert.AreEqual(testMonster.Strength, 15);
         }
 
         //test changing your own hp 
