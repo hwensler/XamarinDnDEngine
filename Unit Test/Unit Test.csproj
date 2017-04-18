@@ -50,6 +50,9 @@
   <ItemGroup>
     <Compile Include="TestTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FighterTests.cs" />
+    <Compile Include="MonsterTests.cs" />
+    <Compile Include="CharacterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
