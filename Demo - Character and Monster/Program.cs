@@ -20,7 +20,7 @@ namespace Character1
             int damage =0;
             //test of basic combat logic and interaction, plus test of isAlive() function and dealDamage 
             //I know how badly designed this section is, it is simply a test of alive functions and an intital test of battle logic.
-            while (char1.isAlive() && monst1.isAlive())
+            while (char1.IsAlive() && monst1.IsAlive())
             {
                 int attackRoll;
                 int defenseRoll;
@@ -41,7 +41,7 @@ namespace Character1
                     }
                     else
                     {
-                        char1.doDamage(monst1, damage);
+                        char1.DoDamage(monst1, damage);
                         Console.WriteLine("Char1 does " + damage + " to monst1, lowering hitpoints to " + monst1.HitPoints);
                     }
 
@@ -64,7 +64,7 @@ namespace Character1
                     }
                     else
                     {
-                        monst1.doDamage(char1, damage);
+                        monst1.DoDamage(char1, damage);
                         Console.WriteLine("monst1 does " + damage + " to char1, lowering hitpoints to " + char1.HitPoints);
                     }
 
