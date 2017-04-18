@@ -7,7 +7,7 @@ namespace Unit_Test
     [TestClass]
     public class MonsterTests
     {
-        Monster testMonster = new Monster(1, 1, 1, 1, 1);
+        Monster testMonster = new Monster(1, 1, 1, 1, 1, 1);
 
         [TestMethod]
         public void GetMonsterStrengthWorks()
