@@ -13,15 +13,24 @@ namespace Unit_Test
         [TestMethod]
         public void GetMonsterStrengthWorks()
         {
-            Assert.AreEqual(testMonster.Strength, 1);
+            Assert.AreEqual(testMonster.Strength, 10);
         }
 
-        //test doing an amount of damage to the defender
+        //test changing your own hp 
         [TestMethod]
         public void ChangeHPWorks()
         {
             testMonster.ChangeHP(1);
             Assert.AreEqual(testMonster.HitPoints, 11);
+        }
+
+        //test doing damage (to self, in this case)
+        [TestMethod]
+
+        public void DoDamageWorks()
+        {
+            testMonster.DoDamage(testMonster, 5);
+            Assert.AreEqual(testMonster.HitPoints, 5);
         }
     }
 }
