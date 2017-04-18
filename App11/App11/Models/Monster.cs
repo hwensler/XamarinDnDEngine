@@ -9,13 +9,14 @@ namespace App11.Models
     public class Monster : Fighter
     {
         //monster constructor
-        public Monster(int strength, int defense, int speed, int stackOrder, int hitPoints)
+        public Monster(int strength, int defense, int speed, int stackOrder, int hitPoints, int level)
         {
             this.strength = strength;
             this.defense = defense;
             this.speed = speed;
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
+            this.level = level;
         }
     }
 }
