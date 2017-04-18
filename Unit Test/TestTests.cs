@@ -9,7 +9,7 @@ namespace Unit_Test
         //this is a test method just to prove testing works!
 
         [TestMethod]
-        public void doesOneEqualOne()
+        public void OneEqualsOne()
         {
             Assert.AreEqual(1, 1, "one isn't equal to one");
         }

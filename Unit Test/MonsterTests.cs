@@ -7,11 +7,14 @@ namespace Unit_Test
     [TestClass]
     public class MonsterTests
     {
-        [TestInitialize]
+        Monster testMonster = new Monster(1, 1, 1, 1, 1);
 
         [TestMethod]
-        public void TestMethod1()
+        public void GetMonsterStrengthWorks()
         {
+            Assert.AreEqual(testMonster.Strength, 1);
         }
+
+        public
     }
 }

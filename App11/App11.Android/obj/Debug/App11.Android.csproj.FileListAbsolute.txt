@@ -105,5 +105,6 @@ C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\r
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\res\drawable\dnd.png
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\R.cs.flag
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\uploadflags.txt
+C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.csprojResolveAssemblyReference.cache
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.dll.mdb
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\App11.Android.dll.mdb
