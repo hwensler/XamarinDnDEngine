@@ -23,10 +23,16 @@ namespace Unit_Test
         }
 
         [TestMethod]
-        public void LevelUpWorks()
+        public void LevelUpWorksWhenItShould()
         {
             testCharacter.AwardExp(1100);
             Assert.AreEqual(testCharacter.Level, 11);
+        }
+
+        public void LevelUpDoesNotWorkWhenItShouldnt()
+        {
+            testCharacter.AwardExp(0);
+            Assert.AreEqual(testCharacter.Level, 10);
         }
 
     }
