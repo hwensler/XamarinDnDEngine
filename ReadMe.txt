@@ -9,5 +9,5 @@ Since both Character and Monster inherit from Fighter, these tests are applicabl
 
 CharacterTest tests only the tests unique to character (as those inherited from Fighter are tested in MonsterTest).
 
-Getters and setters aren't tested (save for one of each in MonsterTest) because that code is part of visual studio and if it's broken...
-then there's something deeply wrong with visual studio.
+Getters and setters aren't tested (save for one of each in MonsterTest) because that code is part of visual studio/C# and if it's broken...
+then there's something deeply wrong with visual studio and C#
