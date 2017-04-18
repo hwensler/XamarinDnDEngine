@@ -13,8 +13,9 @@ namespace App11.Models
         //DISCUSSION NEEDED: Should level be made into a private variable, accesible only by experience? The problem we can run
         //into with public level variables is that if a level is added, experience is not necessarily adjusted alongside it.
 
-        public int Experience { get { return Experience; } set { Experience = value; } }
         protected int experience;
+        public int Experience { get { return experience; } set { this.experience = value; } }
+        
         //placholder until item implementation
         //List<DDItem> inventory = new List<DDItem> ();
 
