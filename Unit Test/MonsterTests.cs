@@ -2,6 +2,12 @@
 using App11.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+/**
+ * This class tests Fighter class attributes through Monster class because
+ * right now, Monster has no distinct operates and fighter class (as it is 
+ * just a class to inheret from) contains no constructor.
+ * **/
+
 namespace Unit_Test
 {
     [TestClass]
