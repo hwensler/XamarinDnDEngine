@@ -8,9 +8,5 @@ namespace Unit_Test
     public class FighterTests
     {
 
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
     }
 }
