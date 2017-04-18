@@ -50,8 +50,10 @@ namespace Unit_Test
         [TestMethod]
         public void IsAliveWorksWhenHPEqualsZero()
         {
-            testMonster.ChangeHP(-10);
-            Assert.IsFalse(testMonster.IsAlive());
+            Monster testMonster2 = new Monster(10, 10, 10, 10, 0, 10);
+            Assert.IsFalse(testMonster2.IsAlive());
         }
+
+      
     }
 }
