@@ -26,11 +26,18 @@ namespace Unit_Test
 
         //test doing damage (to self, in this case)
         [TestMethod]
-
         public void DoDamageWorks()
         {
             testMonster.DoDamage(testMonster, 5);
             Assert.AreEqual(testMonster.HitPoints, 5);
+        }
+
+        //tests that stats are adjusted correctly
+        [TestMethod]
+        public void AdjustStatsWorks()
+        {
+            testMonster.AdjustStats(1, 0, 0);
+            Assert.AreEqual(testMonster.Strength, 11);
         }
     }
 }
