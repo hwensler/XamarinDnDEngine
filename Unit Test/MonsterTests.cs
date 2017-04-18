@@ -54,6 +54,11 @@ namespace Unit_Test
             Assert.IsFalse(testMonster2.IsAlive());
         }
 
-      
+        [TestMethod]
+        public void IsAliveWorksWhenHPIsNegative()
+        {
+            Monster testMonster2 = new Monster(10, 10, 10, 10, -5, 10);
+            Assert.IsFalse(testMonster2.IsAlive());
+        }
     }
 }
