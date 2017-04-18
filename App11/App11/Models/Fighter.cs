@@ -44,7 +44,7 @@ namespace App11.Models
         {
             this.hitPoints += hpChange;
         }
-        public void adjustStats(int strength, int defense, int speed)
+        public void AdjustStats(int strength, int defense, int speed)
         {
             this.strength += strength;
             this.defense += defense;
