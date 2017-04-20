@@ -15,5 +15,8 @@
 			get { return description; }
 			set { SetProperty(ref description, value); }
 		}
-	}
+
+        //the strength of the item
+        public int Strength { get; set; }
+    }
 }

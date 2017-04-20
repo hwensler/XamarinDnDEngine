@@ -80,6 +80,7 @@ C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\X
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Android.csprojResolveAssemblyReference.cache
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.App.xaml.g.cs
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.Views.AboutPage.xaml.g.cs
 C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.Android\obj\Debug\App11.Droid.Views.MenuPage.xaml.g.cs
