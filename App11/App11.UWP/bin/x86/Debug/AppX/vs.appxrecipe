@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-17T23:10:00.981</Modified>
+      <Modified>2017-04-20T05:31:30.878</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\App11.UWP.exe">
       <PackagePath>entrypoint\App11.UWP.exe</PackagePath>
-      <Modified>2017-04-17T23:09:56.083</Modified>
+      <Modified>2017-04-20T05:31:29.285</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\heath\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -581,11 +581,11 @@
     <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-17T23:10:00.183</Modified>
+      <Modified>2017-04-20T05:31:30.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\heath\Documents\Repositories\DigitsGame\App11\App11.UWP\bin\x86\Debug\Core\App11.UWP.exe">
       <PackagePath>App11.UWP.exe</PackagePath>
-      <Modified>2017-04-17T23:10:00.975</Modified>
+      <Modified>2017-04-20T05:31:30.872</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

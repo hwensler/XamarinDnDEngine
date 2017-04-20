@@ -1,30 +1,33 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+using System.Text;
+using System.Threading.Tasks;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using App11.ViewModels;
+
 
 namespace App11.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class BlankPage1 : Page
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ItemDetailPage : ContentPage
     {
-        public BlankPage1()
+        ItemDetailViewModel viewModel;
+
+        // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
+        public ItemDetailPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+        }
+
+        public ItemDetailPage(ItemDetailViewModel viewModel)
+        {
+            InitializeComponent();
+
+            BindingContext = this.viewModel = viewModel;
         }
     }
 }
