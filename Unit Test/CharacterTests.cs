@@ -28,11 +28,20 @@ namespace Unit_Test
             testCharacter.AwardExp(1100);
             Assert.AreEqual(testCharacter.Level, 11);
         }
-
-        public void LevelUpDoesNotWorkWhenItShouldnt()
+        [TestMethod]
+        //works if character level is 0
+        public void LevelUpDoesNotWorkWhen0EXP()
         {
             testCharacter.AwardExp(0);
-            Assert.AreEqual(testCharacter.Level, 10);
+            Assert.AreEqual(testCharacter.Level, 0);
+        }
+        [TestMethod]
+        public void AwardExpandLevelUpWorks()
+        {
+            testCharacter.Experience += 50;
+            testCharacter.AwardExp(51);
+            Assert.AreEqual(testCharacter.Level, 1);
+
         }
 
     }
