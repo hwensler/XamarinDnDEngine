@@ -20,6 +20,7 @@ namespace App11.Models
         //List<DDItem> inventory = new List<DDItem> ();
 
         //Character constructor
+        //Add name to constructor?
         public Character(int strength, int defense, int speed, int stackOrder, int hitPoints)
         {
             this.strength = strength;
