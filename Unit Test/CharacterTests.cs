@@ -35,5 +35,11 @@ namespace Unit_Test
             Assert.AreEqual(testCharacter.Level, 10);
         }
 
+        [TestMethod]
+        public void CharacterNameAssignmentWorks()
+        {
+            testCharacter.Name = "Test Character";
+            Assert.AreEqual(testCharacter.Name, "Test Character");
+        }
     }
 }

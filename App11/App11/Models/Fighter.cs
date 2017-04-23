@@ -22,6 +22,10 @@ namespace App11.Models
         protected int level;
         public int Level { get { return level; } set { this.level = value; } }
 
+        //Should we revisit and limit the number of chars in a name?
+        protected string name;
+        public string Name { get { return name; } set { this.name = value; } }
+
         public bool IsAlive()
         {
             if (hitPoints <= 0)
