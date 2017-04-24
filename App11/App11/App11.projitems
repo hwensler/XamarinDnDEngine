@@ -91,9 +91,11 @@
       <DependentUpon>CharacterDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPageCS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CharacterDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ScorePage.xaml">
