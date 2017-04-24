@@ -1,7 +1,8 @@
 ﻿using System;
+using Xamarin.Forms;
 using System.Collections.Generic;
 
-using Xamarin.Forms;
+using App11.Models;
 
 namespace App11.Views
 {
@@ -11,5 +12,30 @@ namespace App11.Views
         {
             InitializeComponent();
         }
+
+		async void OnSaveClicked(object sender, EventArgs e)
+		{
+			var character = (Character)BindingContext;
+			await App.Database.SaveItemAsync(character);
+			await Navigation.PopAsync();
+		}
+
+		async void OnDeleteClicked(object sender, EventArgs e)
+		{
+			var character = (Character)BindingContext;
+			await App.Database.DeleteItemAsync(character);
+			await Navigation.PopAsync();
+		}
+
+		async void OnCancelClicked(object sender, EventArgs e)
+		{
+			await Navigation.PopAsync();
+		}
     }
 }
+
+
+
+
+
+
