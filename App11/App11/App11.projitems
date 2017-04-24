@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPageCS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\CharacterDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterDetailPageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
