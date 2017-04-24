@@ -126,10 +126,14 @@ C:/Users/heath/Documents/Repositories/DigitsGame/App11/App11.Android/bin/Debug/A
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Platform.dll
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Xaml.dll
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/FormsViewGroup.pdb
+/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/FormsViewGroup.dll.mdb
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Core.pdb
+/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Core.dll.mdb
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Core.xml
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Platform.Android.pdb
+/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Platform.Android.dll.mdb
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Xaml.pdb
+/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Xaml.xml
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/obj/Debug/App11.Android.csprojResolveAssemblyReference.cache
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/obj/Debug/App11.Android.csproj.CoreCompileInputs.cache
@@ -159,7 +163,3 @@ C:/Users/heath/Documents/Repositories/DigitsGame/App11/App11.Android/bin/Debug/A
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/obj/Debug/res/drawable/dnd.png
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/obj/Debug/R.cs.flag
 /Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/obj/Debug/uploadflags.txt
-/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/FormsViewGroup.dll.mdb
-/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Core.dll.mdb
-/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Platform.Android.dll.mdb
-/Users/Leonardo/SrcTree Repos/SUDigits/App11/App11.Android/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
