@@ -1,5 +1,30 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App11.Views.CharacterDetailPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="App11.Views.CharacterDetailPage"
+    Title="{Binding Name}">
     <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+                <Label Text="Character Name:" />
+                <Entry Text="{Binding Name}" />
+                <Label Text="Stack Order:" />
+                <Entry Text="{Binding StackOrder}" />
+                <Label Text="Character Level:" />
+                <Entry Text="{Binding Level}" />
+                <Label Text="HP:" />
+                <Entry Text="{Binding HitPoints}" />
+                <Label Text="Strength:" />
+                <Entry Text="{Binding Strength}" />
+                <Label Text="Defense:" />
+                <Entry Text="{Binding Defense}" />
+                <Label Text="Speed:" />
+                <Entry Text="{Binding Speed}" />
+                <Button Text="Save" Clicked="OnSaveClicked" />
+                <Button Text="Delete" Clicked="OnDeleteClicked" />
+                <Button Text="Cancel" Clicked="OnCancelClicked" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
+
