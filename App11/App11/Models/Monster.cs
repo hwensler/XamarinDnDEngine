@@ -15,6 +15,17 @@ namespace App11.Models
         //to set up for ??? appearance later
         private bool hasEncountered = false;
 
+       
+        //default constructor for testing now
+        public Monster()
+        {
+            this.strength = 1;
+            this.defense = 1;
+            this.speed = 1;
+            this.stackOrder = 1;
+            this.hitPoints = 1;
+            this.level = 1;
+        }
         //monster constructor
         public Monster(int strength, int defense, int speed, int stackOrder, int hitPoints, int level)
         {
@@ -26,6 +37,7 @@ namespace App11.Models
             this.hitPoints = hitPoints;
             this.level = level;
         }
+       
 
         //adding crud features below
 
@@ -43,6 +55,7 @@ namespace App11.Models
                 OnPropertyChanged(nameof(Id));
             }
         }
+        //monster description
         private string _description;
         public string Description
         {
@@ -58,11 +71,5 @@ namespace App11.Models
         }
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            this.PropertyChanged?.Invoke(this,
-              new PropertyChangedEventArgs(propertyName));
-        }
     }
 }
