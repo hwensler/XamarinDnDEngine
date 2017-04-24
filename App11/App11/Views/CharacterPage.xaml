@@ -5,7 +5,7 @@
              Title="Character List">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Create" Clicked="OnCharacterAdded" />
+        <ToolbarItem Text="New Character" Clicked="OnCharacterAdded" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
