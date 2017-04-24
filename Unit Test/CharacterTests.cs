@@ -44,5 +44,11 @@ namespace Unit_Test
 
         }
 
+        [TestMethod]
+        public void CharacterNameAssignmentWorks()
+        {
+            testCharacter.Name = "Test Character";
+            Assert.AreEqual(testCharacter.Name, "Test Character");
+        }
     }
 }

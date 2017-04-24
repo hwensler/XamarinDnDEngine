@@ -74,5 +74,12 @@ namespace Unit_Test
             Monster testMonster2 = new Monster(10, 10, 10, 10, -5, 10);
             Assert.IsFalse(testMonster2.IsAlive());
         }
+
+        [TestMethod]
+        public void MonsterNameAssignmentWorks()
+        {
+            testMonster.Name = "Test Monster";
+            Assert.AreEqual(testMonster.Name, "Test Monster");
+        }
     }
 }
