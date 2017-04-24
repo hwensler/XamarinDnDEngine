@@ -27,11 +27,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DBDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Battle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Character.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DDItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Fighter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Monster.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Program.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Round.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDatabaseConnection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
