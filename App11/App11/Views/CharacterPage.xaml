@@ -1,8 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App11.Views.CharacterPage">
-    <Label Text="This is the character page. It will display the characters in the current party and their status. "
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+             x:Class="App11.Views.CharacterPage" 
+             Title="Character List">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Create" Clicked="OnCharacterAdded" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+<!--            <Image Source="dnd.png" />-->
+            <ListView x:Name="listView" Margin="20" ItemSelected="OnListCharacterSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontAttributes="Bold" FontSize="17" />
+                                <Label Text="{Binding Level, StringFormat='Lv: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
+
+
