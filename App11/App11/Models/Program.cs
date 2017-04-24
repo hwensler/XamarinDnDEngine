@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App11.Models;
 
 namespace Character1
 {
@@ -11,7 +12,7 @@ namespace Character1
         static void Main(string[] args)
         {
             Character char1 = new Character(1, 1, 1, 1, 10);
-            Monster monst1 = new Monster(1, 1, 1, 1, 10);
+            Monster monst1 = new Monster(1, 1, 1, 1, 10, 1);
 
             Console.WriteLine("Testing character strength getter = " + char1.Strength);
             Console.WriteLine("Testing character defense getter = " + char1.Defense);
@@ -32,16 +33,16 @@ namespace Character1
             Console.WriteLine("Testing character hitPoints setter = " + ++char1.HitPoints + "\n");
 
             monst1.Level = 2;
-            char1.awardExp(200);
+            char1.AwardExp(200);
             Console.WriteLine("Testing character level setter = " + char1.Level);
             Console.WriteLine("Testing monster level setter = " + monst1.Level + "\n");
 
             Console.WriteLine("Testing character level up function, adding 100 xp to char, curr level = " + char1.Level);
-            char1.awardExp(100);
+            char1.AwardExp(100);
             Console.WriteLine("New character level  = " + char1.Level + "\n");
 
-            char1.adjustStats(5, 5, 0);
-            monst1.adjustStats(5, 5, 0);
+            char1.AdjustStats(5, 5, 0);
+            monst1.AdjustStats(5, 5, 0);
             Console.WriteLine("Set monster and character attack and defense to 5 \n");
 
 
@@ -51,7 +52,7 @@ namespace Character1
             int damage = 0;
             //test of basic combat logic and interaction, plus test of isAlive() function and dealDamage 
             //I know how badly designed this section is, it is simply a test of alive functions and an intital test of battle logic.
-            while (char1.isAlive() && monst1.isAlive())
+            while (char1.IsAlive() && monst1.IsAlive())
             {
                 int attackRoll;
                 int defenseRoll;
@@ -72,7 +73,7 @@ namespace Character1
                     }
                     else
                     {
-                        char1.doDamage(monst1, damage);
+                        char1.DoDamage(monst1, 20);
                         Console.WriteLine("Char1 does " + damage + " to monst1, lowering hitpoints to " + monst1.HitPoints);
                     }
 
@@ -95,7 +96,7 @@ namespace Character1
                     }
                     else
                     {
-                        monst1.doDamage(char1, damage);
+                        monst1.DoDamage(char1, damage);
                         Console.WriteLine("monst1 does " + damage + " to char1, lowering hitpoints to " + char1.HitPoints);
                     }
 

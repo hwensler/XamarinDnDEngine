@@ -30,11 +30,11 @@ namespace App11.Views
             await Navigation.PushAsync(new MonstersPage());
         }
 
-        async void OnUpdateClick(object sender, EventArgs args)
-        {
-            Monster MonToUpdate = MonsterModel.getMonster();
-            await Navigation.PushAsync(new NewMonsterPage(MonToUpdate));
-        }
+        //async void OnUpdateClick(object sender, EventArgs args)
+        //{
+        //    Monster MonToUpdate = MonsterModel.getMonster();
+        //    await Navigation.PushAsync(new NewMonsterPage(MonToUpdate));
+        //}
 
     }
 }
