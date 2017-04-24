@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 
 namespace App11.Models
@@ -24,7 +25,11 @@ namespace App11.Models
 
         //Should we revisit and limit the number of chars in a name?
         protected string name;
-        public string Name { get { return name; } set { this.name = value; } }
+        public string Name { get { return name; }
+            set {
+                this.name = value;
+                OnPropertyChanged(nameof(Name)); }
+        }
 
         public bool IsAlive()
         {
@@ -53,6 +58,13 @@ namespace App11.Models
             this.strength += strength;
             this.defense += defense;
             this.speed += speed;
+        }
+        //added this method for crud operations
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            this.PropertyChanged?.Invoke(this,
+                new PropertyChangedEventArgs(propertyName));
         }
     }
 }
