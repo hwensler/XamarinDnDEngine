@@ -5,11 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
+using SQLite;
+
 
 namespace App11.Models
 {
     public class Fighter
     {
+		// newly added for character DB ops
+		[PrimaryKey, AutoIncrement]
+		public int ID { get; set; }
+
         protected int strength;
         public int Strength { get { return strength; } set { this.strength = value; } }
         protected int defense;
