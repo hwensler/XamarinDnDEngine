@@ -37,11 +37,11 @@ namespace App11.Views
 
             Monsters.SelectedItem = null;
         }
-        //add a new monster
-        async void OnAddClick(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new NewMonsterPage());
-        }
+        ////add a new monster
+        //async void OnAddClick(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new NewMonsterPage());
+        //}
 
 
     }
