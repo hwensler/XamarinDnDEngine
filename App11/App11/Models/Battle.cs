@@ -102,10 +102,13 @@ namespace App11.Models
             if (charQueue.Count == 0)
             {
                 battleResult.charsWon = false;
+                battleResult.points = 0;
             }
             else
             {
                 battleResult.charsWon = true;
+                //keep track of points troughout battle and assign here.
+                battleResult.points = 0;
             }
             return battleResult;
         }
