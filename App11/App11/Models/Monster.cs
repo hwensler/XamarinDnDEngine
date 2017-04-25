@@ -50,6 +50,7 @@ namespace App11.Models
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
             this.level = level;
+            this.isHuman = false;
         }
        
 
