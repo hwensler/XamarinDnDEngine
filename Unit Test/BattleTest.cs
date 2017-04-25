@@ -26,13 +26,13 @@ namespace Unit_Test
         [TestMethod]
         public void TestTeamSize()
         {
-            //when creating the team in the game class, we should have an array that we fill in based on index for
-            //the stack order. once we have all 4 array elements made we can push to the team Queue.
-            
-           
-            //
-            // TODO: Add test logic here
-            //
+            Queue<Fighter> charQueue = new Queue<Fighter>();
+            for (int i = 0; i < 4; i++)
+            {
+                charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10));
+            }
+            Battle testBattle = new Battle(charQueue);
+            Assert.AreEqual(testBattle.charQueueSize(), 4);
         }
 
         [TestMethod]

@@ -35,7 +35,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Fighter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Monster.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Program.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Results.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Round.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IDatabaseConnection.cs" />
