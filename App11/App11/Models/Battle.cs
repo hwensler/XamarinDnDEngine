@@ -18,6 +18,7 @@ namespace App11.Models
             this.charQueue = charQueue;
             initMonstQueue();
         }
+        
 
         //run the battle, maybe set this up to return a struct containing battle won/lost, score, and loot 
         public Results initBattle()
@@ -69,7 +70,7 @@ namespace App11.Models
             while (charQueue.Count != 0 && monstQueue.Count != 0)
             {
                 //if the fighter is dead, it does not get to attack and is removed from the fight order
-                if (!fightOrder.Peek().isAlive())
+                while (!fightOrder.Peek().isAlive())
                 {
                     fightOrder.Dequeue();
                 }
