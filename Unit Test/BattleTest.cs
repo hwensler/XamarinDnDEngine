@@ -43,5 +43,21 @@ namespace Unit_Test
             Assert.AreEqual(testBattle.monstQueueSize(), 4);
 
         }
+        //test that Battle Init returns a struct
+        [TestMethod]
+        public void BattleClassReturnsStruct()
+        {
+            Queue<Fighter> charQueue = new Queue<Fighter>();
+            for (int i = 0; i < 4; i++)
+            {
+                charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10, 0));
+            }
+
+            Battle testBattle = new Battle(charQueue);
+            Results testResult = testBattle.initBattle();
+            Assert.IsNotNull(testResult);
+        }
+
+
     }
 }

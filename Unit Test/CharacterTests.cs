@@ -13,7 +13,7 @@ namespace Unit_Test
     public class CharacterTests
     {
 
-        Character testCharacter = new Character(10, 10, 10, 10, 10);
+        Character testCharacter = new Character(10, 10, 10, 10, 10,0);
 
         [TestMethod]
         public void AwardExpWorks()
