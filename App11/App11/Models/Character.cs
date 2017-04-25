@@ -29,6 +29,7 @@ namespace App11.Models
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
             this.experience = 0;
+            this.isHuman = true;
         }
 
         public void AwardExp(int expAward)
