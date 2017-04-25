@@ -36,6 +36,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Monster.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Program.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Results.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Round.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IDatabaseConnection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsData.cs" />
@@ -86,6 +87,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewMonsterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ScorePage.xaml.cs">
       <DependentUpon>ScorePage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -96,8 +100,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPageCS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\CharacterDB.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterDetailPageCS.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Results.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
@@ -147,6 +149,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MonsterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewMonsterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

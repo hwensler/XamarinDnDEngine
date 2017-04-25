@@ -41,7 +41,7 @@ namespace App11.Views
         //add a new monster
         async void OnAddClick(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new NewMonsterPage());
+            await Navigation.PushAsync(new NewMonsterPage());
         }
 
 

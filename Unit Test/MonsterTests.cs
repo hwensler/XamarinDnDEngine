@@ -58,21 +58,21 @@ namespace Unit_Test
         [TestMethod]
         public void IsAliveWorksWhenHPGreaterThanZero()
         {
-            Assert.IsTrue(testMonster.IsAlive());
+            Assert.IsTrue(testMonster.isAlive());
         }
 
         [TestMethod]
         public void IsAliveWorksWhenHPEqualsZero()
         {
             Monster testMonster2 = new Monster(10, 10, 10, 10, 0, 10);
-            Assert.IsFalse(testMonster2.IsAlive());
+            Assert.IsFalse(testMonster2.isAlive());
         }
 
         [TestMethod]
         public void IsAliveWorksWhenHPIsNegative()
         {
             Monster testMonster2 = new Monster(10, 10, 10, 10, -5, 10);
-            Assert.IsFalse(testMonster2.IsAlive());
+            Assert.IsFalse(testMonster2.isAlive());
         }
 
         [TestMethod]

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Xamarin.Forms;
 
 using App11.Models;
+using App11.Views;
 
 namespace App11.Views
 {
@@ -22,7 +23,7 @@ namespace App11.Views
 
 			toolbarItem.Clicked += async (sender, e) =>
 			{
-				await Navigation.PushAsync(new CharacterDetailPageCS
+				await Navigation.PushAsync(new CharacterDetailPage
 				{
 					BindingContext = new Character()
 				});
@@ -66,7 +67,7 @@ namespace App11.Views
 				((App)App.Current).ResumeAtCharacterId = (e.SelectedItem as Character).ID;
 				Debug.WriteLine("setting ResumeAtCharacterId = " + (e.SelectedItem as Character).ID);
 
-				await Navigation.PushAsync(new CharacterDetailPageCS
+				await Navigation.PushAsync(new CharacterDetailPage
 				{
 					BindingContext = e.SelectedItem as Character
 				});

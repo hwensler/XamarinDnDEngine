@@ -26,14 +26,14 @@ namespace App11.Views
         {
             Monster monToDelete = MonsterModel.GetMonsterModel();
             DNDDatabase.DeleteMonster(monToDelete);
-            //bring back to item page
+            //bring back to Monster page
             await Navigation.PushAsync(new MonstersPage());
         }
 
         async void OnUpdateClick(object sender, EventArgs args)
         {
             Monster MonToUpdate = MonsterModel.GetMonsterModel();
-            //await Navigation.PushAsync(new NewMonsterPage(MonToUpdate));
+            await Navigation.PushAsync(new NewMonsterPage(MonToUpdate));
         }
 
     }
