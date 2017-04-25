@@ -30,47 +30,13 @@ namespace App11.Models
                 return defaultRes;
             }
             //create battle order using speed
-            Queue<Fighter> fightOrder = new Queue<Fighter>();
-            Fighter[] fightOrderArr = new Fighter[8];
-
-            for (int i = 0; i < charQueue.Count; i++)
-            {
-                Character loader = (Character)charQueue.Dequeue();
-                fightOrderArr[i] = loader;
-                charQueue.Enqueue(loader);
-            }
-
-            for (int i = 0; i < monstQueue.Count; i++)
-            {
-                Monster loader = (Monster)monstQueue.Dequeue();
-                fightOrderArr[i + charQueue.Count] = loader;
-                monstQueue.Enqueue(loader);
-            }
-            for (int i = 0; i < fightOrderArr.Length; i++)
-            {
-                for (int j = 0; j < fightOrderArr.Length; j++)
-                {
-                    if (fightOrderArr[j].Speed > fightOrderArr[i].Speed)
-                    {
-                        Fighter temp = fightOrderArr[i];
-                        fightOrderArr[i] = fightOrderArr[j];
-                        fightOrderArr[j] = temp;
-                    }
-                }
-            }
-
-            //UNIT TEST HERE TO MAKE SURE THAT ARR IS SORTED
-            //Create the Queue for the fight order
-            for (int i = 0; i < 8; i++)
-            {
-                fightOrder.Enqueue(fightOrderArr[i]);
-            }
+            Queue<Fighter> fightOrder = setOrder();
 
             //Now, FIGHT TO THE DEATH!
             while (charQueue.Count != 0 && monstQueue.Count != 0)
             {
                 //if the fighter is dead, it does not get to attack and is removed from the fight order
-                while (!fightOrder.Peek().isAlive())
+                if (!fightOrder.Peek().isAlive())
                 {
                     fightOrder.Dequeue();
                 }
@@ -143,7 +109,45 @@ namespace App11.Models
             }
             return battleResult;
         }
+        private Queue<Fighter> setOrder()
+        {
+            Queue<Fighter> fightOrder = new Queue<Fighter>();
+            Fighter[] fightOrderArr = new Fighter[8];
 
+            for (int i = 0; i < charQueue.Count; i++)
+            {
+                Character loader = (Character)charQueue.Dequeue();
+                fightOrderArr[i] = loader;
+                charQueue.Enqueue(loader);
+            }
+
+            for (int i = 0; i < monstQueue.Count; i++)
+            {
+                Monster loader = (Monster)monstQueue.Dequeue();
+                fightOrderArr[i + charQueue.Count] = loader;
+                monstQueue.Enqueue(loader);
+            }
+            for (int i = 0; i < fightOrderArr.Length; i++)
+            {
+                for (int j = 0; j < fightOrderArr.Length; j++)
+                {
+                    if (fightOrderArr[j].Speed > fightOrderArr[i].Speed)
+                    {
+                        Fighter temp = fightOrderArr[i];
+                        fightOrderArr[i] = fightOrderArr[j];
+                        fightOrderArr[j] = temp;
+                    }
+                }
+            }
+
+            //UNIT TEST HERE TO MAKE SURE THAT ARR IS SORTED
+            //Create the Queue for the fight order
+            for (int i = 0; i < 8; i++)
+            {
+                fightOrder.Enqueue(fightOrderArr[i]);
+            }
+            return fightOrder;
+        }
         private void initMonstQueue()
         {
             //for now, each monster will be initialized with 5 default on all stats. 
