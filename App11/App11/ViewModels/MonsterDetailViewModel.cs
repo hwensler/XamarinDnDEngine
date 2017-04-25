@@ -9,6 +9,7 @@ namespace App11.ViewModels
     public class MonsterDetailViewModel : BaseViewModel
     {
         public Monster Mon { get; set; }
+       
         public MonsterDetailViewModel (Monster mon = null)
         {
             Title = mon.Name;
@@ -22,9 +23,9 @@ namespace App11.ViewModels
             set { SetProperty(ref quantity, value); }
         }
     
-        public Monster getMonster()
+        public Monster GetMonsterModel()
         {
-            return Mon;
+            return this.Mon;
         }
 
     }

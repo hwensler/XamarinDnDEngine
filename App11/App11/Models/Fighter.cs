@@ -10,7 +10,7 @@ using SQLite;
 
 namespace App11.Models
 {
-    public class Fighter
+    public class Fighter    :   INotifyPropertyChanged
     {
 		// newly added for character DB ops
 		[PrimaryKey, AutoIncrement]

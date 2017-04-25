@@ -19,7 +19,8 @@ namespace App11.Views
 		{
 			InitializeComponent ();
             this.DNDDatabase = new DBDataAccess();
-        }//display the Monsters
+        }
+        //display the Monsters
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -35,13 +36,13 @@ namespace App11.Views
             await Navigation.PushAsync(new MonsterDetailPage(
                 new MonsterDetailViewModel(itemSelected)));
 
-            Monsters.SelectedItem = null;
+            MonstersList.SelectedItem = null;
         }
-        ////add a new monster
-        //async void OnAddClick(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new NewMonsterPage());
-        //}
+        //add a new monster
+        async void OnAddClick(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewMonsterPage());
+        }
 
 
     }
