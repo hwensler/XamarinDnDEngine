@@ -32,7 +32,7 @@ namespace App11.Models
 
         //Character constructor
         //Add name to constructor?
-        public Character(int strength, int defense, int speed, int stackOrder, int hitPoints)
+        public Character(int strength, int defense, int speed, int stackOrder, int hitPoints,int level)
         {
             this.strength = strength;
             this.defense = defense;
@@ -40,6 +40,7 @@ namespace App11.Models
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
             this.experience = 0;
+            this.level = level;
             this.isHuman = true;
         }
 

@@ -17,10 +17,10 @@ namespace Unit_Test
         //initCharTeam to simulate the fact that we will have the char Queue created in the Game class.
         private void initCharTeam()
         {
-            charTeam.Enqueue(new Character(10, 10, 10, 1, 10));
-            charTeam.Enqueue(new Character(10, 10, 10, 2, 10));
-            charTeam.Enqueue(new Character(10, 10, 10, 3, 10));
-            charTeam.Enqueue(new Character(10, 10, 10, 4, 10));
+            charTeam.Enqueue(new Character(10, 10, 10, 1, 10,0));
+            charTeam.Enqueue(new Character(10, 10, 10, 2, 10,0));
+            charTeam.Enqueue(new Character(10, 10, 10, 3, 10,0));
+            charTeam.Enqueue(new Character(10, 10, 10, 4, 10,0));
         }
 
         [TestMethod]
@@ -29,7 +29,7 @@ namespace Unit_Test
             Queue<Fighter> charQueue = new Queue<Fighter>();
             for (int i = 0; i < 4; i++)
             {
-                charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10));
+                charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10,0));
             }
             Battle testBattle = new Battle(charQueue);
             Assert.AreEqual(testBattle.charQueueSize(), 4);
