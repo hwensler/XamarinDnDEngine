@@ -8,8 +8,8 @@
         <ToolbarItem Name="Add" Clicked="OnAddClick" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="Monsters"
-            ItemsSource = "{Binding Path=Monsters}"
+        <ListView x:Name="MonstersList"
+            ItemsSource = "{Binding Path= Monsters }"
             ItemSelected = "OnSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>

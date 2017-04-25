@@ -7,10 +7,11 @@ using System.Collections.ObjectModel;
 using SQLite;
 using App11.Models;
 using App11.Services;
+using App11.ViewModels;
 
 namespace App11
 {
-    class DBDataAccess
+    public class DBDataAccess
     {
         private SQLiteConnection database;
         //don't really have an implmentation of a lock yet
@@ -23,7 +24,8 @@ namespace App11
             database = DependencyService.Get<IDatabaseConnection>().
                 DbConnection();
             database.CreateTable<Monster>();
-            this.Monsters = new ObservableCollection<Monster>();
+            this.Monsters = new ObservableCollection<Monster>(database.Table<Monster>());
+
             if (!database.Table<Monster>().Any())
             {
                 AddNewMonster(new Monster());
@@ -35,7 +37,7 @@ namespace App11
             this.Monsters.Add(new Monster
             {
                 Name="Name of monster",
-                Description="Description of monster"
+                Description="Description of monster",
             });
         }
         //querying monsters
@@ -45,8 +47,7 @@ namespace App11
             lock (collisionLock)
             {
                 //return them all since that is what we want
-                //remember to change in group project
-                return database.Query<Monster>("SELECT * FROM Item ").
+                return database.Query<Monster>("SELECT * FROM Monsters ").
                     AsEnumerable();
             }
         }
@@ -57,7 +58,7 @@ namespace App11
             {
                 return database.Table<Monster>().
                   FirstOrDefault(Monster
-                  => Monster.Id == id);
+                  => Monster.ID == id);
             }
         }
         public int SaveOrUpdateMonster(Monster mon)
@@ -66,23 +67,23 @@ namespace App11
             lock (collisionLock)
             {
                 //if item exists
-                if(mon.Id != 0)
+                if(mon.ID != 0)
                 {
                     database.Update(mon);
-                    return mon.Id;
+                    return mon.ID;
                 }
                 //if it does not exist in database yet
                 else
                 {
                     database.Insert(mon);
-                    return mon.Id;
+                    return mon.ID;
                 }
             }
         }
 
         public int DeleteMonster(Monster mon)
         {
-            var id = mon.Id;
+            var id = mon.ID;
             if (id != 0)
             {
                 lock(collisionLock)

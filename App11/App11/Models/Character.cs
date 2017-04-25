@@ -15,9 +15,20 @@ namespace App11.Models
 
         protected int experience;
         public int Experience { get { return experience; } set { this.experience = value; } }
-        
+
         //placholder until item implementation
         //List<DDItem> inventory = new List<DDItem> ();
+
+        //default constructor
+        public Character()
+        {
+            this.strength = 1;
+            this.defense = 1;
+            this.speed = 1;
+            this.stackOrder = 1;
+            this.hitPoints = 10;
+            this.experience = 0;
+        }
 
         //Character constructor
         //Add name to constructor?
@@ -29,6 +40,7 @@ namespace App11.Models
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
             this.experience = 0;
+            this.isHuman = true;
         }
 
         public void AwardExp(int expAward)

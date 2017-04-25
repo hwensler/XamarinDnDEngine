@@ -10,12 +10,12 @@ using System.ComponentModel;
 namespace App11.Models
 {
     [Table("Monsters")]
-    public class Monster : Fighter, INotifyPropertyChanged
+    public class Monster : Fighter
     {
         //to set up for ??? appearance later
-        private bool hasEncountered = false;
+        //private bool hasEncountered = false;
+      
 
-       
         //default constructor for testing now
         public Monster()
         {
@@ -25,6 +25,20 @@ namespace App11.Models
             this.stackOrder = 1;
             this.hitPoints = 1;
             this.level = 1;
+            //hasEncountered = true;
+        }
+        //Constructor for adding in a monster
+        public Monster(string name, string description)
+        {
+            this.name = name;
+            this._description = description;
+            this.strength = 1;
+            this.defense = 1;
+            this.speed = 1;
+            this.stackOrder = 1;
+            this.hitPoints = 1;
+            this.level = 1;
+            //hasEncountered = true;
         }
         //monster constructor
         public Monster(int strength, int defense, int speed, int stackOrder, int hitPoints, int level)
@@ -36,25 +50,12 @@ namespace App11.Models
             this.stackOrder = stackOrder;
             this.hitPoints = hitPoints;
             this.level = level;
+            this.isHuman = false;
         }
        
 
         //adding crud features below
 
-        private int _id;
-        [PrimaryKey, AutoIncrement]
-        public int Id
-        {
-            get
-            {
-                return Id;
-            }
-            set
-            {
-                this._id = value;
-                OnPropertyChanged(nameof(Id));
-            }
-        }
         //monster description
         private string _description;
         public string Description
@@ -69,7 +70,6 @@ namespace App11.Models
                 OnPropertyChanged(nameof(Description));
             }
         }
-
 
     }
 }

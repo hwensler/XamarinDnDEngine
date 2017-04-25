@@ -10,7 +10,7 @@ using SQLite;
 
 namespace App11.Models
 {
-    public class Fighter
+    public class Fighter    :   INotifyPropertyChanged
     {
 		// newly added for character DB ops
 		[PrimaryKey, AutoIncrement]
@@ -28,6 +28,7 @@ namespace App11.Models
         public int HitPoints { get { return hitPoints; } set { this.hitPoints = value; } }
         protected int level;
         public int Level { get { return level; } set { this.level = value; } }
+        public bool isHuman;
 
         //Should we revisit and limit the number of chars in a name?
         protected string name;
@@ -37,7 +38,7 @@ namespace App11.Models
                 OnPropertyChanged(nameof(Name)); }
         }
 
-        public bool IsAlive()
+        public bool isAlive()
         {
             if (hitPoints <= 0)
             {
