@@ -22,6 +22,12 @@ namespace App11.Models
         //run the battle, maybe set this up to return a struct containing battle won/lost, score, and loot 
         public Results initBattle()
         {
+            if (charQueue.Count == 0)
+            {
+                Results defaultRes = new Results();
+                defaultRes.charsWon = false;
+                return defaultRes;
+            }
             //create battle order using speed
             Queue<Fighter> fightOrder = new Queue<Fighter>();
             Fighter[] fightOrderArr = new Fighter[8];

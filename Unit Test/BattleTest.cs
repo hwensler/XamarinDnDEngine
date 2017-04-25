@@ -58,6 +58,15 @@ namespace Unit_Test
             Assert.IsNotNull(testResult);
         }
 
+        //Monsters win if passed empty hero queue
+        [TestMethod]
+        public void EmptyCharQueuMonstWin()
+        {
+            Queue<Fighter> charQueue = new Queue<Fighter>();
+            Battle testBattle = new Battle(charQueue);
+            Results testResult = testBattle.initBattle();
+            Assert.IsFalse(testResult.charsWon);
+        }
 
     }
 }
