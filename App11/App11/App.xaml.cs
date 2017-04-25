@@ -8,7 +8,9 @@ namespace App11
 {
 	public partial class App : Application
 	{
-        public App()
+		static CharacterDB database;
+
+		public App()
 		{
 			InitializeComponent();
 
@@ -34,5 +36,19 @@ namespace App11
                 }
             };
         }
+
+		public static CharacterDB Database
+		{
+			get
+			{
+				if (database == null)
+				{
+					database = new CharacterDB(DependencyService.Get<IFileHelper>().GetLocalFilePath("CharacterSQLite.db3"));
+				}
+				return database;
+			}
+		}
+
+		public int ResumeAtCharacterId { get; set; }
 	}
 }

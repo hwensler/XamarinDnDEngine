@@ -33,7 +33,7 @@ namespace App11.Views
         async void OnUpdateClick(object sender, EventArgs args)
         {
             Monster MonToUpdate = MonsterModel.GetMonsterModel();
-            await Navigation.PushAsync(new NewMonsterPage(MonToUpdate));
+            //await Navigation.PushAsync(new NewMonsterPage(MonToUpdate));
         }
 
     }

@@ -5,7 +5,7 @@ using App11.Models;
 
 namespace App11.Views
 {
-    public class CharacterDetailPageCS
+    public class CharacterDetailPageCS : ContentPage
     {
         public CharacterDetailPageCS()
         {

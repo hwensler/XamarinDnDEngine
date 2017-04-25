@@ -52,7 +52,7 @@ namespace Character1
             int damage = 0;
             //test of basic combat logic and interaction, plus test of isAlive() function and dealDamage 
             //I know how badly designed this section is, it is simply a test of alive functions and an intital test of battle logic.
-            while (char1.IsAlive() && monst1.IsAlive())
+            while (char1.isAlive() && monst1.isAlive())
             {
                 int attackRoll;
                 int defenseRoll;

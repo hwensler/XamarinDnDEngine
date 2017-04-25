@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 using App11.Models;
 
-namespace App11
+namespace App11.Views
 {
 	public class CharacterPageCS : ContentPage
 	{

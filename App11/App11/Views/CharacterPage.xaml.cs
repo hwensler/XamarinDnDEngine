@@ -31,7 +31,7 @@ namespace App11.Views
 			// always insert if the db is empty
 			//await App.Database.Initialize();
 
-			listView.CharactersSource = await App.Database.GetCharactersAsync();
+			listView.ItemsSource = await App.Database.GetCharactersAsync();
 		}
 
 		async void OnCharacterAdded(object sender, EventArgs e)

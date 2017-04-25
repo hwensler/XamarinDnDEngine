@@ -16,14 +16,14 @@ namespace App11.Views
 		async void OnSaveClicked(object sender, EventArgs e)
 		{
 			var character = (Character)BindingContext;
-			await App.Database.SaveItemAsync(character);
+			await App.Database.SaveCharacterAsync(character);
 			await Navigation.PopAsync();
 		}
 
 		async void OnDeleteClicked(object sender, EventArgs e)
 		{
 			var character = (Character)BindingContext;
-			await App.Database.DeleteItemAsync(character);
+			await App.Database.DeleteCharacterAsync(character);
 			await Navigation.PopAsync();
 		}
 
