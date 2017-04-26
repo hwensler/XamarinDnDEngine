@@ -46,25 +46,13 @@ namespace App11.Models
                     //if isHuman, attach Monster Tank
                     if (fightOrder.Peek().isHuman)
                     {
-                        die = rand.Next(1, 21);
-                        int attackRoll = die * (fightOrder.Peek().Strength + fightOrder.Peek().Level);
-                        Console.WriteLine("Char rolls " + die);
-                        die = rand.Next(1, 21);
-                        Console.WriteLine("Monst rolls " + die);
-                        int defenseRoll = die * (monstQueue.Peek().Defense + monstQueue.Peek().Level);
-                        int damage = (attackRoll - defenseRoll) / 10;
-
-                        //miss logic
-                        if (damage < 0)
-                        {
-                            damage = 0;
-                        }
+                        int damage = attackDamage(fightOrder.Peek(), monstQueue.Peek());
                         //deal damage
                         monstQueue.Peek().HitPoints -= damage;
-                        Console.WriteLine("Monster Tank took " + damage + " damage, now at " + monstQueue.Peek().HitPoints);
+                        //Console.WriteLine("Monster Tank took " + damage + " damage, now at " + monstQueue.Peek().HitPoints);
                         if (!monstQueue.Peek().isAlive())
                         {
-                            Console.WriteLine("Monster Tank Died");
+                           // Console.WriteLine("Monster Tank Died");
                             battleResult.points += monstQueue.Peek().Level;
                             monstQueue.Dequeue();
                         }
@@ -73,25 +61,13 @@ namespace App11.Models
                     //Monster attack
                     else
                     {
-                        die = rand.Next(1, 21);
-                        int attackRoll = die * (fightOrder.Peek().Strength + fightOrder.Peek().Level);
-                        Console.WriteLine("Monst rolls " + die);
-                        die = rand.Next(1, 21);
-                        Console.WriteLine("Char rolls " + die);
-                        int defenseRoll = die * (charQueue.Peek().Defense + charQueue.Peek().Level);
-                        int damage = (attackRoll - defenseRoll) / 10;
-
-                        //miss logic
-                        if (damage < 0)
-                        {
-                            damage = 0;
-                        }
+                        int damage = attackDamage(fightOrder.Peek(), charQueue.Peek());
                         //deal damage
                         charQueue.Peek().HitPoints -= damage;
-                        Console.WriteLine("Char Tank took " + damage + " damage, now at " + charQueue.Peek().HitPoints);
+                        //Console.WriteLine("Char Tank took " + damage + " damage, now at " + charQueue.Peek().HitPoints);
                         if (!charQueue.Peek().isAlive())
                         {
-                            Console.WriteLine("Char Tank Died");
+                            //Console.WriteLine("Char Tank Died");
                             charQueue.Dequeue();
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
@@ -111,6 +87,23 @@ namespace App11.Models
                 battleResult.points = 0;
             }
             return battleResult;
+        }
+        private int attackDamage(Fighter attacker, Fighter defender)
+        {
+            die = rand.Next(1, 21);
+            int attackRoll = die * (attacker.Strength + attacker.Level);
+            //Console.WriteLine("Attacker rolls " + die);
+            die = rand.Next(1, 21);
+            //Console.WriteLine("Defender rolls " + die);
+            int defenseRoll = die * (defender.Defense + defender.Level);
+            int damage = (attackRoll - defenseRoll) / 10;
+
+            //miss logic
+            if (damage < 0)
+            {
+                damage = 0;
+            }
+            return damage;
         }
         private Queue<Fighter> setOrder()
         {
