@@ -157,6 +157,21 @@ namespace App11.Models
         {
             return attackDamage(x, y);
         }
+        public bool testSetOrder()
+        {
+            Queue<Fighter> fightOrder = setOrder();
+            Fighter prevFighter = fightOrder.Dequeue();
+            for (int i =0; i < fightOrder.Count; i++)
+            {
+                if (fightOrder.Peek().Speed > prevFighter.Speed)
+                {
+                    return false;
+                }
+                fightOrder.Dequeue();
+            }
+            return true;
+
+        }
         public int monstQueueSize()
         {
             return monstQueue.Count;
