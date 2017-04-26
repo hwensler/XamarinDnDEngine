@@ -158,9 +158,17 @@ namespace App11.Models
                 monstQueue.Enqueue(new Monster(5, 5, 5, i + 1, 5, 0));
             }
         }
-        public int testBattleLogic(Fighter x, Fighter y)
+        public bool testBattleLogic(Fighter x, Fighter y)
         {
-            return attackDamage(x, y);
+            int  dam = attackDamage(x, y);
+            if (dam >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public bool testSetOrder()
         {

@@ -81,5 +81,15 @@ namespace Unit_Test
             Results testResult = testBattle.initBattle();
             Assert.IsNotNull(testResult.points);
         }
+        [TestMethod]
+        public void damageIsGreaterThanOrEqualZero()
+        {
+            Battle testBattle = new Battle();
+            bool damage =
+                testBattle.testBattleLogic(
+                    new Character(10, 10, 5, 1, 10, 0), 
+                    new Monster(10, 10, 5, 1, 10, 0));
+            Assert.IsTrue(damage);
+        }
     }
 }
