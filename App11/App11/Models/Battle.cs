@@ -12,6 +12,11 @@ namespace App11.Models
         int die;
         Results battleResult = new Results();
 
+        public Battle()
+        {
+
+        }
+
         //Constructor is used to set up the battle
         public Battle(Queue<Fighter> charQueue)
         {
