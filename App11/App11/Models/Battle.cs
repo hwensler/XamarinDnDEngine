@@ -153,6 +153,10 @@ namespace App11.Models
                 monstQueue.Enqueue(new Monster(5, 5, 5, i + 1, 5, 0));
             }
         }
+        public int testBattleLogic(Fighter x, Fighter y)
+        {
+            return attackDamage(x, y);
+        }
         public int monstQueueSize()
         {
             return monstQueue.Count;
