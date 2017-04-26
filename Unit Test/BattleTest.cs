@@ -91,5 +91,18 @@ namespace Unit_Test
                     new Monster(10, 10, 5, 1, 10, 0));
             Assert.IsTrue(damage);
         }
+        [TestMethod]
+        public void BattleQueueisSorted()
+        {
+            Queue<Fighter> charQueue = new Queue<Fighter>();
+            for (int i = 0; i < 4; i++)
+            {
+                charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10, 0));
+            }
+
+            Battle testBattle = new Battle(charQueue);
+            bool isSorted = testBattle.testSetOrder();
+            Assert.IsTrue(isSorted);
+        }
     }
 }
