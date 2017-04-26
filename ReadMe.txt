@@ -7,4 +7,6 @@ CharacterTest tests only the tests unique to character (as those inherited from 
 Getters and setters aren't tested (save for one of each in MonsterTest) because that code is part of visual studio/C# and if it's broken...
 then there's something deeply wrong with visual studio and C#
 
-Screencaps of the running project are in /Documentation/Week5 screencaps
+Screencaps of the running project are in /Documentation/Week5 screencaps. 
+
+Please run in android emmulator.
