@@ -9,20 +9,18 @@
 //------------------------------------------------------------------------------
 
 namespace App11.Views {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\brook\\source\\repos\\sudigits2\\app11\\App11\\Views\\MonstersPage.xaml")]
     public partial class MonstersPage : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView MonstersList;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(MonstersPage));
-            MonstersList = this.FindByName<global::Xamarin.Forms.ListView>("MonstersList");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MonstersPage));
+            MonstersList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "MonstersList");
         }
     }
 }

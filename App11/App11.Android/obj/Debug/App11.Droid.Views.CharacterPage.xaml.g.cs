@@ -9,20 +9,18 @@
 //------------------------------------------------------------------------------
 
 namespace App11.Views {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\brook\\source\\repos\\sudigits2\\app11\\App11\\Views\\CharacterPage.xaml")]
     public partial class CharacterPage : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView listView;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(CharacterPage));
-            listView = this.FindByName<global::Xamarin.Forms.ListView>("listView");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CharacterPage));
+            listView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "listView");
         }
     }
 }
