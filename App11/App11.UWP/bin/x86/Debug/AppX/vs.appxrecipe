@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Brook\Source\Repos\SUDigits2\App11\App11.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-27T23:14:01.510</Modified>
+      <Modified>2017-04-28T21:04:03.365</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brook\Source\Repos\SUDigits2\App11\App11.UWP\bin\x86\Debug\App11.UWP.exe">
       <PackagePath>entrypoint\App11.UWP.exe</PackagePath>
-      <Modified>2017-04-27T23:13:50.116</Modified>
+      <Modified>2017-04-28T21:03:56.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brook\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -616,11 +616,11 @@
     <AppxPackagedFile Include="C:\Users\Brook\Source\Repos\SUDigits2\App11\App11.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-27T23:13:59.619</Modified>
+      <Modified>2017-04-28T21:04:01.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brook\Source\Repos\SUDigits2\App11\App11.UWP\bin\x86\Debug\Core\App11.UWP.exe">
       <PackagePath>App11.UWP.exe</PackagePath>
-      <Modified>2017-04-27T23:14:01.501</Modified>
+      <Modified>2017-04-28T21:04:03.350</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
