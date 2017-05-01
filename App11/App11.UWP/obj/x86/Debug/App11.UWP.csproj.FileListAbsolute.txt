@@ -934,3 +934,4 @@ C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\qualifiers.t
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.csprojResolveAssemblyReference.cache

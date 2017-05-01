@@ -20,8 +20,18 @@ namespace App11.Models
         //Constructor is used to set up the battle
         public Battle(Queue<Fighter> charQueue)
         {
+            double difficulty = .75;
             this.charQueue = charQueue;
-            initMonstQueue();
+            int battleValue = 0;
+            int hpValue = 0;
+            for (int i = 0; i < charQueue.Count; i++)
+            {
+                battleValue += charQueue.Peek().Strength + charQueue.Peek().Defense +
+                     charQueue.Peek().Speed;
+                hpValue += charQueue.Peek().HitPoints;
+
+            }
+            initMonstQueue((int)(battleValue * difficulty), (hpValue / charQueue.Count));
         }
         
 
@@ -149,13 +159,38 @@ namespace App11.Models
             }
             return fightOrder;
         }
-        private void initMonstQueue()
+        private void initMonstQueue(int battleValue, int hpValue)
         {
+            Monster[] statDistrib = new Monster[4];
+            Random statRand = new Random();
+            int applyStat;
+            int statNum;
+            for (int i = 0; i < 4; i++)
+            {
+                statDistrib[i] = new Monster(0, 0, 0, i, hpValue, 0, "Monster " + (i + 1));
+            }
+            for (int i = 0; i < battleValue; i++)
+            {
+                applyStat = statRand.Next(0, 4);
+                statNum = statRand.Next(0, 3);
+                if (statNum == 0)
+                {
+                    statDistrib[applyStat % 4].Strength += 1;
+                }
+                else if (statNum == 1)
+                {
+                    statDistrib[applyStat % 4].Defense += 1;
+                }
+                else
+                {
+                    statDistrib[applyStat % 4].Speed += 1;
+                }
+            }
             //for now, each monster will be initialized with 5 default on all stats. 
             //later we can make this a function based on the stats from the charQueue
             for (int i = 0; i < 4; i++)
             {
-                monstQueue.Enqueue(new Monster(5, 5, 5, i + 1, 5, 0));
+                monstQueue.Enqueue(statDistrib[i]);
             }
         }
         public bool testBattleLogic(Fighter x, Fighter y)
