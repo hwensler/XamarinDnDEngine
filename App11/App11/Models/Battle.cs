@@ -128,11 +128,11 @@ namespace App11.Models
                 fightOrderArr[i + charQueue.Count] = loader;
                 monstQueue.Enqueue(loader);
             }
-            for (int i = 0; i < fightOrderArr.Length; i++)
+            for (int i = 0; i < (charQueue.Count + monstQueue.Count); i++)
             {
-                for (int j = 0; j < fightOrderArr.Length; j++)
+                for (int j = 0; j < (charQueue.Count + monstQueue.Count); j++)
                 {
-                    if (fightOrderArr[j].Speed > fightOrderArr[i].Speed)
+                    if (fightOrderArr[j].Speed < fightOrderArr[i].Speed)
                     {
                         Fighter temp = fightOrderArr[i];
                         fightOrderArr[i] = fightOrderArr[j];
@@ -143,7 +143,7 @@ namespace App11.Models
 
             //UNIT TEST HERE TO MAKE SURE THAT ARR IS SORTED
             //Create the Queue for the fight order
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < (charQueue.Count + monstQueue.Count); i++)
             {
                 fightOrder.Enqueue(fightOrderArr[i]);
             }

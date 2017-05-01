@@ -830,7 +830,6 @@ C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Xamarin.Form
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Xamarin.Forms.Platform.dll
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.csprojResolveAssemblyReference.cache
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App.g.i.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\MainPage.g.i.cs
