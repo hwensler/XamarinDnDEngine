@@ -26021,10 +26021,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Brook\\Source\\Repos\\SUDigits2\\App11\\App11.UWP\\App11.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Brook\\Source\\Repos\\SUDigits3\\App11\\App11.UWP\\App11.UWP.csproj",
       "projectName": "App11.UWP",
-      "projectPath": "C:\\Users\\Brook\\Source\\Repos\\SUDigits2\\App11\\App11.UWP\\App11.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\Brook\\Source\\Repos\\SUDigits2\\App11\\App11.UWP\\project.json",
+      "projectPath": "C:\\Users\\Brook\\Source\\Repos\\SUDigits3\\App11\\App11.UWP\\App11.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\Brook\\Source\\Repos\\SUDigits3\\App11\\App11.UWP\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

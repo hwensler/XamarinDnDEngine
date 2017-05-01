@@ -68,3 +68,43 @@ C:\Users\Brook\Source\Repos\SUDigits2\Unit Test\bin\Debug\Xamarin.Forms.Platform
 C:\Users\Brook\Source\Repos\SUDigits2\Unit Test\bin\Debug\FormsViewGroup.pdb
 C:\Users\Brook\Source\Repos\SUDigits2\Unit Test\obj\Debug\Unit Test.dll
 C:\Users\Brook\Source\Repos\SUDigits2\Unit Test\obj\Debug\Unit Test.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Unit Test.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Unit Test.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\App11.Android.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\SQLite-net.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Platform.Android.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\FormsViewGroup.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.Fragment.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.Compat.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\App11.Android.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\SQLite-net.xml
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\bin\Debug\FormsViewGroup.pdb
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\obj\Debug\Unit Test.csprojResolveAssemblyReference.cache
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\obj\Debug\Unit Test.dll
+C:\Users\Brook\Source\Repos\SUDigits3\Unit Test\obj\Debug\Unit Test.pdb

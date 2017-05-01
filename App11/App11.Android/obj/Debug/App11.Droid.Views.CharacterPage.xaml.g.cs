@@ -11,7 +11,7 @@
 namespace App11.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\brook\\source\\repos\\sudigits2\\app11\\App11\\Views\\CharacterPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Brook\\Source\\Repos\\SUDigits3\\App11\\App11\\Views\\CharacterPage.xaml")]
     public partial class CharacterPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
