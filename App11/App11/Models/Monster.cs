@@ -52,7 +52,18 @@ namespace App11.Models
             this.level = level;
             this.isHuman = false;
         }
-       
+        public Monster(int strength, int defense, int speed, int stackOrder, int hitPoints, int level, string name)
+        {
+
+            this.strength = strength;
+            this.defense = defense;
+            this.speed = speed;
+            this.stackOrder = stackOrder;
+            this.hitPoints = hitPoints;
+            this.level = level;
+            this.name = name;
+            this.isHuman = false;
+        }
 
         //adding crud features below
 

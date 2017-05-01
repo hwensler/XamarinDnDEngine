@@ -44,6 +44,18 @@ namespace App11.Models
             this.isHuman = true;
         }
 
+        public Character(int strength, int defense, int speed, int stackOrder, int hitPoints, int level, string name)
+        {
+            this.strength = strength;
+            this.defense = defense;
+            this.speed = speed;
+            this.stackOrder = stackOrder;
+            this.hitPoints = hitPoints;
+            this.experience = 0;
+            this.level = level;
+            this.name = name;
+            this.isHuman = true;
+        }
         public void AwardExp(int expAward)
         {
             this.experience += expAward;
