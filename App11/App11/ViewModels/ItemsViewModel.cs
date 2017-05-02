@@ -21,7 +21,7 @@ namespace App11.ViewModels
 
         //data will come from ItemsPage
         App11.Services.ItemsData data;
-
+        //note from sunny: Where is this?
 
         public ItemsViewModel()
         {

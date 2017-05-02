@@ -28,7 +28,8 @@ namespace App11
 
             if (!database.Table<Monster>().Any())
             {
-                AddNewMonster(new Monster());
+                //empty list for now
+                //AddNewMonster(new Monster());
             }
         }
         //for adding monsters
