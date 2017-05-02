@@ -9,7 +9,7 @@ namespace App11.Views
 	public partial class NewItemPage : ContentPage
 	{
 		public Item Item { get; set; }
-
+        ItemsDBDataAccess itemAccess;
 		public NewItemPage()
 		{
 			InitializeComponent();
@@ -22,11 +22,17 @@ namespace App11.Views
 
 			BindingContext = this;
 		}
-
-		async void Save_Clicked(object sender, EventArgs e)
-		{
-			MessagingCenter.Send(this, "AddItem", Item);
-			await Navigation.PopToRootAsync();
-		}
+        public NewItemPage(Item edit)
+        {
+            InitializeComponent();
+            itemAccess = new ItemsDBDataAccess();
+            Item = edit;
+            BindingContext = this;                      //bind to display the current details
+        }
+		//async void Save_Clicked(object sender, EventArgs e)
+		//{
+		//	MessagingCenter.Send(this, "AddItem", Item);
+		//	await Navigation.PopToRootAsync();
+		//}
 	}
 }

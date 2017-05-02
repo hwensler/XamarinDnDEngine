@@ -82,5 +82,39 @@ namespace App11
                   => Item.itemId == id);
             }
         }
+        public string SaveOrUpdateItem(Item edit)
+        {
+            //again this does nothing right now
+            lock (collisionLock)
+            {
+                //if item exists
+                if (edit.Id != null)
+                {
+                    database.Update(edit);
+                    return edit.Id;
+                }
+                //if it does not exist in database yet
+                else
+                {
+                    database.Insert(edit);
+                    return edit.Id;
+                }
+            }
+        }
+
+        public string DeleteItem(Item delete)
+        {
+            var id = delete.Id;
+            if (id != null)
+            {
+                lock (collisionLock)
+                {
+                    database.Delete<Item>(id);
+                }
+            }
+            //remove the item and return the id
+            this.Items.Remove(delete);
+            return id;
+        }
     }
 }
