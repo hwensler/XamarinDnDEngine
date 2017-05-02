@@ -16,7 +16,7 @@ namespace App11.Views
 
 			Item = new Item
 			{
-				Text = "Item name",
+				Name = "Item name",
 				Description = "This is a nice description"
 			};
 
