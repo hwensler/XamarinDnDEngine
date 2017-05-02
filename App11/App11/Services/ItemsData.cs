@@ -22,12 +22,12 @@ namespace App11.Services
             items = new List<Item>();
             var _items = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Sword", Description= "A really cool sword. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Shield", Description="A really cool shield. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Shoes", Description="A really cool pair of shoes. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Bow", Description="A realy cool bow.", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Lance", Description="A really cool lance. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Axe", Description="A really cool axe. " , Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Small Sword", Description= "A really cool sword. ", Strength = 1, Attribute = "Strength" },
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Cool Shield", Description="A really cool shield. ", Strength = 1, Attribute = "Defense" },
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Used Basketball Shoes", Description="Some used basketball shoes. Run fast!", Strength = 1, Attribute = "Speed" },
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Bow", Description="A realy cool bow.", Strength = 1, Attribute = "Strength" },
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Ring of Life", Description = "A really cool ring that increases HP. ", Strength = 1, Attribute = "HP"},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Baby Oil", Description="Slicken up for top speed! " , Strength = 1, Attribute = "Speed"},
             };
 
             foreach (Item item in _items)
