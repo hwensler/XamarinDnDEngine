@@ -10,6 +10,6 @@ namespace App11.Models
     {
         public bool charsWon;
         public int points;
-        public DDItem loot;
+        public Item loot;
     }
 }

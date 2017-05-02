@@ -11,7 +11,7 @@ using App11.ViewModels;
 
 namespace App11
 {
-    public class DBDataAccess
+    public class MonstersDBDataAccess
     {
         private SQLiteConnection database;
         //don't really have an implmentation of a lock yet
@@ -19,7 +19,7 @@ namespace App11
 
         public ObservableCollection<Monster> Monsters { get; set; }
 
-        public DBDataAccess()
+        public MonstersDBDataAccess()
         {
             database = DependencyService.Get<IDatabaseConnection>().
                 DbConnection();

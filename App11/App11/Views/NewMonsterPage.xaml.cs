@@ -17,11 +17,11 @@ namespace App11.Views
         
         public Monster Monsters { get; set; }           //to store monster to use on this page
        
-        DBDataAccess monAccess;                         //start a database access
+        MonstersDBDataAccess monAccess;                         //start a database access
         public NewMonsterPage()
         {
             InitializeComponent();
-            monAccess = new DBDataAccess();             //intialize the database
+            monAccess = new MonstersDBDataAccess();             //intialize the database
             Title = "New Entry";                        //bind from xaml page
             Monsters = new Monster                      //intialize a new monster
             {
@@ -34,7 +34,7 @@ namespace App11.Views
         public NewMonsterPage(Monster edit)
         {
             InitializeComponent();
-            monAccess = new DBDataAccess();
+            monAccess = new MonstersDBDataAccess();
             Title = "Change Monster details";
             Monsters = edit;
             BindingContext = this;                      //bind to display the current details

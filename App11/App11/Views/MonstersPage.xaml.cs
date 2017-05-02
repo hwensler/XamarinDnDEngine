@@ -15,12 +15,12 @@ namespace App11.Views
 	public partial class MonstersPage : ContentPage
 	{
         //to access the database
-        DBDataAccess DNDDatabase;
+        MonstersDBDataAccess DNDDatabase;
 		public MonstersPage ()
 		{
 			InitializeComponent ();
             //initializing
-            this.DNDDatabase = new DBDataAccess();
+            this.DNDDatabase = new MonstersDBDataAccess();
         }
         //display the Monsters
         protected override void OnAppearing()

@@ -15,11 +15,11 @@ namespace App11.Views
 	public partial class MonsterDetailPage : ContentPage
 	{
         MonsterDetailViewModel MonsterModel;
-        DBDataAccess DNDDatabase;
+        MonstersDBDataAccess DNDDatabase;
 		public MonsterDetailPage (MonsterDetailViewModel monModel)
 		{
 			InitializeComponent ();
-            DNDDatabase = new DBDataAccess();
+            DNDDatabase = new MonstersDBDataAccess();
             BindingContext = this.MonsterModel = monModel;
         }
         async void OnDeleteClick(object sender, EventArgs args)
