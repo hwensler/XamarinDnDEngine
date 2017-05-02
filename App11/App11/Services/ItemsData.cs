@@ -22,12 +22,12 @@ namespace App11.Services
             items = new List<Item>();
             var _items = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sword", Description= "A really cool sword. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Shield", Description="A really cool shield. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Shoes", Description="A really cool pair of shoes. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Bow", Description="A realy cool bow.", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Lance", Description="A really cool lance. ", Strength = 1},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Axe", Description="A really cool axe. " , Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Sword", Description= "A really cool sword. ", Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Shield", Description="A really cool shield. ", Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Shoes", Description="A really cool pair of shoes. ", Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Bow", Description="A realy cool bow.", Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Lance", Description="A really cool lance. ", Strength = 1},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "Axe", Description="A really cool axe. " , Strength = 1},
             };
 
             foreach (Item item in _items)
