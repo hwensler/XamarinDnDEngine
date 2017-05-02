@@ -31,7 +31,11 @@ namespace App11.Models
                 hpValue += charQueue.Peek().HitPoints;
 
             }
-            initMonstQueue((int)(battleValue * difficulty), (hpValue / charQueue.Count));
+            if (charQueue.Count != 0)
+            {
+                initMonstQueue((int)(battleValue * difficulty), (hpValue / charQueue.Count));
+            }
+            
         }
         
 
