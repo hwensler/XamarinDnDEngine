@@ -8,13 +8,15 @@
         <ToolbarItem Name="Add" Clicked="OnAddClick" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <!--binding path monsters is to the monsters table-->
         <ListView x:Name="MonstersList"
-            ItemsSource = "{Binding Path= Monsters }"
+            ItemsSource = "{Binding Path = Monsters }"
             ItemSelected = "OnSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Vertical">
+                            <!--This binds the name of the monster in view detail-->
                             <Label Text="{Binding Name}"
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemTextStyle}"

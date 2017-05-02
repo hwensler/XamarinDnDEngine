@@ -1,14 +1,24 @@
-﻿namespace App11.Models
+﻿using System;
+using SQLite;
+using System.ComponentModel;
+
+namespace App11.Models
 {
+    [Table("Items")]
     public class Item : BaseDataObject
-	{
-		string text = string.Empty;
-		public string Text
+    {
+        
+        public String itemId { get; set; }
+
+        //the name of an item
+        string name = string.Empty;
+        public string Name
 		{
-			get { return text; }
-			set { SetProperty(ref text, value); }
+			get { return name; }
+			set { SetProperty(ref name, value); }
 		}
 
+        //the description of an item
 		string description = string.Empty;
 		public string Description
 		{
@@ -18,5 +28,10 @@
 
         //the strength of the item
         public int Strength { get; set; }
+
+        //tells what attribute (strength, defense, speed, hp) the item modifies
+        public string Attribute { get; set; }
+
+
     }
 }

@@ -15,12 +15,12 @@ namespace App11.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
-
+        ItemsDBDataAccess DNDDatabase;
         public ItemsPage()
         {
             InitializeComponent();
-
-            BindingContext = viewModel = new ItemsViewModel();
+            this.DNDDatabase = new ItemsDBDataAccess();
+           
         }
 
         //if clicked, go to the item detail page
@@ -39,9 +39,14 @@ namespace App11.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            this.BindingContext = this.DNDDatabase;
+            //if (viewModel.Items.Count == 0)
+            //{
+            //    viewModel.LoadItemsCommand.Execute(null);
+            //    BindingContext = viewModel = new ItemsViewModel();
+                
+            //}
+                
         }
     }
 }

@@ -1,1 +1,1 @@
-C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\App11.UWP.csproj;x86
+D:\Repositories\Public\DigitsGame\App11\App11.UWP\App11.UWP.csproj;x86
