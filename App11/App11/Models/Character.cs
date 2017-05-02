@@ -16,8 +16,8 @@ namespace App11.Models
         protected int experience;
         public int Experience { get { return experience; } set { this.experience = value; } }
 
-        //placholder until item implementation
-        //List<DDItem> inventory = new List<DDItem> ();
+       //items list in action!
+        List<Item> inventory = new List<Item> ();
 
         //default constructor
         public Character()
