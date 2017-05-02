@@ -28,5 +28,9 @@ namespace App11.ViewModels
             get { return quantity; }
             set { SetProperty(ref quantity, value); }
         }
+        public Item getItem()
+        {
+            return Item;
+        }
     }
 }

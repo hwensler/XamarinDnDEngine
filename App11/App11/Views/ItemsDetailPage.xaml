@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App11.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem Name="Update" Clicked="OnUpdateClick" />
         <ToolbarItem Name="Delete" Clicked="OnDeleteClick" />
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
     <StackLayout Spacing="20" Padding="15">
+        <Label Text="{Binding Item.itemId} "/>
         <Label Text="{Binding Item.Name}" FontSize="Large"/>
         <Label Text="Description: " FontSize="Medium" />
         <Label Text="{Binding Item.Description}" FontSize="Small"/>

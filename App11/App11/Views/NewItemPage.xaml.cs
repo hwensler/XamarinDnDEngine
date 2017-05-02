@@ -29,10 +29,11 @@ namespace App11.Views
             Item = edit;
             BindingContext = this;                      //bind to display the current details
         }
-		//async void Save_Clicked(object sender, EventArgs e)
-		//{
-		//	MessagingCenter.Send(this, "AddItem", Item);
-		//	await Navigation.PopToRootAsync();
-		//}
-	}
+        //this method upon clicking of save will update the item details.
+        async void Save_Clicked(object sender, EventArgs e)
+        {
+            itemAccess.SaveOrUpdateItem(Item);
+            await Navigation.PopToRootAsync();
+        }
+    }
 }
