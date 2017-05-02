@@ -15,7 +15,7 @@ namespace App11.Models
         }
         public BattleController()
         {
-
+            newBattle = new Battle();
         }
         public Results initBattle()
         {
