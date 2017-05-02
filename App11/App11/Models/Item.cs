@@ -1,14 +1,18 @@
-﻿namespace App11.Models
+﻿using System;
+
+namespace App11.Models
 {
     public class Item : BaseDataObject
 	{
-		string text = string.Empty;
+        public Guid id { get; set; }
+
 
         //the name of an item
-		public string Name
+        string name = string.Empty;
+        public string Name
 		{
 			get { return Name; }
-			set { SetProperty(ref text, value); }
+			set { SetProperty(ref name, value); }
 		}
 
         //the description of an item
@@ -24,5 +28,6 @@
 
         //tells what attribute (strength, defense, speed, hp) the item modifies
         public string Attribute { get; set; }
+
     }
 }
