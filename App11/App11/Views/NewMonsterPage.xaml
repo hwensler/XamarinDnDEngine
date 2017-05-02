@@ -9,6 +9,7 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Text" FontSize="Medium" />
+            <!--Binding path is to the monster class-->
             <Entry Text="{Binding Monsters.Name}" FontSize="Small" />
             <Label Text="Description" FontSize="Medium" />
             <Entry Text="{Binding Monsters.Description}" FontSize="Small"/>
