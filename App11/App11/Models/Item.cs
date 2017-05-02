@@ -3,12 +3,15 @@
     public class Item : BaseDataObject
 	{
 		string text = string.Empty;
+
+        //the name of an item
 		public string Name
 		{
 			get { return Name; }
 			set { SetProperty(ref text, value); }
 		}
 
+        //the description of an item
 		string description = string.Empty;
 		public string Description
 		{
