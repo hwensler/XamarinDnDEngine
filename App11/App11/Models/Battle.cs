@@ -6,11 +6,11 @@ namespace App11.Models
 {
     public class Battle
     {
-        Queue<Fighter> charQueue;
-        Queue<Fighter> monstQueue = new Queue<Fighter>();
-        Random rand = new Random();
-        int die;
-        Results battleResult = new Results();
+        public Queue<Fighter> charQueue;
+        public Queue<Fighter> monstQueue = new Queue<Fighter>();
+        public Random rand = new Random();
+        public int die;
+        public Results battleResult = new Results();
 
         public Battle()
         {
@@ -31,12 +31,17 @@ namespace App11.Models
                 hpValue += charQueue.Peek().HitPoints;
 
             }
-            initMonstQueue((int)(battleValue * difficulty), (hpValue / charQueue.Count));
+            if (charQueue.Count != 0)
+            {
+                initMonstQueue((int)(((battleValue / charQueue.Count) * 4) * difficulty),
+                    (hpValue / charQueue.Count));
+            }
+            
         }
         
 
         //run the battle, maybe set this up to return a struct containing battle won/lost, score, and loot 
-        public Results initBattle()
+        /*public Results initBattle()
         {
             if (charQueue.Count == 0)
             {
@@ -158,7 +163,7 @@ namespace App11.Models
                 fightOrder.Enqueue(fightOrderArr[i]);
             }
             return fightOrder;
-        }
+        }*/
         private void initMonstQueue(int battleValue, int hpValue)
         {
             Monster[] statDistrib = new Monster[4];
@@ -193,7 +198,7 @@ namespace App11.Models
                 monstQueue.Enqueue(statDistrib[i]);
             }
         }
-        public bool testBattleLogic(Fighter x, Fighter y)
+        /*public bool testBattleLogic(Fighter x, Fighter y)
         {
             int  dam = attackDamage(x, y);
             if (dam >= 0)
@@ -227,6 +232,6 @@ namespace App11.Models
         public int charQueueSize()
         {
             return charQueue.Count;
-        }
+        }*/
     }
 }

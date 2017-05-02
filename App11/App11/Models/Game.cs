@@ -23,11 +23,11 @@ namespace App11.Models
         private void gameEngine()
         {
             roundScore.currScore = 0;
-            Battle currentRound;
+            BattleController currentRound;
             Results currResults;
             do
             {
-                currentRound = new Battle(charQueue);
+                currentRound = new BattleController(charQueue);
                 currResults = currentRound.initBattle();
                 //Readline was to stop after each round. Good place to display a round update
                 //Console.ReadLine();

@@ -31,7 +31,7 @@ namespace Unit_Test
             {
                 charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10,0));
             }
-            Battle testBattle = new Battle(charQueue);
+            BattleController testBattle = new BattleController(charQueue);
             Assert.AreEqual(testBattle.charQueueSize(), 4);
         }
 
@@ -39,7 +39,7 @@ namespace Unit_Test
         public void MonsterTeamSizeCorrect()
         {
             initCharTeam();
-            Battle testBattle = new Battle(charTeam);
+            BattleController testBattle = new BattleController(charTeam);
             Assert.AreEqual(testBattle.monstQueueSize(), 4);
 
         }
@@ -53,7 +53,7 @@ namespace Unit_Test
                 charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10, 0));
             }
 
-            Battle testBattle = new Battle(charQueue);
+            BattleController testBattle = new BattleController(charQueue);
             Results testResult = testBattle.initBattle();
             Assert.IsNotNull(testResult);
         }
@@ -63,7 +63,7 @@ namespace Unit_Test
         public void EmptyCharQueuMonstWin()
         {
             Queue<Fighter> charQueue = new Queue<Fighter>();
-            Battle testBattle = new Battle(charQueue);
+            BattleController testBattle = new BattleController(charQueue);
             Results testResult = testBattle.initBattle();
             Assert.IsFalse(testResult.charsWon);
         }
@@ -77,14 +77,14 @@ namespace Unit_Test
                 charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10, 0));
             }
 
-            Battle testBattle = new Battle(charQueue);
+            BattleController testBattle = new BattleController(charQueue);
             Results testResult = testBattle.initBattle();
             Assert.IsNotNull(testResult.points);
         }
         [TestMethod]
         public void damageIsGreaterThanOrEqualZero()
         {
-            Battle testBattle = new Battle();
+            BattleController testBattle = new BattleController();
             bool damage =
                 testBattle.testBattleLogic(
                     new Character(10, 10, 5, 1, 10, 0), 
@@ -100,7 +100,7 @@ namespace Unit_Test
                 charQueue.Enqueue(new Character(10, 10, 5 + i, i + 1, 10, 0));
             }
 
-            Battle testBattle = new Battle(charQueue);
+            BattleController testBattle = new BattleController(charQueue);
             bool isSorted = testBattle.testSetOrder();
             Assert.IsTrue(isSorted);
         }
