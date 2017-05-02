@@ -30,6 +30,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DBDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Battle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BattleController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Character.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DDItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Fighter.cs" />
