@@ -3,9 +3,9 @@
     public class Item : BaseDataObject
 	{
 		string text = string.Empty;
-		public string Text
+		public string Name
 		{
-			get { return text; }
+			get { return Name; }
 			set { SetProperty(ref text, value); }
 		}
 
