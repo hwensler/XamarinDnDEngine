@@ -4,7 +4,7 @@ namespace App11.Models
 {
     public class Item : BaseDataObject
 	{
-        public String Id { get; set; }
+        public String itemId { get; set; }
 
 
         //the name of an item
