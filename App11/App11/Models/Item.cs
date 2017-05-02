@@ -18,5 +18,8 @@
 
         //the strength of the item
         public int Strength { get; set; }
+
+        //tells what attribute (strength, defense, speed, hp) the item modifies
+        public string Attribute { get; set; }
     }
 }
