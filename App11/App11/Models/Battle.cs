@@ -33,7 +33,8 @@ namespace App11.Models
             }
             if (charQueue.Count != 0)
             {
-                initMonstQueue((int)(battleValue * difficulty), (hpValue / charQueue.Count));
+                initMonstQueue((int)(((battleValue / charQueue.Count) * 4) * difficulty),
+                    (hpValue / charQueue.Count));
             }
             
         }
