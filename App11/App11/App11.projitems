@@ -27,7 +27,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MonstersDBDataAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsDBDataAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MonstersDBDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Battle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Character.cs" />
@@ -39,7 +40,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Round.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ScoreBoard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IDatabaseConnection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MonsterDetailViewModel.cs" />
@@ -94,7 +94,7 @@
       <DependentUpon>ScorePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)IFileHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterDetailPage.xaml.cs">
       <DependentUpon>CharacterDetailPage.xaml</DependentUpon>
     </Compile>
@@ -102,7 +102,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\CharacterDB.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
   </ItemGroup>
   <ItemGroup>
