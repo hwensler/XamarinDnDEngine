@@ -45,11 +45,10 @@ namespace App11.Models
                         int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
 
                         newBattle.monstQueue.Peek().HitPoints -= damage;
-                        Console.WriteLine("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
+                        newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
                         if (!newBattle.monstQueue.Peek().isAlive())
                         {
-                            Console.WriteLine("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", Died");
-                            newBattle.battleResult.points += newBattle.monstQueue.Peek().Level;
+                            newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", Died");
                             newBattle.monstQueue.Dequeue();
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
@@ -60,10 +59,10 @@ namespace App11.Models
                         int damage = attackDamage(fightOrder.Peek(), newBattle.charQueue.Peek());
 
                         newBattle.charQueue.Peek().HitPoints -= damage;
-                        Console.WriteLine("Char Tank, " + newBattle.charQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.charQueue.Peek().HitPoints);
+                        newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.charQueue.Peek().HitPoints);
                         if (!newBattle.charQueue.Peek().isAlive())
                         {
-                            Console.WriteLine("Char Tank, " + newBattle.charQueue.Peek().Name + ", Died");
+                            newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", Died");
                             newBattle.charQueue.Dequeue();
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
@@ -77,7 +76,7 @@ namespace App11.Models
             }
             else
             {
-
+                //assign items
                 newBattle.battleResult.charsWon = true;
             }
             return newBattle.battleResult;
@@ -87,9 +86,9 @@ namespace App11.Models
         {
             newBattle.die = newBattle.rand.Next(1, 21);
             int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
-            Console.WriteLine("Attacker, " + attacker.Name + ", rolls " + newBattle.die);
+            newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name +", rolls " + newBattle.die);
             newBattle.die = newBattle.rand.Next(1, 21);
-            Console.WriteLine("Defender, " + defender.Name + ", rolls " + newBattle.die);
+            newBattle.battleResult.battleOutput.Add("Defender, " + defender.Name + ", rolls " + newBattle.die);
             int defenseRoll = newBattle.die * (defender.Defense + defender.Level);
             int damage = (attackRoll - defenseRoll) / 10;
 
