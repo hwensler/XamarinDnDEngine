@@ -24,6 +24,7 @@ namespace App11.Models
             this.charQueue = charQueue;
             int battleValue = 0;
             int hpValue = 0;
+            this.battleResult.battleOutput = new System.Collections.ObjectModel.ObservableCollection<string>();
             for (int i = 0; i < charQueue.Count; i++)
             {
                 battleValue += charQueue.Peek().Strength + charQueue.Peek().Defense +
