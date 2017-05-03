@@ -35,10 +35,17 @@ namespace App11.Views
 
         public async void battleStart(object sender, EventArgs e)
         {
+            if (charQueue.Count != 0)
+            {
+                BattleController newBattle = new BattleController(charQueue);
+                battleResults = newBattle.initBattle();
+                await Navigation.PushAsync(new NewBattlePage(battleResults, charQueue, gameScore));
+            }
+            else
+            {
+                await Navigation.PushAsync(new GameOver());
+            }
             
-            BattleController newBattle = new BattleController(charQueue);
-            battleResults = newBattle.initBattle();
-            await Navigation.PushAsync(new NewBattlePage(battleResults,charQueue,gameScore));
         }
 
 	}

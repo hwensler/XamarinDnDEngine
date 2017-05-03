@@ -6,20 +6,6 @@
         <Label Text="This is the battle page. It will display all of the action! "
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
-        <ListView x:Name="ItemsListView"
-				ItemsSource="{Binding BattleOutput}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding  battleResults.battleOutput}"
-                               LineBreakMode="NoWrap"
-                               FontSize="12"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
         <Button Text="Start Battle" Clicked="battleStart" />
     </StackLayout>
 </ContentPage>
