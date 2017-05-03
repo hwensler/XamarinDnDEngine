@@ -32,19 +32,19 @@ namespace App11.Views
             BindingContext = this.viewModel = viewModel;
         }
 
-        async void OnDeleteClick(object sender, EventArgs args)
-        {
+    //    async void OnDeleteClick(object sender, EventArgs args)
+    //    {
             
-            Item ItemToDelete = viewModel.getItem();
-            DNDDatabase.DeleteItem(ItemToDelete);
-            //bring back to Item page
-            await Navigation.PushAsync(new ItemsPage());
-        }
+    //        Item ItemToDelete = viewModel.getItem();
+    //        DNDDatabase.DeleteItem(ItemToDelete);
+    //        //bring back to Item page
+    //        await Navigation.PushAsync(new ItemsPage());
+    //    }
 
-        async void OnUpdateClick(object sender, EventArgs args)
-        {
-            Item ItemToUpdate = viewModel.getItem();
-            await Navigation.PushAsync(new NewItemPage(ItemToUpdate));
-        }
+    //    async void OnUpdateClick(object sender, EventArgs args)
+    //    {
+    //        Item ItemToUpdate = viewModel.getItem();
+    //        await Navigation.PushAsync(new NewItemPage(ItemToUpdate));
+    //    }
     }
 }
