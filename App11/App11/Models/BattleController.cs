@@ -49,7 +49,6 @@ namespace App11.Models
                         if (!newBattle.monstQueue.Peek().isAlive())
                         {
                             newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", Died");
-                            newBattle.battleResult.points += newBattle.monstQueue.Peek().Level;
                             newBattle.monstQueue.Dequeue();
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
@@ -77,7 +76,7 @@ namespace App11.Models
             }
             else
             {
-
+                //assign items
                 newBattle.battleResult.charsWon = true;
             }
             return newBattle.battleResult;

@@ -19,9 +19,18 @@ namespace App11.Views
 		{
             
             InitializeComponent ();
-            ItemsListView.ItemsSource = results.battleOutput;
             this.charQueue = _charQueue;
             this.gameScore = _gameScore;
+            /*for (int i = 0; i < charQueue.Count; i++)
+            {
+                Character currChar = (Character)charQueue.Dequeue();
+                if (currChar.AwardExp((int)battleResults.points / charQueue.Count))
+                {
+                    battleResults.battleOutput.Add(currChar.Name + " leveled up to level " + currChar.Level);
+                }
+            }*/
+            ItemsListView.ItemsSource = results.battleOutput;
+            
         }
         /*protected override void OnAppearing()
         {
@@ -35,6 +44,8 @@ namespace App11.Views
             {
                 BattleController newBattle = new BattleController(charQueue);
                 battleResults = newBattle.initBattle();
+                gameScore.currScore += battleResults.points;
+                
                 await Navigation.PushAsync(new NewBattlePage(battleResults, charQueue, gameScore));
             }
             else

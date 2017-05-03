@@ -56,18 +56,21 @@ namespace App11.Models
             this.name = name;
             this.isHuman = true;
         }
-        public void AwardExp(int expAward)
+        public bool AwardExp(int expAward)
         {
             this.experience += expAward;
-            this.LevelUp();
+
+            return this.LevelUp();
         }
         //placeholder level up logic using a new level every 100 xp points, we can of course revisit
-        public void LevelUp()
+        public bool LevelUp()
         {
-            if (this.level < experience / 100)
+            if (this.level < experience / 10)
             {
-                level = experience / 100;
+                level = experience / 10;
+                return true;
             }
+            return false;
         }
     }
 }
