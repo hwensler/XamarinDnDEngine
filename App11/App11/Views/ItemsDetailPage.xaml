@@ -8,7 +8,6 @@
         <ToolbarItem Name="Delete" Clicked="OnDeleteClick" />
     </ContentPage.ToolbarItems>-->
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="{Binding Item.itemId} "/>
         <Label Text="{Binding Item.Name}" FontSize="Large"/>
         <Label Text="Description: " FontSize="Medium" />
         <Label Text="{Binding Item.Description}" FontSize="Small"/>
