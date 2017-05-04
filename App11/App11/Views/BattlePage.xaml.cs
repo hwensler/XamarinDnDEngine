@@ -19,10 +19,10 @@ namespace App11.Views
         public BattlePage ()
 		{
 			InitializeComponent ();
-            /*for(int i =0; i<4; i++)
+            for(int i =0; i<4; i++)
             {
                 charQueue.Enqueue(new Character(2, 2, 2, i + 1, 10, 0, "Character " + (i+1)));
-            }*/
+            }
 		}
 
         /*protected override async void OnAppearing()
