@@ -16,27 +16,27 @@ namespace App11
 		}
 
 		// initialization for demo purposes
-		public async Task Initialize()
-		{
-			int rowCount = await database.Table<Character>().CountAsync();
+		//public async Task Initialize()
+		//{
+		//	int rowCount = await database.Table<Character>().CountAsync();
 
-			if (rowCount == 0){
-				var _characters = new List<Character>
-				{
-					new Character { ID = 0, Name = "Test Character 1", StackOrder = 1,  Level= 10,
-									HitPoints = 20, Strength= 16, Defense = 16, Speed = 16},
-					new Character { ID = 0, Name = "Test Character 2", StackOrder = 2,  Level= 9,
-									HitPoints = 20, Strength= 16, Defense = 16, Speed = 16},
-					new Character { ID = 0, Name = "Test Character 3", StackOrder = 3,  Level= 8,
-									HitPoints = 20, Strength= 16, Defense = 16, Speed = 16}
-				};
+		//	if (rowCount == 0){
+		//		var _characters = new List<Character>
+		//		{
+		//			new Character { ID = 0, Name = "Test Character 1", StackOrder = 1,  Level= 10,
+		//							HitPoints = 20, Strength= 16, Defense = 16, Speed = 16},
+		//			new Character { ID = 0, Name = "Test Character 2", StackOrder = 2,  Level= 9,
+		//							HitPoints = 20, Strength= 16, Defense = 16, Speed = 16},
+		//			new Character { ID = 0, Name = "Test Character 3", StackOrder = 3,  Level= 8,
+		//							HitPoints = 20, Strength= 16, Defense = 16, Speed = 16}
+		//		};
 
-				foreach (Character character in _characters)
-				{
-					await database.InsertAsync(character);
-				}	
-			}
-		}
+		//		foreach (Character character in _characters)
+		//		{
+		//			await database.InsertAsync(character);
+		//		}	
+		//	}
+		//}
 
 		public Task<List<Character>> GetCharactersAsync()
 		{
