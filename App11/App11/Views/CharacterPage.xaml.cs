@@ -29,7 +29,7 @@ namespace App11.Views
 			((App)App.Current).ResumeAtCharacterId = -1;
 
 			// always insert if the db is empty
-			//await App.Database.Initialize();
+			await App.Database.Initialize();
 
 			listView.ItemsSource = await App.Database.GetCharactersAsync();
 		}

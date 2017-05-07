@@ -16,27 +16,38 @@ namespace App11
 		}
 
 		// initialization for demo purposes
-		//public async Task Initialize()
-		//{
-		//	int rowCount = await database.Table<Character>().CountAsync();
+		public async Task Initialize()
+		{
+			int rowCount = await database.Table<Character>().CountAsync();
 
-		//	if (rowCount == 0){
-		//		var _characters = new List<Character>
-		//		{
-		//			new Character { ID = 0, Name = "Test Character 1", StackOrder = 1,  Level= 10,
-		//							HitPoints = 20, Strength= 16, Defense = 16, Speed = 16},
-		//			new Character { ID = 0, Name = "Test Character 2", StackOrder = 2,  Level= 9,
-		//							HitPoints = 20, Strength= 16, Defense = 16, Speed = 16},
-		//			new Character { ID = 0, Name = "Test Character 3", StackOrder = 3,  Level= 8,
-		//							HitPoints = 20, Strength= 16, Defense = 16, Speed = 16}
-		//		};
+			if (rowCount == 0)
+			{
+				// use this to create different test characters
+				//var _characters = new List<Character>
+				//{
+				//	new Character { Name = "Character 1", StackOrder = 1,  Level= 0,
+				//					HitPoints = 10, Strength= 2, Defense = 2, Speed = 2},
+				//	new Character { Name = "Character 2", StackOrder = 2,  Level= 0,
+				//					HitPoints = 10, Strength= 2, Defense = 2, Speed = 2},
+				//	new Character { Name = "Character 3", StackOrder = 3,  Level= 0,
+				//					HitPoints = 10, Strength= 2, Defense = 2, Speed = 2},
+				//	new Character { Name = "Character 4", StackOrder = 4,  Level= 0,
+				//					HitPoints = 10, Strength= 2, Defense = 2, Speed = 2}
+				//};
 
-		//		foreach (Character character in _characters)
-		//		{
-		//			await database.InsertAsync(character);
-		//		}	
-		//	}
-		//}
+				// use this to create same test characters
+				var _characters = new List<Character>();
+				for(int i = 0; i < 4; i++)
+				{
+				    _characters.Add(new Character(2, 2, 2, i + 1, 10, 0, "Character " + (i+1)));
+				}
+
+				foreach (Character character in _characters)
+				{
+					await database.InsertAsync(character);
+				}	
+			}
+		}
 
 		public Task<List<Character>> GetCharactersAsync()
 		{
