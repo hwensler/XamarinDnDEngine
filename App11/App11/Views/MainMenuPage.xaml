@@ -4,9 +4,6 @@
              x:Class="App11.Views.MainMenuPage"
               Title="{Binding Title}"
              x:Name="BrowseMenuPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <Image Source="dnd.png" />

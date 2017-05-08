@@ -64,10 +64,6 @@ namespace App11.Views
             MainMenuListView.SelectedItem = null;
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new NewItemPage());
-        }
 
         protected override void OnAppearing()
         {
