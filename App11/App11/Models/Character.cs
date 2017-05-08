@@ -15,6 +15,7 @@ namespace App11.Models
 
         protected int experience;
         public int Experience { get { return experience; } set { this.experience = value; } }
+        private int timeToLevel = 10;
 
        //items list in action!
         List<Item> inventory = new List<Item> ();
@@ -68,11 +69,16 @@ namespace App11.Models
             if (this.level < experience / 10)
             {
                 int levelAward = (experience / 10) - this.level;
-                this.Strength += levelAward;
-                this.Speed += levelAward;
-                this.Defense += levelAward;
-                this.HitPoints += levelAward;
-                level = experience / 10;
+                for (int i =0; i < levelAward; i++)
+                {
+                    this.Strength++; ;
+                    this.Speed++;
+                    this.Defense++;
+                    this.HitPoints++;
+                    level++;
+                    timeToLevel = (int)(timeToLevel *1.2);
+                }
+                
                 return true;
             }
             return false;

@@ -20,7 +20,7 @@ namespace App11.Models
         //Constructor is used to set up the battle
         public Battle(Queue<Fighter> charQueue)
         {
-            double difficulty = .7;
+            double difficulty = .8;
             this.charQueue = charQueue;
             int battleValue = 0;
             int hpValue = 0;
