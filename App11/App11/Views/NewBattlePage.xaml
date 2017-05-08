@@ -4,7 +4,8 @@
              x:Class="App11.Views.NewBattlePage">
     <StackLayout>
         <ListView x:Name="ItemsListView"
-				ItemsSource="{Binding}">
+				ItemsSource="{Binding}"
+                HeightRequest="70">
             <ListView.ItemTemplate>
                 <DataTemplate>
                         <ViewCell>

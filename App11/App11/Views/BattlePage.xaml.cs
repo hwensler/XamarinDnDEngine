@@ -80,7 +80,7 @@ namespace App11.Views
                     {
                         Character currChar = (Character)charQueue.Dequeue();
                         charQueue.Enqueue(currChar);
-                        if (currChar.AwardExp((int)battleResults.points / charQueue.Count))
+                        if (currChar.AwardExp((int)battleResults.points / 4))
                         {
                             battleResults.battleOutput.Add(currChar.Name + " leveled up to level " + currChar.Level);
                         }
