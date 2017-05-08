@@ -65,7 +65,8 @@ namespace App11.Models
                         if (!newBattle.charQueue.Peek().isAlive())
                         {
                             newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", Died");
-                            newBattle.charQueue.Dequeue();
+                            newBattle.battleResult.deadChars.Add((Character)newBattle.charQueue.Dequeue());
+                            
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
                     }

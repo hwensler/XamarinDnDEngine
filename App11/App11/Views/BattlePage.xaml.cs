@@ -17,6 +17,7 @@ namespace App11.Views
         public Results battleResults;
         Queue<Fighter> charQueue = new Queue<Fighter>();
         ScoreBoard gameScore = new ScoreBoard();
+        
 
         public BattlePage()
 		{
@@ -69,8 +70,16 @@ namespace App11.Views
                 gameScore.round += 1;
                 BattleController newBattle = new BattleController(charQueue);
                 battleResults = newBattle.initBattle();
+                gameScore.deadChars = new ObservableCollection<Character>();
+                if (battleResults.deadChars.Count != 0)
+                {
 
-
+                    foreach (Character deadChar in battleResults.deadChars)
+                    {
+                        gameScore.deadChars.Add(deadChar);
+                    }
+                }
+                
                 if (charQueue.Count != 0)
                 {
                     Random itemDist = new Random();

@@ -8,6 +8,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App11.Models;
 using App11.ViewModels;
+
+
 namespace App11.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -22,6 +24,7 @@ namespace App11.Views
             gameScore = finalScore;
             //display the score
             BindingContext = this.gameScore;
+            listView.ItemsSource = finalScore.deadChars;
         }
         public async void goHome(object sender, EventArgs e)
         {

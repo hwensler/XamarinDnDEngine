@@ -11,8 +11,23 @@
         <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
         <Label Text= "Your score was:" HorizontalOptions="Center"  FontSize ="16"/>
         <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
+        <Button Text="View High Scores" Clicked="goScore" />
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontAttributes="Bold" FontSize="17" />
+                            <Label Text="{Binding Level, StringFormat='Lv: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            <Label Text="{Binding Strength, StringFormat='Strength: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            <Label Text="{Binding Speed, StringFormat='Speed: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            <Label Text="{Binding Defense, StringFormat='Defense: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Button Text="Home" Clicked="goHome" />
-        <Button Text="Score" Clicked="goScore" />
     </StackLayout>
    
 </ContentPage>

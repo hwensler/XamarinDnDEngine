@@ -4,18 +4,17 @@
              x:Class="App11.Views.NewBattlePage">
     <StackLayout>
         <ListView x:Name="ItemsListView"
-				ItemsSource="{Binding}"
-                HeightRequest="70">
+				ItemsSource="{Binding}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label Text="{Binding}"
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}"
                                    LineBreakMode="NoWrap"
                                    FontSize="12"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <Button Text="Next" Clicked="battleStart" />

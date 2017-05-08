@@ -12,5 +12,6 @@ namespace App11.Models
         public int points;
         public Item loot;
         public ObservableCollection<String> battleOutput;
+        public ObservableCollection<Character> deadChars;
     }
 }

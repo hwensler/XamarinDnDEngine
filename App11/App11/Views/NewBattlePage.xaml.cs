@@ -42,7 +42,13 @@ namespace App11.Views
                 gameScore.round += 1;
                 BattleController newBattle = new BattleController(charQueue);
                 battleResults = newBattle.initBattle();
-
+                if (battleResults.deadChars.Count != 0)
+                {
+                    foreach (Character deadChar in battleResults.deadChars)
+                    {
+                        gameScore.deadChars.Add(deadChar);
+                    }
+                }
                 if (charQueue.Count != 0)
                 {
                     Random itemDist = new Random();
