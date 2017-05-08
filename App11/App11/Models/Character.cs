@@ -65,9 +65,14 @@ namespace App11.Models
         //placeholder level up logic using a new level every 100 xp points, we can of course revisit
         public bool LevelUp()
         {
-            if (this.level < experience / 1)
+            if (this.level < experience / 10)
             {
-                level = experience / 1;
+                int levelAward = (experience / 10) - this.level;
+                this.Strength += levelAward;
+                this.Speed += levelAward;
+                this.Defense += levelAward;
+                this.HitPoints += levelAward;
+                level = experience / 10;
                 return true;
             }
             return false;

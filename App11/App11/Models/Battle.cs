@@ -38,6 +38,7 @@ namespace App11.Models
                 initMonstQueue((int)(((battleValue / charQueue.Count) * 4) * difficulty),
                     (hpValue / charQueue.Count));
             }
+
             this.battleResult.points = (int)(((battleValue / charQueue.Count) * 4));
         }
         
