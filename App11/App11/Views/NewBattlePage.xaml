@@ -7,14 +7,14 @@
 				ItemsSource="{Binding}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding}"
-                               LineBreakMode="NoWrap"
-                               FontSize="12"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding}"
+                                   LineBreakMode="NoWrap"
+                                   FontSize="12"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <Button Text="Next" Clicked="battleStart" />
