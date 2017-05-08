@@ -28,8 +28,8 @@ namespace App11
 
             if (!database.Table<Monster>().Any())
             {
-                //empty list for now
-                //AddNewMonster(new Monster());
+               
+                AddNewMonster();
             }
         }
         //for adding monsters
@@ -39,6 +39,40 @@ namespace App11
             {
                 Name="Name of monster",
                 Description="Description of monster",
+            });
+        }
+        //for adding monsters
+        public void AddNewMonster()
+        {
+            this.Monsters.Add(new Monster
+            {
+                Name = "Skeleton",
+                Description = "A reanimated calcified being derived from past fallen adventurers.",
+            });
+            this.Monsters.Add(new Monster
+            {
+                Name = "Goblin",
+                Description = "A small impish beast that relies on numbers rather than strength.",
+            });
+            this.Monsters.Add(new Monster
+            {
+                Name = "Orc",
+                Description = "A fell beast that relishes in butchering of its foes and allies alike.",
+            });
+            this.Monsters.Add(new Monster
+            {
+                Name = "Dragon",
+                Description = "A species that contains lizards to the mythical hellfire breather.",
+            });
+            this.Monsters.Add(new Monster
+            {
+                Name = "Demon",
+                Description = "A hellspawn that attempts to lure adventurers into madness.",
+            });
+            this.Monsters.Add(new Monster
+            {
+                Name = "Slime",
+                Description = "An amorphous creature that is forever hungry and digests all.",
             });
         }
         //querying monsters
