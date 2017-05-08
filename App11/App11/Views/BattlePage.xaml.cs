@@ -70,7 +70,7 @@ namespace App11.Views
             }
             else
             {
-                await Navigation.PushAsync(new GameOver());
+                await Navigation.PushAsync(new GameOver(gameScore));
             }
         }
 	}
