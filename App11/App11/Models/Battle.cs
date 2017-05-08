@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using App11.Models;
+using App11.Services;
 namespace App11.Models
 {
     public class Battle
@@ -11,6 +12,7 @@ namespace App11.Models
         public Random rand = new Random();
         public int die;
         public Results battleResult = new Results();
+        MonstersDBDataAccess DNDDatabase;
 
         public Battle()
         {
@@ -50,9 +52,11 @@ namespace App11.Models
             Random statRand = new Random();
             int applyStat;
             int statNum;
+            this.DNDDatabase = new MonstersDBDataAccess();
             for (int i = 0; i < 4; i++)
             {
-                statDistrib[i] = new Monster(0, 0, 0, i, hpValue, 0, "Monster " + (i + 1));
+                statDistrib[i] = new Monster(0, 0, 0, i, hpValue, 0,  
+                    DNDDatabase.Monsters[statRand.Next(0,DNDDatabase.Monsters.Count)].Name +" " + (i + 1));
             }
             for (int i = 0; i < battleValue; i++)
             {
