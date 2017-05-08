@@ -16,5 +16,10 @@ namespace App11.Views
 		{
 			InitializeComponent ();
 		}
-	}
+        public async void goHome(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
+
+    }
 }
