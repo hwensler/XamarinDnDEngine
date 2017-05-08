@@ -7,7 +7,9 @@
            VerticalOptions="Center" 
            HorizontalOptions="Center" 
            FontSize ="32"/>
+        <Label Text="{Binding currScore}"/>
         <Button Text="Home" Clicked="goHome" />
+        <Button Text="Score" Clicked="goScore" />
     </StackLayout>
    
 </ContentPage>

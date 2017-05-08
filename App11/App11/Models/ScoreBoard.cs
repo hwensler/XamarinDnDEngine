@@ -8,7 +8,7 @@ namespace App11.Models
 {
     public struct ScoreBoard
     {
-        public int currScore;
+        public int currScore { get; set; }
         public int round;
     }
 }
