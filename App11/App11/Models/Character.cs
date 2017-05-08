@@ -76,7 +76,7 @@ namespace App11.Models
                     this.Defense++;
                     this.HitPoints++;
                     level++;
-                    timeToLevel = (int)(timeToLevel *1.5);
+                    timeToLevel = (int)(timeToLevel *2);
                 }
                 
                 return true;

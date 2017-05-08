@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace App11.Models
 {
-    public struct ScoreBoard
+    public class ScoreBoard
     {
         public int currScore { get; set; }
-        public int round;
+        public int round { get; set; }
     }
 }

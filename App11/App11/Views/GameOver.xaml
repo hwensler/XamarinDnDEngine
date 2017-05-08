@@ -7,7 +7,10 @@
            VerticalOptions="Center" 
            HorizontalOptions="Center" 
            FontSize ="32"/>
-        <Label Text="{Binding currScore}"/>
+        <Label Text= "You made it to round:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
+        <Label Text= "Your score was:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
         <Button Text="Home" Clicked="goHome" />
         <Button Text="Score" Clicked="goScore" />
     </StackLayout>
