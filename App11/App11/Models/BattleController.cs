@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App11.ViewModels;
 
 namespace App11.Models
 {
     public class BattleController
     {
+        ItemsDBDataAccess DNDDatabase;
         Battle newBattle;
         public BattleController(Queue<Fighter> charQueue)
         {
@@ -76,7 +78,14 @@ namespace App11.Models
             }
             else
             {
-                //assign items
+                this.DNDDatabase = new ItemsDBDataAccess();
+                int itemIntRand = newBattle.rand.Next(0, DNDDatabase.Items.Count);
+                newBattle.battleResult.loot = DNDDatabase.Items[itemIntRand];
+
+                //could add grammar here to have more variance with loot
+                /*newBattle.battleResult.loot.Strength = 
+                    (int)(newBattle.battleResult.points/5) * ((newBattle.rand.Next(0,21))/10);*/
+                newBattle.battleResult.loot.Strength = newBattle.rand.Next(0, 11);
                 newBattle.battleResult.charsWon = true;
             }
             return newBattle.battleResult;

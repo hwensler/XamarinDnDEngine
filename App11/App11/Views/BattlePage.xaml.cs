@@ -73,6 +73,8 @@ namespace App11.Views
 
                 if (charQueue.Count != 0)
                 {
+                    Random itemDist = new Random();
+                    int charAwarded = itemDist.Next(0, charQueue.Count);
                     gameScore.currScore += battleResults.points;
                     for (int i = 0; i < charQueue.Count; i++)
                     {
@@ -81,6 +83,28 @@ namespace App11.Views
                         if (currChar.AwardExp((int)battleResults.points / charQueue.Count))
                         {
                             battleResults.battleOutput.Add(currChar.Name + " leveled up to level " + currChar.Level);
+                        }
+                        if (i == charAwarded)
+                        {
+                            battleResults.battleOutput.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
+                            if (battleResults.loot.Attribute == "Strength")
+                            {
+                                currChar.Strength += battleResults.loot.Strength;
+                            }
+                            else if (battleResults.loot.Attribute == "Defense")
+                            {
+                                currChar.Defense += battleResults.loot.Strength;
+                            }
+                            else if (battleResults.loot.Attribute == "Speed")
+                            {
+                                currChar.Speed += battleResults.loot.Strength;
+                            }
+                            else
+                            {
+                                currChar.HitPoints += battleResults.loot.Strength;
+                            }
+
                         }
                     }
                 }
