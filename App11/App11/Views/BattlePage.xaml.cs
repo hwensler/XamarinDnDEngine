@@ -60,18 +60,30 @@ namespace App11.Views
 
 		public async void battleStart(object sender, EventArgs e)
         {
-            if (charQueue.Count != 0)
-            {
-                BattleController newBattle = new BattleController(charQueue);
-                battleResults = newBattle.initBattle();
-                gameScore.currScore += battleResults.points;
-              
-                await Navigation.PushAsync(new NewBattlePage(battleResults, charQueue, gameScore));
-            }
-            else
+            if (charQueue.Count == 0)
             {
                 await Navigation.PushAsync(new GameOver(gameScore));
             }
+            
+            gameScore.round += 1;
+            BattleController newBattle = new BattleController(charQueue);
+            battleResults = newBattle.initBattle();
+            gameScore.currScore += battleResults.points;
+
+            if (charQueue.Count != 0)
+            {
+                for (int i = 0; i < charQueue.Count; i++)
+                {
+                    Character currChar = (Character)charQueue.Dequeue();
+                    if (currChar.AwardExp((int)battleResults.points / charQueue.Count))
+                    {
+                        battleResults.battleOutput.Add(currChar.Name + " leveled up to level " + currChar.Level);
+                    }
+                }
+            }
+              
+            await Navigation.PushAsync(new NewBattlePage(battleResults, charQueue, gameScore));
+           
         }
 	}
 }
