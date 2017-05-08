@@ -40,6 +40,7 @@ namespace App11.Views
         }*/
         public async void battleStart(object sender, EventArgs e)
         {
+            gameScore.round += 1;
             if (charQueue.Count != 0)
             {
                 BattleController newBattle = new BattleController(charQueue);

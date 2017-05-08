@@ -17,6 +17,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Text="Start Battle" Clicked="battleStart" />
+        <Button Text="Next" Clicked="battleStart" />
     </StackLayout>
 </ContentPage>
