@@ -11,7 +11,7 @@
         <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
         <Label Text= "Your score was:" HorizontalOptions="Center"  FontSize ="16"/>
         <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
-        <Entry Text="{Binding Name}" FontSize="16" HorizontalOptions="Center" />
+        <Entry Text="{Binding Name}" FontSize="16" HorizontalOptions="Fill" />
         <Button Text="View High Scores" Clicked="goScore" />
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
