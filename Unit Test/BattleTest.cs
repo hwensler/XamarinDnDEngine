@@ -13,8 +13,8 @@ namespace Unit_Test
     public class BattleTest
     {
         Queue<Fighter> charTeam = new Queue<Fighter>();
-
         //initCharTeam to simulate the fact that we will have the char Queue created in the Game class.
+        [TestMethod]
         private void initCharTeam()
         {
             charTeam.Enqueue(new Character(10, 10, 10, 1, 10,0));

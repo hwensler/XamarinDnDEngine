@@ -21,12 +21,12 @@ namespace Unit_Test
             testCharacter.AwardExp(50);
             Assert.AreEqual(testCharacter.Experience, 50);
         }
-
         [TestMethod]
         public void LevelUpWorksWhenItShould()
         {
-            testCharacter.AwardExp(1100);
-            Assert.AreEqual(testCharacter.Level, 11);
+            //11 because of scaling int in level up logic
+            testCharacter.AwardExp(11);
+            Assert.AreEqual(testCharacter.Level, 1);
         }
         [TestMethod]
         //works if character level is 0
@@ -38,8 +38,9 @@ namespace Unit_Test
         [TestMethod]
         public void AwardExpandLevelUpWorks()
         {
-            testCharacter.Experience += 50;
-            testCharacter.AwardExp(51);
+            //scaling int factors into level up
+            testCharacter.Experience = 5;
+            testCharacter.AwardExp(6);
             Assert.AreEqual(testCharacter.Level, 1);
 
         }
