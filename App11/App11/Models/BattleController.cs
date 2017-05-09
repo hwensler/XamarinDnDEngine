@@ -75,6 +75,7 @@ namespace App11.Models
             //We can assign the items and exp here or in the game class.
             if (newBattle.charQueue.Count == 0)
             {
+                newBattle.battleResult.postGame.Add("Monsters Win...");
                 newBattle.battleResult.charsWon = false;
             }
             else
@@ -86,7 +87,8 @@ namespace App11.Models
                 //could add grammar here to have more variance with loot
                 /*newBattle.battleResult.loot.Strength = 
                     (int)(newBattle.battleResult.points/5) * ((newBattle.rand.Next(0,21))/10);*/
-                newBattle.battleResult.loot.Strength = newBattle.rand.Next(0, 11);
+                newBattle.battleResult.loot.Strength = newBattle.rand.Next(1, 11);
+                newBattle.battleResult.postGame.Add("Characters Win!!!");
                 newBattle.battleResult.charsWon = true;
             }
             return newBattle.battleResult;

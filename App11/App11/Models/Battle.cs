@@ -29,6 +29,7 @@ namespace App11.Models
             int battleValue = 0;
             int hpValue = 0;
             this.battleResult.battleOutput = new System.Collections.ObjectModel.ObservableCollection<string>();
+            this.battleResult.postGame = new System.Collections.ObjectModel.ObservableCollection<string>();
             this.battleResult.deadChars= new System.Collections.ObjectModel.ObservableCollection<Character>();
             for (int i = 0; i < charQueue.Count; i++)
             {

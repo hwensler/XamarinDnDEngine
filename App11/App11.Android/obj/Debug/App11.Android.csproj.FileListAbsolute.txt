@@ -465,5 +465,7 @@ C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\res\drawable
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\res\drawable\dnd.png
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\R.cs.flag
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\uploadflags.txt
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\App11.Droid.Views.NewBattlePage.xaml.g.cs
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\App11.Droid.Views.GameOver.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\obj\Debug\App11.Android.dll.mdb
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.Android\bin\Debug\App11.Android.dll.mdb

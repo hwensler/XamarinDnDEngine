@@ -1,18 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App11.Views.GameOver">
+             x:Class="App11.Views.HighScoreView">
     <StackLayout>
-        <Label Text="YOU LOSE!!!!!! "
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" 
-           FontSize ="32"/>
-        <Label Text= "You made it to round:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text= "Round:" HorizontalOptions="Center"  FontSize ="16"/>
         <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
-        <Label Text= "Your score was:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text= "Score:" HorizontalOptions="Center"  FontSize ="16"/>
         <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
-        <Entry Text="{Binding Name}" FontSize="16" HorizontalOptions="Fill" />
-        <Button Text="View High Scores" Clicked="goScore" />
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -30,5 +24,5 @@
         </ListView>
         <Button Text="Home" Clicked="goHome" />
     </StackLayout>
-   
 </ContentPage>
+    

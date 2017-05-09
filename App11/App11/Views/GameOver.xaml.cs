@@ -17,12 +17,11 @@ namespace App11.Views
 	{
         //ScoreViewModel ViewScore;
         public ScoreBoard gameScore { get; set; }
-
+        HighScoresDBDataAccess HSDB;
 		public GameOver (ScoreBoard finalScore)
 		{
 			InitializeComponent ();
             gameScore = finalScore;
-            //display the score
             BindingContext = this.gameScore;
             listView.ItemsSource = finalScore.deadChars;
         }
@@ -32,10 +31,11 @@ namespace App11.Views
         }
         public async void goScore(object sender, EventArgs e)
         {
-
-            //work in progress
-            //await Navigation.PopToRootAsync(new ScorePage(ViewScore));
-            await Navigation.PopToRootAsync();
+            BindingContext = this.gameScore;
+            HSDB = new HighScoresDBDataAccess();
+            HSDB.AddNewScore(gameScore);
+            await Navigation.PushAsync(new ScorePage());
+            //await Navigation.PopToRootAsync();
         }
     }
 }

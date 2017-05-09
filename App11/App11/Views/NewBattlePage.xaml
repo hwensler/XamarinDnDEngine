@@ -17,6 +17,22 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <ListView x:Name="PostView"
+				ItemsSource="{Binding}" 
+                VerticalOptions = "LayoutOptions.Fill"
+                BackgroundColor =" #848484">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}"
+                                   LineBreakMode="NoWrap"
+                                   FontSize="20"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Button Text="Next" Clicked="battleStart" />
     </StackLayout>
 </ContentPage>
