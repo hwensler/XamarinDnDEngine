@@ -13,6 +13,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
+                            <Label Text="{Binding Name, StringFormat='Name: {0:F0}'}"
+                                   LineBreakMode="NoWrap"
+                                   FontSize="16"/>
                             <Label Text="{Binding currScore, StringFormat='Score: {0:F0}'}"
                                    LineBreakMode="NoWrap"/>
                             <Label Text ="{Binding round, StringFormat='Round: {0:F0}'}"

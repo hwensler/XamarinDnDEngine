@@ -26,6 +26,8 @@ namespace App11.Views
 		}
         public void clearHighScores(object sender, EventArgs e)
         {
+            HSDB = new HighScoresDBDataAccess();
+            //This does not work perfectly, but functions well enough for testing purposes
             HSDB.clearHS();
             PostView.ItemsSource = HSDB.HighScores.OrderByDescending(i => i.currScore);
         }

@@ -16,6 +16,8 @@ namespace App11.Models
 
         public int currScore { get; set; }
         public int round { get; set; }
+        protected string name = "Enter Name";
+        public string Name { get { return name; } set { name = value; } }
         public ObservableCollection<Character> deadChars;
     }
 }

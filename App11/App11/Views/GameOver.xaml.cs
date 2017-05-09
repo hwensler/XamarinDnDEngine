@@ -32,6 +32,7 @@ namespace App11.Views
         }
         public async void goScore(object sender, EventArgs e)
         {
+            BindingContext = this.gameScore;
             HSDB = new HighScoresDBDataAccess();
             HSDB.AddNewScore(gameScore);
             await Navigation.PushAsync(new ScorePage());
