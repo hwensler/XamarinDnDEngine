@@ -22,7 +22,6 @@ namespace App11.Views
 		{
 			InitializeComponent ();
             gameScore = finalScore;
-            //display the score
             BindingContext = this.gameScore;
             listView.ItemsSource = finalScore.deadChars;
         }

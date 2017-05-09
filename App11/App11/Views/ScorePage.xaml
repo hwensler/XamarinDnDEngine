@@ -8,6 +8,7 @@
     <StackLayout>
         <ListView x:Name="PostView"
 				ItemsSource="{Binding}" 
+                ItemSelected ="onSelected"
                 VerticalOptions = "LayoutOptions.Fill">
             <ListView.ItemTemplate>
                 <DataTemplate>

@@ -35,5 +35,13 @@ namespace App11.Views
         {
             await Navigation.PopToRootAsync();
         }
+        async void onSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            var itemSelected = args.SelectedItem as ScoreBoard;
+            if (itemSelected == null) return;
+
+            //goes to detail page if no null
+            await Navigation.PushAsync(new HighScoreView(itemSelected));
+        }
     }
 }

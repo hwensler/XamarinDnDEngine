@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.HighScoreView">
+    <StackLayout>
+        <Label Text= "Round:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
+        <Label Text= "Score:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontAttributes="Bold" FontSize="17" />
+                            <Label Text="{Binding Level, StringFormat='Lv: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            <Label Text="{Binding Strength, StringFormat='Strength: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            <Label Text="{Binding Speed, StringFormat='Speed: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                            <Label Text="{Binding Defense, StringFormat='Defense: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Home" Clicked="goHome" />
+    </StackLayout>
+</ContentPage>
+    
