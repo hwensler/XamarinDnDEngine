@@ -29,6 +29,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsDBDataAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\HighScoresDBDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\MonstersDBDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Battle.cs" />

@@ -2,7 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App11.Views.ScorePage">
-    <Label Text="This is the score page. It will display the current score and the top of the leaderboard. "
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear HighScores" Clicked="clearHighScores" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ListView x:Name="PostView"
+				ItemsSource="{Binding}" 
+                VerticalOptions = "LayoutOptions.Fill">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding currScore, StringFormat='Score: {0:F0}'}"
+                                   LineBreakMode="NoWrap"/>
+                            <Label Text ="{Binding round, StringFormat='Round: {0:F0}'}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Home" Clicked="goHome" />
+    </StackLayout>
 </ContentPage>

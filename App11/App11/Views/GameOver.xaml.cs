@@ -17,7 +17,7 @@ namespace App11.Views
 	{
         //ScoreViewModel ViewScore;
         public ScoreBoard gameScore { get; set; }
-
+        HighScoresDBDataAccess HSDB;
 		public GameOver (ScoreBoard finalScore)
 		{
 			InitializeComponent ();
@@ -32,10 +32,10 @@ namespace App11.Views
         }
         public async void goScore(object sender, EventArgs e)
         {
-
-            //work in progress
-            //await Navigation.PopToRootAsync(new ScorePage(ViewScore));
-            await Navigation.PopToRootAsync();
+            HSDB = new HighScoresDBDataAccess();
+            HSDB.AddNewScore(gameScore);
+            await Navigation.PushAsync(new ScorePage());
+            //await Navigation.PopToRootAsync();
         }
     }
 }

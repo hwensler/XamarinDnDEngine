@@ -91,11 +91,11 @@ namespace App11.Views
                         charQueue.Enqueue(currChar);
                         if (currChar.AwardExp((int)battleResults.points / 4))
                         {
-                            battleResults.battleOutput.Add(currChar.Name + " leveled up to level " + currChar.Level);
+                            battleResults.postGame.Add(currChar.Name + " leveled up to level " + currChar.Level);
                         }
                         if (i == charAwarded)
                         {
-                            battleResults.battleOutput.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                            battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
                                 + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
                             if (battleResults.loot.Attribute == "Strength")
                             {

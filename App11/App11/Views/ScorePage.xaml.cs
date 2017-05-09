@@ -7,22 +7,31 @@ using App11.Models;
 using App11.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using System.Collections.ObjectModel;
 namespace App11.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ScorePage : ContentPage
 	{
         ScoreViewModel ScoreModel;
-		public ScorePage (ScoreViewModel Score)
+        HighScoresDBDataAccess HSDB;
+        ObservableCollection<ScoreBoard> dispScores;
+        ObservableCollection<ScoreBoard> orderedScores;
+        public ScorePage ()
 		{
 
 			InitializeComponent ();
-            BindingContext = this.ScoreModel = Score;
+            HSDB = new HighScoresDBDataAccess();
+            PostView.ItemsSource = HSDB.HighScores.OrderByDescending(i => i.currScore);
 		}
-        public ScorePage()
+        public void clearHighScores(object sender, EventArgs e)
         {
-            InitializeComponent();
+            HSDB.clearHS();
+            PostView.ItemsSource = HSDB.HighScores.OrderByDescending(i => i.currScore);
         }
-	}
+        public async void goHome(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
+    }
 }
