@@ -1,13 +1,14 @@
-﻿using App11.iOS;
+﻿﻿using App11.iOS;
 using SQLite;
 using System;
 using System.IO;
+using App11.Services;
 
 [assembly: Xamarin.Forms.Dependency(typeof(DatabaseConnection_iOS))]
 
 namespace App11.iOS
 {
-	public class DatabaseConnection_iOS
+	public class DatabaseConnection_iOS : IDatabaseConnection
 	{
 		public SQLiteConnection DbConnection()
 		{
