@@ -50,8 +50,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BattlePage.xaml.cs">
-      <DependentUpon>BattlePage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BattleLaunchPage.xaml.cs">
+      <DependentUpon>BattleLaunchPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\GameOver.xaml.cs">
@@ -96,8 +96,8 @@
       <DependentUpon>MonstersPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\NewBattlePage.xaml.cs">
-      <DependentUpon>NewBattlePage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BattleDetailPage.xaml.cs">
+      <DependentUpon>BattleDetailPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml.cs">
@@ -151,7 +151,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BattlePage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BattleLaunchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -173,7 +173,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewBattlePage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BattleDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
