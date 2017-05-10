@@ -851,7 +851,6 @@ D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Rep
 D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.InventoryPage.xaml.g.cs
 D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.MonstersPage.xaml.g.cs
 D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.ItemsPage.xaml.g.cs
-D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.BattlePage.xaml.g.cs
 D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.ItemsDetailPage.xaml.g.cs
 D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.MonsterDetailPage.xaml.g.cs
 D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.NewMonsterPage.xaml.g.cs
@@ -1179,3 +1178,7 @@ C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\ProjectArchi
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.NewBattlePage.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.GameOver.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.HighScoreView.xaml.g.cs
+D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.GameOver.xaml.g.cs
+D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.HighScoreView.xaml.g.cs
+D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.BattleLaunchPage.xaml.g.cs
+D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Repositories.Public.DigitsGame.App11.App11.Views.BattleDetailPage.xaml.g.cs
