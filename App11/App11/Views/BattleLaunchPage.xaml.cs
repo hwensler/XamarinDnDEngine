@@ -12,14 +12,14 @@ using SQLite;
 namespace App11.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class BattlePage : ContentPage
+	public partial class BattleLaunchPage : ContentPage
 	{
         public Results battleResults;
         Queue<Fighter> charQueue = new Queue<Fighter>();
         ScoreBoard gameScore = new ScoreBoard();
         
 
-        public BattlePage()
+        public BattleLaunchPage()
 		{
 			InitializeComponent();
 
