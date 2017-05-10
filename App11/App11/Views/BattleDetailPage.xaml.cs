@@ -10,12 +10,12 @@ using System.Collections.ObjectModel;
 namespace App11.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NewBattlePage : ContentPage
+	public partial class BattleDetailPage : ContentPage
 	{
         public Results battleResults;
         Queue<Fighter> charQueue;
         ScoreBoard gameScore;
-        public NewBattlePage (Results results, Queue<Fighter> _charQueue, ScoreBoard _gameScore)
+        public BattleDetailPage (Results results, Queue<Fighter> _charQueue, ScoreBoard _gameScore)
 		{
             
             InitializeComponent ();
@@ -86,7 +86,7 @@ namespace App11.Views
                         }
                     }
                 }
-                await Navigation.PushAsync(new NewBattlePage(battleResults, charQueue, gameScore));
+                await Navigation.PushAsync(new BattleDetailPage(battleResults, charQueue, gameScore));
             }
             
             
