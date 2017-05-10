@@ -52,7 +52,7 @@ namespace App11.Views
 
             else if (page.Text == "Battle")
             {
-                await Navigation.PushAsync(new BattlePage());
+                await Navigation.PushAsync(new BattleLaunchPage());
             }
             else
             {

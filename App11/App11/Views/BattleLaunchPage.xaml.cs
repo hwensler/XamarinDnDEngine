@@ -118,7 +118,7 @@ namespace App11.Views
                     }
                 }
 
-                await Navigation.PushAsync(new NewBattlePage(battleResults, charQueue, gameScore));
+                await Navigation.PushAsync(new BattleDetailPage(battleResults, charQueue, gameScore));
             }
             
            
