@@ -7,5 +7,6 @@
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
         <Button Text="Start Battle" Clicked="battleStart" />
+        <Button Text="Mike button" Clicked="MikeStart"/>
     </StackLayout>
 </ContentPage>
