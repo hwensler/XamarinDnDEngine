@@ -14,7 +14,7 @@ namespace Unit_Test
     {
         Queue<Fighter> charTeam = new Queue<Fighter>();
         //initCharTeam to simulate the fact that we will have the char Queue created in the Game class.
-        [TestMethod]
+        //not a test method
         private void initCharTeam()
         {
             charTeam.Enqueue(new Character(10, 10, 10, 1, 10,0));
@@ -22,10 +22,10 @@ namespace Unit_Test
             charTeam.Enqueue(new Character(10, 10, 10, 3, 10,0));
             charTeam.Enqueue(new Character(10, 10, 10, 4, 10,0));
         }
-
         [TestMethod]
         public void TestTeamSize()
         {
+            //will need mock database to test with monsters
             Queue<Fighter> charQueue = new Queue<Fighter>();
             for (int i = 0; i < 4; i++)
             {
@@ -47,6 +47,7 @@ namespace Unit_Test
         [TestMethod]
         public void BattleClassReturnsStruct()
         {
+            //will need mock database to test with monsters
             Queue<Fighter> charQueue = new Queue<Fighter>();
             for (int i = 0; i < 4; i++)
             {
@@ -62,6 +63,7 @@ namespace Unit_Test
         [TestMethod]
         public void EmptyCharQueuMonstWin()
         {
+            //will need mock database to test with monsters
             Queue<Fighter> charQueue = new Queue<Fighter>();
             BattleController testBattle = new BattleController(charQueue);
             Results testResult = testBattle.initBattle();
@@ -71,6 +73,7 @@ namespace Unit_Test
         [TestMethod]
         public void BattleClassReturnsStructwithNonNullScore()
         {
+            //will need mock database to test with monsters
             Queue<Fighter> charQueue = new Queue<Fighter>();
             for (int i = 0; i < 4; i++)
             {
@@ -84,6 +87,7 @@ namespace Unit_Test
         [TestMethod]
         public void damageIsGreaterThanOrEqualZero()
         {
+            //battleoutput interfering with the unit test.
             BattleController testBattle = new BattleController();
             bool damage =
                 testBattle.testBattleLogic(
@@ -94,6 +98,7 @@ namespace Unit_Test
         [TestMethod]
         public void BattleQueueisSorted()
         {
+            //will need mock database to test with monsters
             Queue<Fighter> charQueue = new Queue<Fighter>();
             for (int i = 0; i < 4; i++)
             {
