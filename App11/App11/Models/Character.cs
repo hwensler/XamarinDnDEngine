@@ -18,7 +18,7 @@ namespace App11.Models
         private int timeToLevel = 5;
 
        //items list in action!
-        List<Item> inventory = new List<Item> ();
+        private List<Item> inventory = new List<Item> ();
 
         //default constructor
         public Character()
@@ -82,6 +82,14 @@ namespace App11.Models
                 return true;
             }
             return false;
+        }
+        public void AddItemToInv(Item item)
+        {
+            inventory.Add(item);
+        }
+        private List<Item> GetInv()
+        {
+            return inventory;
         }
     }
 }

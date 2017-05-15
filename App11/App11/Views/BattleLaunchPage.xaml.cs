@@ -58,17 +58,18 @@ namespace App11.Views
 				charQueue.Enqueue(new Character(str, def, spd, stkod, hp, lv, name));
 			}
 		}
+        //this function is if mike presses it and he gets to the end fast.
         public async void MikeStart(object sender, EventArgs e)
         {
+            gameScore.deadChars = new ObservableCollection<Character>();
             while (charQueue.Count != 0)
             {
                 gameScore.round += 1;
                 BattleController newBattle = new BattleController(charQueue);
                 battleResults = newBattle.initBattle();
-                gameScore.deadChars = new ObservableCollection<Character>();
+               
                 if (battleResults.deadChars.Count != 0)
                 {
-
                     foreach (Character deadChar in battleResults.deadChars)
                     {
                         gameScore.deadChars.Add(deadChar);
@@ -108,7 +109,7 @@ namespace App11.Views
                             {
                                 currChar.HitPoints += battleResults.loot.Strength;
                             }
-
+                            currChar.AddItemToInv(battleResults.loot);
                         }
                     }
                 }
