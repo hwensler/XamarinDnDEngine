@@ -9,7 +9,8 @@
             <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize="20" />
             <Label Text="Team Information:" HorizontalOptions="Center" FontSize="16" />
             <Label Text="{Binding teamInfo}" HorizontalOptions="Center" FontSize="20" />
-            <!--        <ListView x:Name="listView">
+            <!--       
+            <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

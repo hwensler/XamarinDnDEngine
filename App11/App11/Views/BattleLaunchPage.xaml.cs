@@ -75,7 +75,7 @@ namespace App11.Views
                     foreach (Character deadChar in battleResults.deadChars)
                     {
 						// add charInfo to deadTeamInfo
-						deadTeamInfo = deadTeamInfo + deadChar.getCharInfo() + '\n';
+						deadTeamInfo = deadTeamInfo + deadChar.getCharInfo() + "\n\n";
                         gameScore.deadChars.Add(deadChar);
                     }
 					// set the teamInfo and clear deadTeamInfo for the next game
@@ -142,7 +142,7 @@ namespace App11.Views
                     foreach (Character deadChar in battleResults.deadChars)
                     {
 						// add charInfo to deadTeamInfo
-						deadTeamInfo = deadTeamInfo + deadChar.getCharInfo() + '\n';
+						deadTeamInfo = deadTeamInfo + deadChar.getCharInfo() + "\n\n";
 						gameScore.deadChars.Add(deadChar);
                     }
 					// set the teamInfo and clear deadTeamInfo for the next game
