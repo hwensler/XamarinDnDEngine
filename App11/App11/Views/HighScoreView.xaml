@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App11.Views.HighScoreView">
@@ -7,7 +7,9 @@
         <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
         <Label Text= "Score:" HorizontalOptions="Center"  FontSize ="16"/>
         <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
-        <ListView x:Name="listView">
+        <Label Text= "Team Information:" HorizontalOptions="Center"  FontSize ="16"/>
+        <Label Text="{Binding teamInfo}" HorizontalOptions="Center" FontSize ="20"/>
+<!--        <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -21,7 +23,8 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
+        
         <Button Text="Home" Clicked="goHome" />
     </StackLayout>
 </ContentPage>

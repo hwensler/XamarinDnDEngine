@@ -18,7 +18,7 @@ namespace App11.Views
 			InitializeComponent ();
             gameScore = displayScore;
             BindingContext = this.gameScore;
-            listView.ItemsSource = displayScore.deadChars;
+            //listView.ItemsSource = displayScore.deadChars;
         }
 
         public async void goHome(object sender, EventArgs e)
