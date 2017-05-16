@@ -91,5 +91,17 @@ namespace App11.Models
         {
             return inventory;
         }
+
+		public string getCharInfo()
+		{
+			string charInfo = "";
+
+			charInfo = Name + '\n' +
+					   "Lv: " + Level + '\n' +
+					   "Strength:" + Strength + '\n' +
+					   "Speed: " + Speed + '\n' +
+					   "Defense: " + Defense;
+			return charInfo;
+		}
     }
 }

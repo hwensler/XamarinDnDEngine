@@ -73,14 +73,16 @@ namespace App11
                 }
             }
         }
+
         public void clearHS()
         {
-            this.HighScores = new ObservableCollection<ScoreBoard>(database.Table<ScoreBoard>());
-            for (int i =0;i<HighScores.Count; i++)
-            {
-                this.DeleteScore(HighScores[i]);
-            }
-        }
+			this.HighScores = new ObservableCollection<ScoreBoard>(database.Table<ScoreBoard>());
+			for (int i =0; i < this.HighScores.Count; i++)
+			{
+			    this.DeleteScore(HighScores[i]);
+			}
+		}
+
         public int DeleteScore(ScoreBoard delScore)
         {
             var id = delScore.ID;
