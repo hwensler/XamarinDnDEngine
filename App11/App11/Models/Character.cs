@@ -96,7 +96,7 @@ namespace App11.Models
 		{
 			string charInfo = "";
 
-			charInfo = Name + '\n' +
+			charInfo = "--" + Name + "--" + '\n' +
 					   "Lv: " + Level + '\n' +
 					   "Strength:" + Strength + '\n' +
 					   "Speed: " + Speed + '\n' +
