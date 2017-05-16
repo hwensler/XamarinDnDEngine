@@ -17,6 +17,8 @@ namespace App11.Views
         public Results battleResults;
         Queue<Fighter> charQueue = new Queue<Fighter>();
         ScoreBoard gameScore = new ScoreBoard();
+
+		public string deadTeamInfo = "";
         
 
         public BattleLaunchPage()
@@ -72,8 +74,13 @@ namespace App11.Views
                 {
                     foreach (Character deadChar in battleResults.deadChars)
                     {
+						// add charInfo to deadTeamInfo
+						deadTeamInfo = deadTeamInfo + deadChar.getCharInfo() + '\n';
                         gameScore.deadChars.Add(deadChar);
                     }
+					// set the teamInfo and clear deadTeamInfo for the next game
+					gameScore.teamInfo += deadTeamInfo;
+					deadTeamInfo = "";
                 }
 
                 if (charQueue.Count != 0)
@@ -134,9 +141,15 @@ namespace App11.Views
 
                     foreach (Character deadChar in battleResults.deadChars)
                     {
-                        gameScore.deadChars.Add(deadChar);
+						// add charInfo to deadTeamInfo
+						deadTeamInfo = deadTeamInfo + deadChar.getCharInfo() + '\n';
+						gameScore.deadChars.Add(deadChar);
                     }
-                }
+					// set the teamInfo and clear deadTeamInfo for the next game
+					gameScore.teamInfo += deadTeamInfo;
+					deadTeamInfo = "";
+
+				}
                 
                 if (charQueue.Count != 0)
                 {

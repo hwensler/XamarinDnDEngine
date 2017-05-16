@@ -15,7 +15,8 @@ namespace App11.Views
         public Results battleResults;
         Queue<Fighter> charQueue;
         ScoreBoard gameScore;
-        public BattleDetailPage (Results results, Queue<Fighter> _charQueue, ScoreBoard _gameScore)
+
+		public BattleDetailPage (Results results, Queue<Fighter> _charQueue, ScoreBoard _gameScore)
 		{
             
             InitializeComponent ();
