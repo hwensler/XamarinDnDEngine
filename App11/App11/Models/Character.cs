@@ -87,7 +87,7 @@ namespace App11.Models
         {
             inventory.Add(item);
         }
-        private List<Item> GetInv()
+        public List<Item> GetInv()
         {
             return inventory;
         }
