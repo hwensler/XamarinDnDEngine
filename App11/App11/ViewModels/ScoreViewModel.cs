@@ -18,5 +18,6 @@ namespace App11.ViewModels
         {
             get { return Score.currScore; }
         }
+
     }
 }

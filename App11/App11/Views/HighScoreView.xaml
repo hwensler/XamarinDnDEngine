@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App11.Views.HighScoreView">
-    <StackLayout>
-        <Label Text= "Round:" HorizontalOptions="Center"  FontSize ="16"/>
-        <Label Text="{Binding round}" HorizontalOptions="Center" FontSize ="20"/>
-        <Label Text= "Score:" HorizontalOptions="Center"  FontSize ="16"/>
-        <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize ="20"/>
-        <Label Text= "Team Information:" HorizontalOptions="Center"  FontSize ="16"/>
-        <Label Text="{Binding teamInfo}" HorizontalOptions="Center" FontSize ="20"/>
-<!--        <ListView x:Name="listView">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App11.Views.HighScoreView">
+    <ScrollView>
+        <StackLayout>
+            <Button Text="Home" Clicked="goHome" />
+            <Label Text="Round:" HorizontalOptions="Center" FontSize="16" />
+            <Label Text="{Binding round}" HorizontalOptions="Center" FontSize="20" />
+            <Label Text="Score:" HorizontalOptions="Center" FontSize="16" />
+            <Label Text="{Binding currScore}" HorizontalOptions="Center" FontSize="20" />
+            <Label Text="Team Information:" HorizontalOptions="Center" FontSize="16" />
+            <Label Text="{Binding teamInfo}" HorizontalOptions="Center" FontSize="20" />
+            <!--        <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -24,8 +24,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>-->
-        
-        <Button Text="Home" Clicked="goHome" />
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
-    
