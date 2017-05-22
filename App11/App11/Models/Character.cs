@@ -16,6 +16,10 @@ namespace App11.Models
         protected int experience;
         public int Experience { get { return experience; } set { this.experience = value; } }
         private int timeToLevel = 5;
+        public Item hpItem;
+        public Item strItem;
+        public Item defItem;
+        public Item speedItem;
 
        //items list in action!
         private List<Item> inventory = new List<Item> ();

@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Unit Test"
+    "\\App11",
+    "\\App11\\App11",
+    "\\App11\\App11.Android",
+    "\\App11\\App11.UWP",
+    "\\App11\\App11\\Data",
+    "\\App11\\App11\\Helpers",
+    "\\App11\\App11\\Models",
+    "\\App11\\App11\\Services",
+    "\\App11\\App11\\Views"
   ],
   "SelectedNode": "\\Digits.sln",
   "PreviewInSolutionExplorer": false

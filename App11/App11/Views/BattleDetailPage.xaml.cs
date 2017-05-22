@@ -70,19 +70,103 @@ namespace App11.Views
                                 + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
                             if (battleResults.loot.Attribute == "Strength")
                             {
-                                currChar.Strength += battleResults.loot.Strength;
+                                if (currChar.strItem == null)
+                                {
+                                    currChar.strItem = battleResults.loot;
+                                    currChar.Strength += battleResults.loot.Strength;
+                                }
+                                else
+                                {
+                                    if (battleResults.loot.Strength > currChar.strItem.Strength)
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                            " takes it and discards their " + currChar.strItem.Name +".");
+                                        currChar.Strength -= currChar.strItem.Strength;
+                                        currChar.Strength += battleResults.loot.Strength;
+                                        currChar.strItem = battleResults.loot;
+                                        
+                                    }
+                                    else
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name + 
+                                            " shakes their head in disgust and leaves it on the floor.");
+                                    }
+                                }
                             }
                             else if (battleResults.loot.Attribute == "Defense")
                             {
-                                currChar.Defense += battleResults.loot.Strength;
+                                if (currChar.defItem == null)
+                                {
+                                    currChar.defItem = battleResults.loot;
+                                    currChar.Defense += battleResults.loot.Strength;
+                                }
+                                else
+                                {
+                                    if (battleResults.loot.Strength > currChar.defItem.Strength)
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                            " takes it and discards their " + currChar.defItem.Name + ".");
+                                        currChar.Defense -= currChar.defItem.Strength;
+                                        currChar.Defense += battleResults.loot.Strength;
+                                        currChar.defItem = battleResults.loot;
+
+                                    }
+                                    else
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
+                                            " shakes their head in disgust and leaves it on the floor.");
+                                    }
+                                }
                             }
                             else if (battleResults.loot.Attribute == "Speed")
                             {
-                                currChar.Speed += battleResults.loot.Strength;
+                                if (currChar.speedItem == null)
+                                {
+                                    currChar.speedItem = battleResults.loot;
+                                    currChar.Speed += battleResults.loot.Strength;
+                                }
+                                else
+                                {
+                                    if (battleResults.loot.Strength > currChar.speedItem.Strength)
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                            " takes it and discards their " + currChar.speedItem.Name + ".");
+                                        currChar.Speed -= currChar.speedItem.Strength;
+                                        currChar.Speed += battleResults.loot.Strength;
+                                        currChar.speedItem = battleResults.loot;
+
+                                    }
+                                    else
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
+                                            " shakes their head in disgust and leaves it on the floor.");
+                                    }
+                                }
                             }
                             else
                             {
-                                currChar.HitPoints+= battleResults.loot.Strength;
+                                if (currChar.hpItem == null)
+                                {
+                                    currChar.hpItem = battleResults.loot;
+                                    currChar.HitPoints += battleResults.loot.Strength;
+                                }
+                                else
+                                {
+                                    if (battleResults.loot.Strength > currChar.hpItem.Strength)
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                            " takes it and discards their " + currChar.hpItem.Name + ".");
+                                        currChar.HitPoints += battleResults.loot.Strength;
+                                        currChar.HitPoints -= currChar.hpItem.Strength;
+                                        currChar.hpItem = battleResults.loot;
+
+                                    }
+                                    else
+                                    {
+                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
+                                            " shakes their head in disgust and leaves it on the floor.");
+                                    }
+                                }
                             }
                         }
                     }
