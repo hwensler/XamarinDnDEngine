@@ -103,20 +103,24 @@ namespace App11.Views
                             if (battleResults.loot.Attribute == "Strength")
                             {
                                 currChar.Strength += battleResults.loot.Strength;
+                                currChar.strItem = battleResults.loot;
                             }
                             else if (battleResults.loot.Attribute == "Defense")
                             {
                                 currChar.Defense += battleResults.loot.Strength;
+                                currChar.defItem = battleResults.loot;
                             }
                             else if (battleResults.loot.Attribute == "Speed")
                             {
                                 currChar.Speed += battleResults.loot.Strength;
+                                currChar.speedItem = battleResults.loot;
                             }
                             else
                             {
                                 currChar.HitPoints += battleResults.loot.Strength;
+                                currChar.hpItem = battleResults.loot;
                             }
-                            currChar.AddItemToInv(battleResults.loot);
+                            //currChar.AddItemToInv(battleResults.loot);
                         }
                     }
                 }
@@ -171,18 +175,22 @@ namespace App11.Views
                             if (battleResults.loot.Attribute == "Strength")
                             {
                                 currChar.Strength += battleResults.loot.Strength;
+                                currChar.strItem = battleResults.loot;
                             }
                             else if (battleResults.loot.Attribute == "Defense")
                             {
                                 currChar.Defense += battleResults.loot.Strength;
+                                currChar.defItem = battleResults.loot;
                             }
                             else if (battleResults.loot.Attribute == "Speed")
                             {
                                 currChar.Speed += battleResults.loot.Strength;
+                                currChar.speedItem = battleResults.loot;
                             }
                             else
                             {
                                 currChar.HitPoints += battleResults.loot.Strength;
+                                currChar.hpItem = battleResults.loot;
                             }
 
                         }

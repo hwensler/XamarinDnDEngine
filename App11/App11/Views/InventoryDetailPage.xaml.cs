@@ -15,7 +15,7 @@ namespace App11.Views
 	{
 		public InventoryDetailPage (Character character)
 		{
-            var list = character.GetInv();
+            var list = character.getInv();
 			InitializeComponent ();
             InvList.ItemsSource = list;
 		}

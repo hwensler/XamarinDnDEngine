@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Collections.ObjectModel;
 
 namespace App11.Models
 {
@@ -23,6 +24,7 @@ namespace App11.Models
 
        //items list in action!
         private List<Item> inventory = new List<Item> ();
+        public ObservableCollection<string> retInvent;
 
         //default constructor
         public Character()
@@ -91,9 +93,30 @@ namespace App11.Models
         {
             inventory.Add(item);
         }
-        public List<Item> GetInv()
+        
+        public ObservableCollection<string> getInv()
         {
-            return inventory;
+            if (strItem != null)
+            {
+                retInvent.Add("Strength Item: " + strItem.Name + "\n"
+                    + "Tier: " + strItem.Strength + "\n\n");
+            }
+            if (defItem != null)
+            {
+                retInvent.Add("Defense Item: " + defItem.Name + "\n"
+                    + "Tier: " + defItem.Strength + "\n\n");
+            }
+            if (speedItem != null)
+            {
+                retInvent.Add("Speed Item: " + speedItem.Name + "\n"
+                    + "Tier: " + speedItem.Strength + "\n\n");
+            }
+            if (hpItem != null)
+            {
+                retInvent.Add("Strength Item: " + hpItem.Name + "\n"
+                    + "Tier: " + hpItem.Strength + "\n\n");
+            }
+            return retInvent;
         }
 
 		public string getCharInfo()
@@ -104,8 +127,24 @@ namespace App11.Models
 					   "Lv: " + Level + '\n' +
 					   "Strength:" + Strength + '\n' +
 					   "Speed: " + Speed + '\n' +
-					   "Defense: " + Defense;
-			return charInfo;
+					   "Defense: " + Defense +'\n';
+            if (strItem != null)
+            {
+                charInfo += "Strength Item: " + strItem.Name + " " + strItem.Strength + "\n";
+            }
+            if (defItem != null)
+            {
+                charInfo += "Defense Item: " + defItem.Name +" "+ defItem.Strength + "\n";
+            }
+            if (speedItem != null)
+            {
+                charInfo += "Speed Item: " + speedItem.Name + " " + speedItem.Strength + "\n";
+            }
+            if (hpItem != null)
+            {
+                charInfo += "Hitpoints Item: " + hpItem.Name + " " + hpItem.Strength + "\n";
+            }
+            return charInfo;
 		}
     }
 }

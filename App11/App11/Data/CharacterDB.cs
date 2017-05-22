@@ -14,6 +14,7 @@ namespace App11
 			database = new SQLiteAsyncConnection(dbPath);
 			database.CreateTableAsync<Character>().Wait();
 		}
+        
 
 		// initialization for demo purposes
 		public async Task Initialize()
