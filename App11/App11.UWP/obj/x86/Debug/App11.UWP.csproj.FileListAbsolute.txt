@@ -1183,3 +1183,4 @@ D:\Repositories\Public\DigitsGame\App11\App11.UWP\obj\x86\Debug\App11.UWP.D_.Rep
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.BattleLaunchPage.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.BattleDetailPage.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.InventoryDetailPage.xaml.g.cs
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.SettingPage.xaml.g.cs

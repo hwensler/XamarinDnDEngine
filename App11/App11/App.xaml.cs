@@ -33,6 +33,11 @@ namespace App11
                         Title = "About",
                         Icon = Device.OnPlatform<string>("tab_about.png",null,null)
                     },
+                    new NavigationPage(new SettingPage())
+                    {
+                        Title = "Settings",
+                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
+                    },
                 }
             };
         }
