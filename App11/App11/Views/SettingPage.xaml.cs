@@ -62,14 +62,21 @@ namespace App11.Views
                 superItems.IsVisible = true;
                 randomItems.IsVisible = true;
             }
+            if (Setting.useServerItems)
+            {
+                string retMod;
+                retMod = await GetItemsAsync();
+                JSONItem model = JsonConvert.DeserializeObject<JSONItem>(retMod);
+                List<ServerItem> getRetItem = model.data;
+                dataAccess = new ItemsDBDataAccess();
 
-            string retMod;
-            retMod = await GetItemsAsync();
-            JSONItem model = JsonConvert.DeserializeObject<JSONItem>(retMod);
-            List<ServerItem> getRetItem = model.data;
-            dataAccess = new ItemsDBDataAccess();
-
-            dataAccess.DropTableandInsert(getRetItem);
+                dataAccess.DropTableandInsert(getRetItem);
+            }
+            else
+            {
+                dataAccess.DropTableandLocal();
+            }
+            
 
         }
         public async void randomIt(object sender, EventArgs e)

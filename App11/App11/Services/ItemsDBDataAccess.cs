@@ -49,6 +49,17 @@ namespace App11
             }
             
         }
+        public void DropTableandLocal()
+        {
+            database.DropTable<Item>();
+            database.CreateTable<Item>();
+            database.Insert(new Item { itemId = Guid.NewGuid().ToString(), Name = "Small Sword", Description = "A really cool sword. ", Strength = 5, Attribute = "Strength" });
+            database.Insert(new Item { itemId = Guid.NewGuid().ToString(), Name = "Cool Shield", Description = "A really cool shield. ", Strength = 6, Attribute = "Defense" });
+            database.Insert(new Item { itemId = Guid.NewGuid().ToString(), Name = "Used Basketball Shoes", Description = "Some used basketball shoes. Run fast!", Strength = 7, Attribute = "Speed" });
+            database.Insert(new Item { itemId = Guid.NewGuid().ToString(), Name = "Bow", Description = "A realy cool bow.", Strength = 11, Attribute = "Strength" });
+            database.Insert(new Item { itemId = Guid.NewGuid().ToString(), Name = "Ring of Life", Description = "A really cool ring that increases HP. ", Strength = 10, Attribute = "HP" });
+            database.Insert(new Item { itemId = Guid.NewGuid().ToString(), Name = "Baby Oil", Description = "Slicken up for top speed! ", Strength = 10, Attribute = "Speed" });
+        }
         //to populate the DB with base items for now
         public void PopulateItems()
         {
