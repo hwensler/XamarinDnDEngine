@@ -15,8 +15,9 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
-                                <Label Text="{Binding Name}"
-                       LineBreakMode="NoWrap"
+                                <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding image}" HorizontalOptions="LayoutOptions.Start"/>
+                                <Label Text="{Binding Name}" HorizontalOptions="LayoutOptions.Fill" 
+                                LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemTextStyle}"
                        FontSize="16"/>
 
