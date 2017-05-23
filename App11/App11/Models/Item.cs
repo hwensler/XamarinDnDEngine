@@ -7,7 +7,7 @@ namespace App11.Models
     [Table("Items")]
     public class Item : BaseDataObject
     {
-
+        
         public String itemId { get; set; }
 
         //the name of an item
@@ -45,6 +45,42 @@ namespace App11.Models
                 _itemCounter = 100;
             }
         }
+
+        public string image { get; set; }
+        public string creator { get; set; }
+        public Item(string _name, string _desc, int _tier, string _attrib, int _usage, string _image, string _creator)
+        {
+            this.name = _name;
+            this.description = _desc;
+            this.Strength = _tier;
+            
+            switch (_attrib)
+            {
+                case ("STRENGTH"):
+                    this.Attribute = "Strength";
+                    break;
+                case ("SPEED"):
+                    this.Attribute = "Speed";
+                    break;
+                case ("DEFENSE"):
+                    this.Attribute = "Defense";
+                    break;
+                case ("HP"):
+                    this.Attribute = "HP";
+                    break;
+                case ("MAGICALL"):
+                    this.Attribute = "MagicAll";
+                    break;
+                case ("MAGICDIRECT"):
+                    this.Attribute = "MagicDirect";
+                    break;
+
+            }
+            this._itemCounter = _usage;
+            this.image = _image;
+            this.creator = _creator;
+        }
+        public Item() { }
     }
         
 }

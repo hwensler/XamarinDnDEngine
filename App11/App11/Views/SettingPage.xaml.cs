@@ -14,7 +14,9 @@ namespace App11.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingPage : ContentPage
 	{
-		public SettingPage ()
+        ItemsDBDataAccess dataAccess;
+
+        public SettingPage ()
 		{
 			InitializeComponent ();
         }
@@ -43,7 +45,7 @@ namespace App11.Views
         {
             Setting.battleEvents = !Setting.battleEvents;
         }
-        public void serverIt(object sender, EventArgs e)
+        public async void serverIt(object sender, EventArgs e)
         {
             Setting.useServerItems = !Setting.useServerItems;
             if (superItems.IsVisible==true)
@@ -60,7 +62,15 @@ namespace App11.Views
                 superItems.IsVisible = true;
                 randomItems.IsVisible = true;
             }
-            
+
+            string retMod;
+            retMod = await GetItemsAsync();
+            JSONItem model = JsonConvert.DeserializeObject<JSONItem>(retMod);
+            List<ServerItem> getRetItem = model.data;
+            dataAccess = new ItemsDBDataAccess();
+
+            dataAccess.DropTableandInsert(getRetItem);
+
         }
         public void randomIt(object sender, EventArgs e)
         {
@@ -87,7 +97,7 @@ namespace App11.Views
             };
             var client = new System.Net.Http.HttpClient();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            var address = $"http://apihw20170510024050.azurewebsites.net//api/GetItemList";
+            var address = $"http://gamehackathon.azurewebsites.net/api/GetItemsList";
             var values = new FormUrlEncodedContent(dictArr);
             var response = await client.PostAsync(address, values);
 

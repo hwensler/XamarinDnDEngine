@@ -39,6 +39,16 @@ namespace App11
             }
         }
 
+        public void DropTableandInsert(List<ServerItem> servPass)
+        {
+            database.DropTable<Item>();
+            database.CreateTable<Item>();
+            foreach (ServerItem sItem in servPass)
+            {
+                database.Insert(new Item(sItem.Name, sItem.Description, sItem.Tier, sItem.AttribMod, sItem.Usage, sItem.Image, sItem.Creator));
+            }
+            
+        }
         //to populate the DB with base items for now
         public void PopulateItems()
         {
