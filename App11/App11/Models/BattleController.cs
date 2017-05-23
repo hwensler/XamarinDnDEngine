@@ -33,7 +33,7 @@ namespace App11.Models
             //Now, FIGHT TO THE DEATH!
             while (newBattle.charQueue.Count != 0 && newBattle.monstQueue.Count != 0)
             {
-                //if the fighter is dead, it does not get to attack and is removed from the figth order
+                //if the fighter is dead, it does not get to attack and is removed from the fight order
                 if (!fightOrder.Peek().isAlive())
                 {
                     fightOrder.Dequeue();
@@ -45,7 +45,6 @@ namespace App11.Models
                     if (fightOrder.Peek().isHuman)
                     {
                         int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
-
                         newBattle.monstQueue.Peek().HitPoints -= damage;
                         newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
                         if (!newBattle.monstQueue.Peek().isAlive())
@@ -97,13 +96,29 @@ namespace App11.Models
         private int attackDamage(Fighter attacker, Fighter defender)
         {
             newBattle.die = newBattle.rand.Next(1, 21);
+            //for critical miss since items break before calculating damage
+            if (newBattle.die == 1)
+            {
+                newBattle.battleResult.battleOutput.Add("Oh no! a critical miss!");
+                //item breaking logic here
+                //adjust character stats next
+            }
             int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
             newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name +", rolls " + newBattle.die);
+
+            //for critical damage
+            if (newBattle.die == 20)
+            {
+                attackRoll=attackRoll*2;
+                newBattle.battleResult.battleOutput.Add("It's a critical! Damage x2!");
+            }
+            
             newBattle.die = newBattle.rand.Next(1, 21);
             newBattle.battleResult.battleOutput.Add("Defender, " + defender.Name + ", rolls " + newBattle.die);
             int defenseRoll = newBattle.die * (defender.Defense + defender.Level);
+            
             int damage = (attackRoll - defenseRoll) / 10;
-
+            
             //miss logic
             if (damage < 0)
             {
