@@ -25,27 +25,27 @@ namespace App11.Views
         }
         public void flipMiss(object sender, EventArgs e)
         {
-            Setting.critMiss = !Setting.critHit;
+            Setting.critMiss = !Setting.critMiss;
         }
         public void flipIU(object sender, EventArgs e)
         {
-            Setting.itemUsage = !Setting.critHit;
+            Setting.itemUsage = !Setting.itemUsage;
         }
         public void magicU(object sender, EventArgs e)
         {
-            Setting.magicUsage = !Setting.critHit;
+            Setting.magicUsage = !Setting.magicUsage;
         }
         public void toggleHP(object sender, EventArgs e)
         {
-            Setting.hpUsage = !Setting.critHit;
+            Setting.hpUsage = !Setting.hpUsage;
         }
         public void battleE(object sender, EventArgs e)
         {
-            Setting.battleEvents = !Setting.critHit;
+            Setting.battleEvents = !Setting.battleEvents;
         }
         public void serverIt(object sender, EventArgs e)
         {
-            Setting.useServerItems = !Setting.critHit;
+            Setting.useServerItems = !Setting.useServerItems;
             if (superItems.IsVisible==true)
             {
                 SuperItemsText.IsVisible = false;
@@ -64,16 +64,16 @@ namespace App11.Views
         }
         public void randomIt(object sender, EventArgs e)
         {
-            Setting.randomItems = !Setting.critHit;
+            Setting.randomItems = !Setting.randomItems;
         }
         public void superIt(object sender, EventArgs e)
         {
-            Setting.superItems = !Setting.critHit;
+            Setting.superItems = !Setting.superItems;
         }
 
         public void debugIt(object sender, EventArgs e)
         {
-            Setting.debugMode = !Setting.critHit;
+            Setting.debugMode = !Setting.debugMode;
         }
         public async Task<string> GetItemsAsync()
         {

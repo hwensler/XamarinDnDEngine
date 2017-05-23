@@ -1184,3 +1184,10 @@ C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.BattleDetailPage.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.InventoryDetailPage.xaml.g.cs
 C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\App11.UWP.C_.Users.Brook.Source.Repos.SUDigits3.App11.App11.Views.SettingPage.xaml.g.cs
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\System.ComponentModel.Primitives.dll
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\FxResources.System.ComponentModel.Primitives.SR.resw
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\FxResources.System.ComponentModel.TypeConverter.SR.resw
+C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\obj\x86\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw
