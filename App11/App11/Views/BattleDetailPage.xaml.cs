@@ -66,12 +66,13 @@ namespace App11.Views
                         }
                         if (i == charAwarded)
                         {
-                            battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
-                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
                             if (battleResults.loot.Attribute == "Strength")
                             {
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
                                 if (currChar.strItem == null)
                                 {
+
                                     currChar.strItem = battleResults.loot;
                                     currChar.Strength += battleResults.loot.Strength;
                                 }
@@ -95,6 +96,8 @@ namespace App11.Views
                             }
                             else if (battleResults.loot.Attribute == "Defense")
                             {
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
                                 if (currChar.defItem == null)
                                 {
                                     currChar.defItem = battleResults.loot;
@@ -120,6 +123,8 @@ namespace App11.Views
                             }
                             else if (battleResults.loot.Attribute == "Speed")
                             {
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                    + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
                                 if (currChar.speedItem == null)
                                 {
                                     currChar.speedItem = battleResults.loot;
@@ -143,29 +148,24 @@ namespace App11.Views
                                     }
                                 }
                             }
-                            else
+                            else if (battleResults.loot.Attribute == "HP")
                             {
-                                if (currChar.hpItem == null)
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
+                                    + battleResults.loot.Strength);
+                                //healing items will be implemented here.
+                                if (currChar.HitPoints == currChar.maxHP)
                                 {
-                                    currChar.hpItem = battleResults.loot;
-                                    currChar.HitPoints += battleResults.loot.Strength;
+                                    battleResults.postGame.Add(currChar.Name +" is already full health!");
+                                }
+                                else if (currChar.HitPoints + battleResults.loot.Strength >= currChar.maxHP)
+                                {
+                                    currChar.HitPoints = currChar.maxHP;
+                                    battleResults.postGame.Add(currChar.Name + " is healed to full health!");
                                 }
                                 else
                                 {
-                                    if (battleResults.loot.Strength > currChar.hpItem.Strength)
-                                    {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
-                                            " takes it and discards their " + currChar.hpItem.Name + ".");
-                                        currChar.HitPoints += battleResults.loot.Strength;
-                                        currChar.HitPoints -= currChar.hpItem.Strength;
-                                        currChar.hpItem = battleResults.loot;
-
-                                    }
-                                    else
-                                    {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
-                                            " shakes their head in disgust and leaves it on the floor.");
-                                    }
+                                    currChar.HitPoints += battleResults.loot.Strength;
+                                    battleResults.postGame.Add(currChar.Name + " is healed to " + currChar.HitPoints+"!");
                                 }
                             }
                         }

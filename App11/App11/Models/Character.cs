@@ -47,7 +47,7 @@ namespace App11.Models
             this.defense = defense;
             this.speed = speed;
             this.stackOrder = stackOrder;
-            this.hitPoints = hitPoints;
+            this.maxHP = hitPoints;
             this.experience = 0;
             this.level = level;
             this.isHuman = true;
@@ -60,7 +60,7 @@ namespace App11.Models
             this.defense = defense;
             this.speed = speed;
             this.stackOrder = stackOrder;
-            this.hitPoints = hitPoints;
+            this.maxHP = hitPoints;
             this.experience = 0;
             this.level = level;
             this.name = name;
@@ -145,10 +145,6 @@ namespace App11.Models
             if (speedItem != null)
             {
                 charInfo += "Speed Item: " + speedItem.Name + " " + speedItem.Strength + "\n";
-            }
-            if (hpItem != null)
-            {
-                charInfo += "Hitpoints Item: " + hpItem.Name + " " + hpItem.Strength + "\n";
             }
             return charInfo;
 		}

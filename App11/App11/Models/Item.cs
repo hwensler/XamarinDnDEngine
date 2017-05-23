@@ -65,7 +65,7 @@ namespace App11.Models
                 case ("DEFENSE"):
                     this.Attribute = "Defense";
                     break;
-                case ("HP"):
+                case ("Healing"):
                     this.Attribute = "HP";
                     break;
                 case ("MAGICALL"):

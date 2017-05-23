@@ -115,10 +115,25 @@ namespace App11.Views
                                 currChar.Speed += battleResults.loot.Strength;
                                 currChar.speedItem = battleResults.loot;
                             }
-                            else
+                            else if (battleResults.loot.Attribute == "HP")
                             {
-                                currChar.HitPoints += battleResults.loot.Strength;
-                                currChar.hpItem = battleResults.loot;
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
+                                    + battleResults.loot.Strength);
+                                //healing items will be implemented here.
+                                if (currChar.HitPoints == currChar.maxHP)
+                                {
+                                    battleResults.postGame.Add(currChar.Name + " is already full health!");
+                                }
+                                else if (currChar.HitPoints + battleResults.loot.Strength >= currChar.maxHP)
+                                {
+                                    currChar.HitPoints = currChar.maxHP;
+                                    battleResults.postGame.Add(currChar.Name + " is healed to full health!");
+                                }
+                                else
+                                {
+                                    currChar.HitPoints += battleResults.loot.Strength;
+                                    battleResults.postGame.Add(currChar.Name + " is healed to " + currChar.HitPoints + "!");
+                                }
                             }
                             //currChar.AddItemToInv(battleResults.loot);
                         }
