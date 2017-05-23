@@ -7,12 +7,18 @@
         <ToolbarItem Name="Update" Clicked="OnUpdateClick" />
         <ToolbarItem Name="Delete" Clicked="OnDeleteClick" />
     </ContentPage.ToolbarItems>-->
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="{Binding Item.Name}" FontSize="Large"/>
-        <Label Text="Description: " FontSize="Medium" />
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
-        <Label Text="Strength: " FontSize ="Medium" />
-
-        <Label Text="{Binding Item.Strength}" FontSize="Small"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="5">
+            <Image WidthRequest ="100" HeightRequest ="100" Source="{Binding Item.image}"/>
+            <Label Text="{Binding Item.Name}" FontSize="Large"/>
+            <Label Text="Description: " FontSize="Medium" />
+            <Label Text="{Binding Item.Description}" FontSize="Small"/>
+            <Label Text="Strength: " FontSize ="Medium" />
+            <Label Text="{Binding Item.Strength}" FontSize="Small"/>
+            <Label Text="Durability: " FontSize ="Medium" />
+            <Label Text="{Binding Item.ItemCounter}" FontSize="Small"/>
+            <Label Text="Created by: " FontSize ="Medium" />
+            <Label Text="{Binding Item.creator}" FontSize="Small"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
