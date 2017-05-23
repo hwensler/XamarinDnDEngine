@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using App11.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,8 @@ namespace App11.Views
 		public SettingPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            BindingContext = Setting.critMiss;
+        }
+
+    }
 }
