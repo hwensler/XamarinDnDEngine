@@ -72,13 +72,27 @@ namespace App11.Views
             dataAccess.DropTableandInsert(getRetItem);
 
         }
-        public void randomIt(object sender, EventArgs e)
+        public async void randomIt(object sender, EventArgs e)
         {
             Setting.randomItems = !Setting.randomItems;
+            string retMod;
+            retMod = await GetItemsAsync();
+            JSONItem model = JsonConvert.DeserializeObject<JSONItem>(retMod);
+            List<ServerItem> getRetItem = model.data;
+            dataAccess = new ItemsDBDataAccess();
+
+            dataAccess.DropTableandInsert(getRetItem);
         }
-        public void superIt(object sender, EventArgs e)
+        public async void superIt(object sender, EventArgs e)
         {
             Setting.superItems = !Setting.superItems;
+            string retMod;
+            retMod = await GetItemsAsync();
+            JSONItem model = JsonConvert.DeserializeObject<JSONItem>(retMod);
+            List<ServerItem> getRetItem = model.data;
+            dataAccess = new ItemsDBDataAccess();
+
+            dataAccess.DropTableandInsert(getRetItem);
         }
 
         public void debugIt(object sender, EventArgs e)
