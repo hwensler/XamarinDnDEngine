@@ -47,22 +47,27 @@ namespace App11.Models
                         int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
                         newBattle.monstQueue.Peek().HitPoints -= damage;
                         newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
+                        
+                        
+                        if (Setting.itemUsage)
+                        {
+                            //logic for decrement item usage
+                            Character HumanAttacker = (Character)fightOrder.Peek();
+                            Item Weapon = HumanAttacker.strItem;
+                            if (Weapon != null)
+                            {
+                                Weapon.ItemCounter--;
+                                if (Weapon.ItemCounter == 0)
+                                {
+                                    HumanAttacker.strItem = null;
+                                    newBattle.battleResult.postGame.Add(Weapon + " has broke from overuse!");
+                                }
+                            } 
+                        }
                         if (!newBattle.monstQueue.Peek().isAlive())
                         {
                             newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", Died");
                             newBattle.monstQueue.Dequeue();
-                        }
-                        //logic for decrement item usage
-                        Character HumanAttacker = (Character)fightOrder.Peek();
-                        Item Weapon = HumanAttacker.strItem;
-                        if (Weapon != null)
-                        {
-                            Weapon.ItemCounter--;
-                            if (Weapon.ItemCounter == 0)
-                            {
-                                HumanAttacker.strItem = null;
-                                newBattle.battleResult.postGame.Add(Weapon + " has broke from overuse!");
-                            }
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
                     }
@@ -74,33 +79,41 @@ namespace App11.Models
 
                         newBattle.charQueue.Peek().HitPoints -= damage;
                         newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.charQueue.Peek().HitPoints);
+                        
+                        //logic for decrement item usage
+                        if (Setting.itemUsage)
+                        {
+                            Character HumanDefender = (Character)newBattle.charQueue.Peek();
+                            //since speed and armor are used for defence, decrement those
+                            Item BodyArmor = HumanDefender.defItem;
+                            Item SpeedItem = HumanDefender.speedItem;
+                            //if there is an item
+                            if (BodyArmor != null)
+                            {
+                                BodyArmor.ItemCounter--;
+                                if (BodyArmor.ItemCounter == 0)
+                                {
+                                    BodyArmor = null;
+                                    newBattle.battleResult.postGame.Add(BodyArmor + " has broke from overuse!");
+                                }
+                            }
+
+                            //if there is an item
+                            if (SpeedItem != null)
+                            {
+                                SpeedItem.ItemCounter--;
+                                if (SpeedItem.ItemCounter == 0)
+                                {
+                                    SpeedItem = null;
+                                    newBattle.battleResult.postGame.Add(SpeedItem + " has broke from overuse!");
+                                }
+                            } 
+                        }
                         if (!newBattle.charQueue.Peek().isAlive())
                         {
                             newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", Died");
                             newBattle.battleResult.deadChars.Add((Character)newBattle.charQueue.Dequeue());
-                            
-                        }
-                        //logic for decrement item usage
-                        Character HumanDefender = (Character)newBattle.charQueue.Peek();
-                        Item BodyArmor = HumanDefender.defItem;
-                        Item SpeedItem = HumanDefender.speedItem;
-                        if (BodyArmor != null)
-                        {
-                            BodyArmor.ItemCounter--;
-                            if (BodyArmor.ItemCounter == 0)
-                            {
-                                BodyArmor = null;
-                                newBattle.battleResult.postGame.Add(BodyArmor + " has broke from overuse!");
-                            }
-                        }
-                        if (SpeedItem != null)
-                        {
-                            SpeedItem.ItemCounter--;
-                            if (SpeedItem.ItemCounter == 0)
-                            {
-                                SpeedItem = null;
-                                newBattle.battleResult.postGame.Add(SpeedItem + " has broke from overuse!");
-                            }
+
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
                     }
@@ -136,6 +149,7 @@ namespace App11.Models
             {
                 newBattle.battleResult.battleOutput.Add("Oh no! a critical miss!");
                 //item breaking logic here
+                
                 //adjust character stats next
             }
             int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
