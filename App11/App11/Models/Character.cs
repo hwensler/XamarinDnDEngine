@@ -21,6 +21,7 @@ namespace App11.Models
         public Item strItem;
         public Item defItem;
         public Item speedItem;
+        public int maxHP;
 
        //items list in action!
         private List<Item> inventory = new List<Item> ();
@@ -33,8 +34,9 @@ namespace App11.Models
             this.defense = 1;
             this.speed = 1;
             this.stackOrder = 1;
-            this.hitPoints = 10;
+            this.maxHP = 10;
             this.experience = 0;
+            HitPoints = maxHP;
         }
 
         //Character constructor
@@ -49,6 +51,7 @@ namespace App11.Models
             this.experience = 0;
             this.level = level;
             this.isHuman = true;
+            HitPoints = maxHP;
         }
 
         public Character(int strength, int defense, int speed, int stackOrder, int hitPoints, int level, string name)
@@ -62,6 +65,7 @@ namespace App11.Models
             this.level = level;
             this.name = name;
             this.isHuman = true;
+            HitPoints = maxHP;
         }
         public bool AwardExp(int expAward)
         {
@@ -81,6 +85,7 @@ namespace App11.Models
                     this.Speed++;
                     this.Defense++;
                     this.HitPoints++;
+                    this.maxHP++;
                     level++;
                     timeToLevel = (int)(timeToLevel *2);
                 }
@@ -127,7 +132,8 @@ namespace App11.Models
 					   "Lv: " + Level + '\n' +
 					   "Strength:" + Strength + '\n' +
 					   "Speed: " + Speed + '\n' +
-					   "Defense: " + Defense +'\n';
+					   "Defense: " + Defense +'\n'+
+                       "HitPoints: " + maxHP + '\n';
             if (strItem != null)
             {
                 charInfo += "Strength Item: " + strItem.Name + " " + strItem.Strength + "\n";
