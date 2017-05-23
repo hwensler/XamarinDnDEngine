@@ -5,25 +5,35 @@
     <ScrollView>
         <StackLayout>
             <Label Text ="Crit Hit:"/>
-            <Switch x:Name ="critHit"/>
+            <Switch x:Name ="critHit" 
+                    Toggled ="flipCrit"/>
             <Label Text ="Crit Miss:"/>
-            <Switch x:Name ="critMiss"/>
+            <Switch x:Name ="critMiss"
+                    Toggled ="flipMiss"/>
             <Label Text ="Item Usage:"/>
-            <Switch x:Name ="itemUsage"/>
+            <Switch x:Name ="itemUsage"
+                    Toggled ="flipIU"/>
             <Label Text ="Magic:"/>
-            <Switch x:Name ="magic"/>
+            <Switch x:Name ="magic"
+                    Toggled ="magicU"/>
             <Label Text ="HP Items:"/>
-            <Switch x:Name ="hpItems"/>
+            <Switch x:Name ="hpItems"
+                    Toggled ="toggleHP"/>
             <Label Text ="Battle Events:"/>
-            <Switch x:Name ="battleEvents"/>
+            <Switch x:Name ="battleEvents"
+                    Toggled ="battleE"/>
             <Label Text ="Server Items:"/>
-            <Switch x:Name ="serverItems"/>
+            <Switch x:Name ="serverItems"
+                    Toggled ="serverIt"/>
             <Label Text ="Random Items:"/>
-            <Switch x:Name ="randomItems"/>
+            <Switch x:Name ="randomItems"
+                    Toggled ="randomIt"/>
             <Label Text ="Super Items:"/>
-            <Switch x:Name ="superItems"/>
+            <Switch x:Name ="superItems"
+                    Toggled ="superIt"/>
             <Label Text ="Debug Mode:"/>
-            <Switch x:Name ="debug"/>
+            <Switch x:Name ="debug"
+                    Toggled ="debugIt"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
