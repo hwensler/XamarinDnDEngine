@@ -52,11 +52,24 @@ namespace App11.Models
                             newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", Died");
                             newBattle.monstQueue.Dequeue();
                         }
+                        //logic for decrement item usage
+                        Character HumanAttacker = (Character)fightOrder.Peek();
+                        Item Weapon = HumanAttacker.strItem;
+                        if (Weapon != null)
+                        {
+                            Weapon.ItemCounter--;
+                            if (Weapon.ItemCounter == 0)
+                            {
+                                HumanAttacker.strItem = null;
+                                newBattle.battleResult.postGame.Add(Weapon + " has broke from overuse!");
+                            }
+                        }
                         fightOrder.Enqueue(fightOrder.Dequeue());
                     }
                     //Monster attack
                     else
                     {
+                        //decrements all defense items for the current character
                         int damage = attackDamage(fightOrder.Peek(), newBattle.charQueue.Peek());
 
                         newBattle.charQueue.Peek().HitPoints -= damage;
@@ -66,6 +79,28 @@ namespace App11.Models
                             newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", Died");
                             newBattle.battleResult.deadChars.Add((Character)newBattle.charQueue.Dequeue());
                             
+                        }
+                        //logic for decrement item usage
+                        Character HumanDefender = (Character)newBattle.charQueue.Peek();
+                        Item BodyArmor = HumanDefender.defItem;
+                        Item SpeedItem = HumanDefender.speedItem;
+                        if (BodyArmor != null)
+                        {
+                            BodyArmor.ItemCounter--;
+                            if (BodyArmor.ItemCounter == 0)
+                            {
+                                BodyArmor = null;
+                                newBattle.battleResult.postGame.Add(BodyArmor + " has broke from overuse!");
+                            }
+                        }
+                        if (SpeedItem != null)
+                        {
+                            SpeedItem.ItemCounter--;
+                            if (SpeedItem.ItemCounter == 0)
+                            {
+                                SpeedItem = null;
+                                newBattle.battleResult.postGame.Add(SpeedItem + " has broke from overuse!");
+                            }
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
                     }
