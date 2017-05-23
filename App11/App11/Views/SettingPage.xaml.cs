@@ -44,6 +44,21 @@ namespace App11.Views
         public void serverIt(object sender, EventArgs e)
         {
             Setting.useServerItems = !Setting.critHit;
+            if (superItems.IsVisible==true)
+            {
+                SuperItemsText.IsVisible = false;
+                randomItemsText.IsVisible = false;
+                superItems.IsVisible = false;
+                randomItems.IsVisible = false;
+            }
+            else
+            {
+                SuperItemsText.IsVisible = true;
+                randomItemsText.IsVisible = true;
+                superItems.IsVisible = true;
+                randomItems.IsVisible = true;
+            }
+            
         }
         public void randomIt(object sender, EventArgs e)
         {
