@@ -2,26 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App11.Views.SettingPage">
-    <StackLayout>
-        <Label Text ="Crit Hit:"/>
-        <Switch x:Name ="critHit"/>
-        <Label Text ="Crit Miss:"/>
-        <Switch x:Name ="critMiss"/>
-        <Label Text ="Item Usage:"/>
-        <Switch x:Name ="itemUsage"/>
-        <Label Text ="Magic:"/>
-        <Switch x:Name ="magic"/>
-        <Label Text ="HP Items:"/>
-        <Switch x:Name ="hpItems"/>
-        <Label Text ="Battle Events:"/>
-        <Switch x:Name ="battleEvents"/>
-        <Label Text ="Server Items:"/>
-        <Switch x:Name ="serverItems"/>
-        <Label Text ="Random Items:"/>
-        <Switch x:Name ="randomItems"/>
-        <Label Text ="Super Items:"/>
-        <Switch x:Name ="superItems"/>
-        <Label Text ="Debug Mode:"/>
-        <Switch x:Name ="debug"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Label Text ="Crit Hit:"/>
+            <Switch x:Name ="critHit"/>
+            <Label Text ="Crit Miss:"/>
+            <Switch x:Name ="critMiss"/>
+            <Label Text ="Item Usage:"/>
+            <Switch x:Name ="itemUsage"/>
+            <Label Text ="Magic:"/>
+            <Switch x:Name ="magic"/>
+            <Label Text ="HP Items:"/>
+            <Switch x:Name ="hpItems"/>
+            <Label Text ="Battle Events:"/>
+            <Switch x:Name ="battleEvents"/>
+            <Label Text ="Server Items:"/>
+            <Switch x:Name ="serverItems"/>
+            <Label Text ="Random Items:"/>
+            <Switch x:Name ="randomItems"/>
+            <Label Text ="Super Items:"/>
+            <Switch x:Name ="superItems"/>
+            <Label Text ="Debug Mode:"/>
+            <Switch x:Name ="debug"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
