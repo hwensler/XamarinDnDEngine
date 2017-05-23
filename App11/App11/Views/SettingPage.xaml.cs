@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using App11.Models;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Net.Http;
+using App11.Models;
 
 namespace App11.Views
 {
@@ -58,6 +60,28 @@ namespace App11.Views
         {
             Setting.debugMode = !Setting.critHit;
         }
+        public async Task<string> GetItemsAsync()
+        {
+            int superVal = Convert.ToInt32(Setting.superItems);
+            int randomVal = Convert.ToInt32(Setting.randomItems);
 
+            Dictionary<string, string> dictArr = new Dictionary<string, string>
+            {
+                {"randomItemOption" , Convert.ToString(randomVal) },
+                {"superItemOption", Convert.ToString(superVal) }
+            };
+            var client = new System.Net.Http.HttpClient();
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
+            var address = $"http://apihw20170510024050.azurewebsites.net//api/GetItemList";
+            var values = new FormUrlEncodedContent(dictArr);
+            var response = await client.PostAsync(address, values);
+
+            var itemJson = response.Content.ReadAsStringAsync().Result;
+
+            //var rootobject = JsonConvert.DeserializeObject<Rootobject>(airportJson);
+
+            return itemJson;
+
+        }
     }
 }

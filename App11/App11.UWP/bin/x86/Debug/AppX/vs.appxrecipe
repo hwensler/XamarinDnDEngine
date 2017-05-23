@@ -31,7 +31,7 @@
     <AppXManifest Include="C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-23T07:25:43.782</Modified>
+      <Modified>2017-05-23T15:47:34.922</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -620,7 +620,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brook\Source\Repos\SUDigits3\App11\App11.UWP\bin\x86\Debug\Core\App11.UWP.exe">
       <PackagePath>App11.UWP.exe</PackagePath>
-      <Modified>2017-05-23T07:25:43.774</Modified>
+      <Modified>2017-05-23T15:47:34.905</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
