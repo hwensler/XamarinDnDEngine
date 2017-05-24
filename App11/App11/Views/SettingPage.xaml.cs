@@ -24,11 +24,30 @@ namespace App11.Views
         public void flipCrit(object sender, EventArgs e)
         {
             Setting.critHit = !Setting.critHit;
-
+            if (Setting.critHit == true)
+            {
+                critmissText.IsVisible = false;
+                critMiss.IsVisible = false;
+            }
+            else
+            {
+                critmissText.IsVisible = true;
+                critMiss.IsVisible = true;
+            }
         }
         public void flipMiss(object sender, EventArgs e)
         {
             Setting.critMiss = !Setting.critMiss;
+            if (Setting.critMiss == true)
+            {
+                crithitText.IsVisible = false;
+                critHit.IsVisible = false;
+            }
+            else
+            {
+                crithitText.IsVisible = true ;
+                critHit.IsVisible = true;
+            }
         }
         public void flipIU(object sender, EventArgs e)
         {
@@ -42,9 +61,78 @@ namespace App11.Views
         {
             Setting.hpUsage = !Setting.hpUsage;
         }
-        public void battleE(object sender, EventArgs e)
+        public async void battleE(object sender, EventArgs e)
         {
             Setting.battleEvents = !Setting.battleEvents;
+            if (!Setting.battleEvents)
+            {
+                SuperEventsText.IsVisible = false;
+                randomEventsText.IsVisible = false;
+                superEvents.IsVisible = false;
+                randomEvents.IsVisible = false;
+            }
+            else
+            {
+                SuperEventsText.IsVisible = true;
+                randomEventsText.IsVisible = true;
+                superEvents.IsVisible = true;
+                randomEvents.IsVisible = true;
+            }
+
+            if (Setting.battleEvents)
+            {
+                string retMod;
+                retMod = await GetEventsAsync();
+                JSONEvent model = JsonConvert.DeserializeObject<JSONEvent>(retMod);
+                List<ServerEvent> getRetEvent = model.data;
+                //dataAccess = new ItemsDBDataAccess();
+
+                //dataAccess.DropTableandInsert(getRetEvent);
+                Setting.eventList.Clear();
+
+                foreach (ServerEvent sEvent in getRetEvent)
+                {
+                    Setting.eventList.Add(sEvent);
+                }
+            }
+            else
+            {
+                Setting.eventList.Clear();
+            }
+        }
+        public async void randomE(object sender, EventArgs e)
+        {
+            Setting.randomEvents = !Setting.randomEvents;
+            string retMod;
+            retMod = await GetEventsAsync();
+            JSONEvent model = JsonConvert.DeserializeObject<JSONEvent>(retMod);
+            List<ServerEvent> getRetEvent = model.data;
+            //dataAccess = new ItemsDBDataAccess();
+
+            //dataAccess.DropTableandInsert(getRetItem);
+            Setting.eventList.Clear();
+
+            foreach (ServerEvent sEvent in getRetEvent)
+            {
+                Setting.eventList.Add(sEvent);
+            }
+        }
+        public async void superE(object sender, EventArgs e)
+        {
+            Setting.superEvents = !Setting.superEvents;
+            string retMod;
+            retMod = await GetEventsAsync();
+            JSONEvent model = JsonConvert.DeserializeObject<JSONEvent>(retMod);
+            List<ServerEvent> getRetEvent = model.data;
+            //dataAccess = new ItemsDBDataAccess();
+
+            //dataAccess.DropTableandInsert(getRetItem);
+            Setting.eventList.Clear();
+
+            foreach (ServerEvent sEvent in getRetEvent)
+            {
+                Setting.eventList.Add(sEvent);
+            }
         }
         public async void serverIt(object sender, EventArgs e)
         {
@@ -128,6 +216,30 @@ namespace App11.Views
             //var rootobject = JsonConvert.DeserializeObject<Rootobject>(airportJson);
 
             return itemJson;
+
+        }
+        public async Task<string> GetEventsAsync()
+        {
+            int randomVal = Convert.ToInt32(Setting.randomItems);
+            int superVal = Convert.ToInt32(Setting.superItems);
+
+            Dictionary<string, string> dictArr = new Dictionary<string, string>
+            {
+                {"randomItemOption" , Convert.ToString(randomVal) },
+                {"superItemOption", Convert.ToString(superVal) }
+            };
+
+            var client = new System.Net.Http.HttpClient();
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
+            var address = $"http://gamehackathon.azurewebsites.net/api/GetBattleEffects";
+            var values = new FormUrlEncodedContent(dictArr);
+            var response = await client.PostAsync(address, values);
+
+            var eventJson = response.Content.ReadAsStringAsync().Result;
+
+            //var rootobject = JsonConvert.DeserializeObject<Rootobject>(airportJson);
+
+            return eventJson;
 
         }
     }

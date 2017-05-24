@@ -4,10 +4,12 @@
              x:Class="App11.Views.SettingPage">
     <ScrollView>
         <StackLayout>
-            <Label Text ="Crit Hit:"/>
+            <Label Text ="Crit Hit:"
+                   x:Name ="crithitText"/>
             <Switch x:Name ="critHit" 
                     Toggled ="flipCrit"/>
-            <Label Text ="Crit Miss:"/>
+            <Label Text ="Crit Miss:"
+                   x:Name ="critmissText"/>
             <Switch x:Name ="critMiss"
                     Toggled ="flipMiss"/>
             <Label Text ="Item Usage:"/>
@@ -22,6 +24,18 @@
             <Label Text ="Battle Events:"/>
             <Switch x:Name ="battleEvents"
                     Toggled ="battleE"/>
+            <Label Text ="Random Events:"
+                   x:Name ="randomEventsText"
+                   IsVisible="False"/>
+            <Switch x:Name ="randomEvents"
+                    Toggled ="randomIt"
+                    IsVisible="False"/>
+            <Label Text ="Super Events:"
+                   x:Name ="SuperEventsText"
+                   IsVisible="False"/>
+            <Switch x:Name ="superEvents"
+                    Toggled ="superIt"
+                    IsVisible="False"/>
             <Label Text ="Server Items:"/>
             <Switch x:Name ="serverItems"
                     Toggled ="serverIt"/>
