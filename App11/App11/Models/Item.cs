@@ -42,7 +42,7 @@ namespace App11.Models
             }
             set
             {
-                _itemCounter = 100;
+                _itemCounter = value;
             }
         }
 
