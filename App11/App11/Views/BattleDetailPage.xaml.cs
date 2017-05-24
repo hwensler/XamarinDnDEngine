@@ -79,7 +79,11 @@ namespace App11.Views
 
                                             currChar.magicItem = battleResults.loot;
                                         }
-                                    } 
+                                    }
+                                    else
+                                    {
+                                        currChar.magicItem = battleResults.loot;
+                                    }
                                 }
                                 
                                 
