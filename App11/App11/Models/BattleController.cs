@@ -106,13 +106,22 @@ namespace App11.Models
                                     }
                                 }
                             }
+                            //do regular damage if no magic item
+                            else
+                            {
+                                int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
+                                newBattle.monstQueue.Peek().HitPoints -= damage;
+                                newBattle.battleResult.battleOutput.Add("Monster Tank " + newBattle.monstQueue.Peek().Name + " took "
+                                    + damage + " damage. They're now at " + newBattle.monstQueue.Peek().HitPoints + " HP.");
+                            }
                         } 
-                        //do regular damage logic
+                        //do regular damage logic if setting is off
                         else
                         {
                             int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
                             newBattle.monstQueue.Peek().HitPoints -= damage;
-                            newBattle.battleResult.battleOutput.Add("Monster Tank " + newBattle.monstQueue.Peek().Name + " took " + damage + " damage. They're now at " + newBattle.monstQueue.Peek().HitPoints + " HP.");
+                            newBattle.battleResult.battleOutput.Add("Monster Tank " + newBattle.monstQueue.Peek().Name + " took " 
+                                + damage + " damage. They're now at " + newBattle.monstQueue.Peek().HitPoints + " HP.");
                         }
 
                         if (Setting.itemUsage)
