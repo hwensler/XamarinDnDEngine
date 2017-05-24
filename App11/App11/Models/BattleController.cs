@@ -145,6 +145,16 @@ namespace App11.Models
         {
             newBattle.die = newBattle.rand.Next(1, 21);
 
+            //add if tree to alter if critical miss/hit is on
+            if (Setting.critMiss)
+            {
+                newBattle.die = 1;
+            }
+            else if (Setting.critHit)
+            {
+                newBattle.die = 21;
+            }
+
             //for critical miss since items break before calculating damage
             if (newBattle.die == 1)
             {
