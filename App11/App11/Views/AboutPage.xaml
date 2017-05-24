@@ -10,19 +10,18 @@
   <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ScrollView Grid.Row="1">
-      <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-        <Label FontSize="22">
-          <Label.FormattedText>
-            <FormattedString>
-              <FormattedString.Spans>
-                <Span Text="Information About This Project" FontAttributes="Bold" FontSize="22"/>
-              </FormattedString.Spans>
-            </FormattedString>
-          </Label.FormattedText>
-        </Label>
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Information About This Project" FontAttributes="Bold" FontSize="22"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -32,7 +31,8 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <Image Source= "http://thumb.ibb.co/nkLqtF/IMG_4752.jpg"/>
             </StackLayout>
-    </ScrollView>
-  </Grid>
+        </ScrollView>
+    </Grid>
 </ContentPage>
