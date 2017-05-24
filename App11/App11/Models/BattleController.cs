@@ -112,7 +112,7 @@ namespace App11.Models
                         {
                             int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
                             newBattle.monstQueue.Peek().HitPoints -= damage;
-                            newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
+                            newBattle.battleResult.battleOutput.Add("Monster Tank " + newBattle.monstQueue.Peek().Name + " took " + damage + " damage. They're now at " + newBattle.monstQueue.Peek().HitPoints + " HP.");
                         }
 
                         if (Setting.itemUsage)
@@ -132,7 +132,7 @@ namespace App11.Models
                         }
                         if (!newBattle.monstQueue.Peek().isAlive())
                         {
-                            newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", Died");
+                            newBattle.battleResult.battleOutput.Add("Monster Tank " + newBattle.monstQueue.Peek().Name + " Died");
                             newBattle.monstQueue.Dequeue();
                         }
                         fightOrder.Enqueue(fightOrder.Dequeue());
@@ -144,7 +144,7 @@ namespace App11.Models
                         int damage = attackDamage(fightOrder.Peek(), newBattle.charQueue.Peek());
 
                         newBattle.charQueue.Peek().HitPoints -= damage;
-                        newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.charQueue.Peek().HitPoints);
+                        newBattle.battleResult.battleOutput.Add("Character Tank " + newBattle.charQueue.Peek().Name + " took " + damage + " damage. They're now at " + newBattle.charQueue.Peek().HitPoints +" HP.");
                         
                         //logic for decrement item usage
                         if (Setting.itemUsage)
@@ -177,7 +177,7 @@ namespace App11.Models
                         }
                         if (!newBattle.charQueue.Peek().isAlive())
                         {
-                            newBattle.battleResult.battleOutput.Add("Char Tank, " + newBattle.charQueue.Peek().Name + ", Died");
+                            newBattle.battleResult.battleOutput.Add("Chararacter Tank " + newBattle.charQueue.Peek().Name + " died. :(");
                             newBattle.battleResult.deadChars.Add((Character)newBattle.charQueue.Dequeue());
 
                         }
