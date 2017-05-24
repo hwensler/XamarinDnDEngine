@@ -29,6 +29,7 @@ namespace App11.Models
         protected int level;
         public int Level { get { return level; } set { this.level = value; } }
         public bool isHuman;
+        public string Image { get; set; }
 
         //Should we revisit and limit the number of chars in a name?
         protected string name;
