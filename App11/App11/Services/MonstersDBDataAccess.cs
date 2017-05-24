@@ -48,31 +48,37 @@ namespace App11
             {
                 Name = "Skeleton",
                 Description = "A reanimated calcified being derived from past fallen adventurers.",
+                Image = "http://www.freeiconspng.com/uploads/skeleton-png-29.png"
             });
             this.Monsters.Add(new Monster
             {
                 Name = "Goblin",
                 Description = "A small impish beast that relies on numbers rather than strength.",
+                Image = "http://www.iconninja.com/files/873/636/953/goblin-icon.png"
             });
             this.Monsters.Add(new Monster
             {
                 Name = "Orc",
                 Description = "A fell beast that relishes in butchering of its foes and allies alike.",
+                Image = "http://www.i2clipart.com/cliparts/7/a/e/3/1281357ae34b76d14f4c1938301c918aca7981.png"
             });
             this.Monsters.Add(new Monster
             {
                 Name = "Dragon",
                 Description = "A species that contains lizards to the mythical hellfire breather.",
+                Image = "http://www.freeiconspng.com/uploads/black-dragon-icon-7.jpg"
             });
             this.Monsters.Add(new Monster
             {
                 Name = "Demon",
                 Description = "A hellspawn that attempts to lure adventurers into madness.",
+                Image = "http://www.freeiconspng.com/uploads/monster-png-sea-monster-icon-12.png"
             });
             this.Monsters.Add(new Monster
             {
                 Name = "Slime",
                 Description = "An amorphous creature that is forever hungry and digests all.",
+                Image = "http://images.clipartpanda.com/slime-clipart-ncX8daBpi.png"
             });
         }
         //querying monsters
