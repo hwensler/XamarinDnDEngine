@@ -363,11 +363,11 @@ namespace App11.Models
                     if (humanFist.strItem == null && damage > 2)
                     {
                         damage = 2;
-                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon so they resort to using their fist. They do " + damage + ".");
+                        newBattle.battleResult.battleOutput.Add(humanFist.Name + " doesn't have a weapon so they resort to using their fist. They do " + damage + ".");
                     }
                     else if (humanFist.strItem == null)
                     {
-                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon so they resort to using their fist. They do " + damage + ".");
+                        newBattle.battleResult.battleOutput.Add(humanFist.Name + " doesn't have a weapon so they resort to using their fist. They do " + damage + ".");
                     }
                 }
                 //miss logic
