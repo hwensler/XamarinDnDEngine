@@ -164,10 +164,10 @@ namespace App11.Models
                 if (DefenseItem != null || SpeedItem != null || AttackItem != null)
                 {
                     //pick a random item
-                    int magicInt = newBattle.rand.Next(0, 2);
+                    int critInt = newBattle.rand.Next(0, 2);
 
-                   //if magic int is 0, try and drop the defense item 
-                   if(magicInt == 0)
+                   //if magic int is 0, try and drop the defense item then the speed item then the attack item
+                   if(critInt == 0)
                     {
                         //and it has a defense item
                         if(DefenseItem != null)
@@ -184,7 +184,54 @@ namespace App11.Models
                         {
                             attacker.strItem = null;
                         }
-                }
+                    }
+
+                   //else if critint is one, drop order is speed, attack defense
+                   else if(critInt == 1)
+                    {
+                        //and it has a speed item
+                        if (SpeedItem != null)
+                        {
+                            attacker.speedItem = null;
+                        }
+
+                        //else if it has an attack item
+                        else if (AttackItem != null)
+                        {
+                            attacker.strItem = null;
+                        }
+
+                        //else if it has a defense item
+                        else if (DefenseItem != null)
+                        {
+                            attacker.defItem = null;
+                        }
+                       
+                    }
+
+                   //else if magicInt = 2, drop order is attack, defense, speed
+                    else
+                    {
+                        //and it has an attack item
+                        if (AttackItem != null)
+                        {
+                            attacker.strItem = null;
+                        }
+
+                        //else if it has a defense item
+                        else if (DefenseItem != null)
+                        {
+                            attacker.defItem = null;
+                        }
+
+                        ///else if it has a speed item
+                        if (SpeedItem != null)
+                        {
+                            attacker.speedItem = null;
+                        }
+
+                    }
+                 
             }
             int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
             newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name +", rolls " + newBattle.die);
