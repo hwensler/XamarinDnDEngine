@@ -125,7 +125,9 @@ namespace App11.Views
                                     currChar.Speed += battleResults.loot.Strength;
                                     currChar.speedItem = battleResults.loot;
                                 }
-                                else if (battleResults.loot.Attribute == "HP")
+
+                                //if the loot is healing and healing items are allowed
+                                else if (battleResults.loot.Attribute == "HP" && Setting.hpUsage)
                                 {
                                     battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
                                         + battleResults.loot.Strength);

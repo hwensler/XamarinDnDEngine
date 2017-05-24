@@ -168,10 +168,11 @@ namespace App11.Views
                                         }
                                     }
                                 }
-                                else if (battleResults.loot.Attribute == "HP")
+                                else if (battleResults.loot.Attribute == "HP" && Setting.hpUsage)
                                 {
                                     battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
                                         + battleResults.loot.Strength);
+
                                     //healing items will be implemented here.
                                     if (currChar.HitPoints == currChar.maxHP)
                                     {
