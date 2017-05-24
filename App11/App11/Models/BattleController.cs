@@ -250,22 +250,25 @@ namespace App11.Models
                 //return 0 for the critical miss
                 return 0;
             }
-            else if(newBattle.die = 20)
-            {
 
+            //this converts your roll into the strength of the attack
+            int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
+            newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name + ", rolls " + newBattle.die);
+
+            //this is for  critical hit
+            else if (newBattle.die == 20)
+            {
+                //critical hit output
+                newBattle.battleResult.battleOutput.Add("Finally! A critical hit!");
+
+                //calculate double the attack roll
+                attackRoll = attackRoll * 2;
+
+                //return attackroll as the damage done
+                return attackRoll;
             }
 
             
-
-            int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
-            newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name +", rolls " + newBattle.die);
-
-            //for critical damage
-            if (newBattle.die == 20)
-            {
-                attackRoll=attackRoll*2;
-                newBattle.battleResult.battleOutput.Add("It's a critical! Damage x2!");
-            }
             
             newBattle.die = newBattle.rand.Next(1, 21);
             newBattle.battleResult.battleOutput.Add("Defender, " + defender.Name + ", rolls " + newBattle.die);
