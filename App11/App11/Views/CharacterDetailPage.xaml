@@ -6,6 +6,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+                <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding Image}" HorizontalOptions="LayoutOptions.Start"/>
                 <Label Text="Character Name:" />
                 <Entry Text="{Binding Name}" />
                 <Label Text="Stack Order:" />

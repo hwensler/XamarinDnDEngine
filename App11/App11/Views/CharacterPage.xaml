@@ -13,8 +13,9 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Vertical">
-                                <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontAttributes="Bold" FontSize="17" />
+                            <StackLayout Orientation="Horizontal">
+                                <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding Image}" HorizontalOptions="LayoutOptions.Start"/>
+                                <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontAttributes="Bold" FontSize="17" HorizontalOptions="Fill"/>
                                 <Label Text="{Binding Level, StringFormat='Lv: {0:F0}'}" LineBreakMode="NoWrap" FontSize="12" />
                             </StackLayout>
                         </ViewCell>
