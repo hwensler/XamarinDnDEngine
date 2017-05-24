@@ -4,10 +4,12 @@
              x:Class="App11.Views.SettingPage">
     <ScrollView>
         <StackLayout>
-            <Label Text ="Crit Hit:"/>
+            <Label Text ="Crit Hit:"
+                   x:Name ="crithitText"/>
             <Switch x:Name ="critHit" 
                     Toggled ="flipCrit"/>
-            <Label Text ="Crit Miss:"/>
+            <Label Text ="Crit Miss:"
+                   x:Name ="critmissText"/>
             <Switch x:Name ="critMiss"
                     Toggled ="flipMiss"/>
             <Label Text ="Item Usage:"/>

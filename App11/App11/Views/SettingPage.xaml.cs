@@ -24,11 +24,30 @@ namespace App11.Views
         public void flipCrit(object sender, EventArgs e)
         {
             Setting.critHit = !Setting.critHit;
-
+            if (Setting.critHit == true)
+            {
+                critmissText.IsVisible = false;
+                critMiss.IsVisible = false;
+            }
+            else
+            {
+                critmissText.IsVisible = true;
+                critMiss.IsVisible = true;
+            }
         }
         public void flipMiss(object sender, EventArgs e)
         {
             Setting.critMiss = !Setting.critMiss;
+            if (Setting.critMiss == true)
+            {
+                crithitText.IsVisible = false;
+                critHit.IsVisible = false;
+            }
+            else
+            {
+                crithitText.IsVisible = true ;
+                critHit.IsVisible = true;
+            }
         }
         public void flipIU(object sender, EventArgs e)
         {
