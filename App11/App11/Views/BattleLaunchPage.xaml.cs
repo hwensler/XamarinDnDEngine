@@ -98,43 +98,56 @@ namespace App11.Views
                         }
                         if (i == charAwarded)
                         {
-                            battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
-                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
-                            if (battleResults.loot.Attribute == "Strength")
+                            if (battleResults.loot.bodyPart == "MAGICDIRECT" || battleResults.loot.bodyPart == "MAGICALL")
                             {
-                                currChar.Strength += battleResults.loot.Strength;
-                                currChar.strItem = battleResults.loot;
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which targets monster "
+                                    + battleResults.loot.Attribute + ", reducing it by " + battleResults.loot.Strength);
+
+                                currChar.magicItem = battleResults.loot;
                             }
-                            else if (battleResults.loot.Attribute == "Defense")
-                            {
-                                currChar.Defense += battleResults.loot.Strength;
-                                currChar.defItem = battleResults.loot;
-                            }
-                            else if (battleResults.loot.Attribute == "Speed")
-                            {
-                                currChar.Speed += battleResults.loot.Strength;
-                                currChar.speedItem = battleResults.loot;
-                            }
-                            else if (battleResults.loot.Attribute == "HP")
-                            {
-                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
-                                    + battleResults.loot.Strength);
-                                //healing items will be implemented here.
-                                if (currChar.HitPoints == currChar.maxHP)
+                            else
+	                        {
+
+                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                    + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
+                                if (battleResults.loot.Attribute == "Strength")
                                 {
-                                    battleResults.postGame.Add(currChar.Name + " is already full health!");
+                                    currChar.Strength += battleResults.loot.Strength;
+                                    currChar.strItem = battleResults.loot;
                                 }
-                                else if (currChar.HitPoints + battleResults.loot.Strength >= currChar.maxHP)
+                                else if (battleResults.loot.Attribute == "Defense")
                                 {
-                                    currChar.HitPoints = currChar.maxHP;
-                                    battleResults.postGame.Add(currChar.Name + " is healed to full health!");
+                                    currChar.Defense += battleResults.loot.Strength;
+                                    currChar.defItem = battleResults.loot;
                                 }
-                                else
+                                else if (battleResults.loot.Attribute == "Speed")
                                 {
-                                    currChar.HitPoints += battleResults.loot.Strength;
-                                    battleResults.postGame.Add(currChar.Name + " is healed to " + currChar.HitPoints + "!");
+                                    currChar.Speed += battleResults.loot.Strength;
+                                    currChar.speedItem = battleResults.loot;
                                 }
+                                else if (battleResults.loot.Attribute == "HP")
+                                {
+                                    battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
+                                        + battleResults.loot.Strength);
+                                    //healing items will be implemented here.
+                                    if (currChar.HitPoints == currChar.maxHP)
+                                    {
+                                        battleResults.postGame.Add(currChar.Name + " is already full health!");
+                                    }
+                                    else if (currChar.HitPoints + battleResults.loot.Strength >= currChar.maxHP)
+                                    {
+                                        currChar.HitPoints = currChar.maxHP;
+                                        battleResults.postGame.Add(currChar.Name + " is healed to full health!");
+                                    }
+                                    else
+                                    {
+                                        currChar.HitPoints += battleResults.loot.Strength;
+                                        battleResults.postGame.Add(currChar.Name + " is healed to " + currChar.HitPoints + "!");
+                                    }
+                                } 
                             }
+                            //magic
+                            
                             //currChar.AddItemToInv(battleResults.loot);
                         }
                     }

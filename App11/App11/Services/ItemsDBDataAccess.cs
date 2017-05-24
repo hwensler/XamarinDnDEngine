@@ -45,7 +45,7 @@ namespace App11
             database.CreateTable<Item>();
             foreach (ServerItem sItem in servPass)
             {
-                database.Insert(new Item(sItem.Name, sItem.Description, sItem.Tier, sItem.AttribMod, sItem.Usage, sItem.Image, sItem.Creator));
+                database.Insert(new Item(sItem.Name, sItem.Description, sItem.Tier, sItem.AttribMod, sItem.Usage, sItem.Image, sItem.Creator,sItem.BodyPart));
             }
             
         }

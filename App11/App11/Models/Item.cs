@@ -48,8 +48,10 @@ namespace App11.Models
 
         public string image { get; set; }
         public string creator { get; set; }
-        public Item(string _name, string _desc, int _tier, string _attrib, int _usage, string _image, string _creator)
+        public string bodyPart { get; set; }
+        public Item(string _name, string _desc, int _tier, string _attrib, int _usage, string _image, string _creator,string bp)
         {
+            this.bodyPart = bp;
             this.name = _name;
             this.description = _desc;
             this.Strength = _tier;
@@ -65,7 +67,7 @@ namespace App11.Models
                 case ("DEFENSE"):
                     this.Attribute = "Defense";
                     break;
-                case ("Healing"):
+                case ("HP"):
                     this.Attribute = "HP";
                     break;
                 case ("MAGICALL"):

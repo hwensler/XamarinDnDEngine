@@ -24,6 +24,7 @@ namespace App11.Views
         public void flipCrit(object sender, EventArgs e)
         {
             Setting.critHit = !Setting.critHit;
+
         }
         public void flipMiss(object sender, EventArgs e)
         {
