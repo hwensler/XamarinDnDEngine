@@ -21,6 +21,7 @@
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemTextStyle}"
                             FontSize="16"/>
+                            <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding Image}" HorizontalOptions="LayoutOptions.Start"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
