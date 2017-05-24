@@ -68,15 +68,18 @@ namespace App11.Views
                         {
                             if (battleResults.loot.bodyPart == "MAGICDIRECT" || battleResults.loot.bodyPart == "MAGICALL")
                             {
-                                if(currChar.magicItem != null)
+                                if (Setting.magicUsage)
                                 {
-                                    if (currChar.magicItem.Strength > battleResults.loot.Strength)
+                                    if (currChar.magicItem != null)
                                     {
-                                        battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which targets monster "
-                                        + battleResults.loot.Attribute + ", reducing it by " + battleResults.loot.Strength);
+                                        if (currChar.magicItem.Strength > battleResults.loot.Strength)
+                                        {
+                                            battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which targets monster "
+                                            + battleResults.loot.Attribute + ", reducing it by " + battleResults.loot.Strength);
 
-                                        currChar.magicItem = battleResults.loot;
-                                    }
+                                            currChar.magicItem = battleResults.loot;
+                                        }
+                                    } 
                                 }
                                 
                                 
