@@ -348,10 +348,10 @@ namespace App11.Models
             {
                 //this converts your roll into the strength of the attack
                 int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
-                newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name + " rolls " + newBattle.die);
+                newBattle.battleResult.battleOutput.Add("Attacker " + attacker.Name + " rolls " + newBattle.die);
 
                 newBattle.die = newBattle.rand.Next(1, 21);
-                newBattle.battleResult.battleOutput.Add("Defender, " + defender.Name + ", rolls " + newBattle.die);
+                newBattle.battleResult.battleOutput.Add("Defender " + defender.Name + " rolls " + newBattle.die);
                 int defenseRoll = newBattle.die * (defender.Defense + defender.Level);
 
                 int damage = (attackRoll - defenseRoll) / 10;
@@ -363,11 +363,11 @@ namespace App11.Models
                     if (humanFist.strItem == null && damage > 2)
                     {
                         damage = 2;
-                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon, so they fist fight. They do " + damage + ".");
+                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon so they resort to using their fist. They do " + damage + ".");
                     }
                     else if (humanFist.strItem == null)
                     {
-                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon, so they fist fight. They do " + damage + ".");
+                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon so they resort to using their fist. They do " + damage + ".");
                     }
                 }
                 //miss logic
