@@ -151,12 +151,12 @@ namespace App11.Models
                 newBattle.battleResult.battleOutput.Add("Oh no! a critical miss!");
 
                 //Drop an item
-                Character attacker = (Character)newBattle.charQueue.Peek();
+                Character attackingChar = (Character)newBattle.charQueue.Peek();
 
                 //first check if there are items
-                Item DefenseItem = attacker.defItem;
-                Item SpeedItem = attacker.speedItem;
-                Item AttackItem = attacker.strItem;
+                Item DefenseItem = attackingChar.defItem;
+                Item SpeedItem = attackingChar.speedItem;
+                Item AttackItem = attackingChar.strItem;
                 //TODO: ADD MAGIC ITEMS HERE
 
                 //If the character has an item
@@ -172,17 +172,18 @@ namespace App11.Models
                         //and it has a defense item
                         if(DefenseItem != null)
                         {
-                            attacker.defItem = null;
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name);
+                            newBattle.charQueue.Peek().defItem = null;
                         }
                         //else if it has a speed item
                         else if(SpeedItem != null)
                         {
-                            attacker.speedItem = null;
+                            attackingChar.speedItem = null;
                         }
                         //else if it has an attack item
                         else if (AttackItem != null)
                         {
-                            attacker.strItem = null;
+                            attackingChar.strItem = null;
                         }
                     }
 
@@ -192,19 +193,19 @@ namespace App11.Models
                         //and it has a speed item
                         if (SpeedItem != null)
                         {
-                            attacker.speedItem = null;
+                            attackingChar.speedItem = null;
                         }
 
                         //else if it has an attack item
                         else if (AttackItem != null)
                         {
-                            attacker.strItem = null;
+                            attackingChar.strItem = null;
                         }
 
                         //else if it has a defense item
                         else if (DefenseItem != null)
                         {
-                            attacker.defItem = null;
+                            attackingChar.defItem = null;
                         }
                        
                     }
@@ -215,19 +216,19 @@ namespace App11.Models
                         //and it has an attack item
                         if (AttackItem != null)
                         {
-                            attacker.strItem = null;
+                            attackingChar.strItem = null;
                         }
 
                         //else if it has a defense item
                         else if (DefenseItem != null)
                         {
-                            attacker.defItem = null;
+                            attackingChar.defItem = null;
                         }
 
                         ///else if it has a speed item
                         if (SpeedItem != null)
                         {
-                            attacker.speedItem = null;
+                            attackingChar.speedItem = null;
                         }
 
                     }
