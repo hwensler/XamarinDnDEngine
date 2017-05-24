@@ -157,6 +157,7 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\dnd.png" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +186,18 @@
     <BundleResource Include="Resources\tab_feed.png" />
     <BundleResource Include="Resources\tab_feed%402x.png" />
     <BundleResource Include="Resources\tab_feed%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
   </ItemGroup>
   <Import Project="..\App11\App11.projitems" Label="Shared" Condition="Exists('..\App11\App11.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
