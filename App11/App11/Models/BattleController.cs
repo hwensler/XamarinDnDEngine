@@ -141,8 +141,9 @@ namespace App11.Models
                                 Weapon.ItemCounter--;
                                 if (Weapon.ItemCounter == 0)
                                 {
+                                    newBattle.battleResult.postGame.Add(HumanAttacker.strItem.Name + " has broke from overuse!");
                                     HumanAttacker.strItem = null;
-                                    newBattle.battleResult.postGame.Add(Weapon + " has broke from overuse!");
+                                    
                                 }
                             } 
                         }
@@ -175,8 +176,9 @@ namespace App11.Models
                                 BodyArmor.ItemCounter--;
                                 if (BodyArmor.ItemCounter == 0)
                                 {
+
+                                    newBattle.battleResult.postGame.Add(HumanDefender.defItem.Name + " has broke from overuse!");
                                     BodyArmor = null;
-                                    newBattle.battleResult.postGame.Add(BodyArmor + " has broke from overuse!");
                                 }
                             }
 
@@ -186,8 +188,9 @@ namespace App11.Models
                                 SpeedItem.ItemCounter--;
                                 if (SpeedItem.ItemCounter == 0)
                                 {
+                                    newBattle.battleResult.postGame.Add(HumanDefender.speedItem.Name + " has broke from overuse!");
                                     SpeedItem = null;
-                                    newBattle.battleResult.postGame.Add(SpeedItem + " has broke from overuse!");
+                                    
                                 }
                             } 
                         }
