@@ -168,17 +168,17 @@ namespace App11.Models
                     //pick a random item
                     int critInt = newBattle.rand.Next(0, 2);
 
-                   //if magic int is 0, try and drop the defense item then the speed item then the attack item
-                   if(critInt == 0)
+                    //if magic int is 0, try and drop the defense item then the speed item then the attack item
+                    if (critInt == 0)
                     {
                         //and it has a defense item
-                        if(DefenseItem != null)
+                        if (DefenseItem != null)
                         {
                             newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name + ".");
                             attackingChar.defItem = null;
                         }
                         //else if it has a speed item
-                        else if(SpeedItem != null)
+                        else if (SpeedItem != null)
                         {
                             newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.speedItem.Name + ".");
                             attackingChar.speedItem = null;
@@ -191,13 +191,13 @@ namespace App11.Models
                         }
                     }
 
-                   //else if critint is one, drop order is speed, attack defense
-                   else if(critInt == 1)
+                    //else if critint is one, drop order is speed, attack defense
+                    else if (critInt == 1)
                     {
                         //and it has a speed item
                         if (SpeedItem != null)
                         {
-                           newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.speedItem.Name + ".");
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.speedItem.Name + ".");
                             attackingChar.speedItem = null;
                         }
 
@@ -214,10 +214,10 @@ namespace App11.Models
                             newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name + ".");
                             attackingChar.defItem = null;
                         }
-                       
+
                     }
 
-                   //else if magicInt = 2, drop order is attack, defense, speed
+                    //else if magicInt = 2, drop order is attack, defense, speed
                     else
                     {
                         //and it has an attack item
@@ -245,8 +245,14 @@ namespace App11.Models
                         }
 
                     }
-                 
+                }
+
+                //return 0 for the critical miss
+                return 0;
             }
+
+            
+
             int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
             newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name +", rolls " + newBattle.die);
 
