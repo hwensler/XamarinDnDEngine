@@ -41,18 +41,84 @@ namespace App11.Models
                 //otherwise, attack the other teams tank
                 else
                 {
-                    //if isHuman, attach Monster Tank
+                    //if isHuman, attack Monster Tank
                     if (fightOrder.Peek().isHuman)
                     {
-                        int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
-                        newBattle.monstQueue.Peek().HitPoints -= damage;
-                        newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
-                        
-                        
+                        Character HumanAttacker = (Character)fightOrder.Peek();
+                        //if magic setting is on
+                        if (Setting.magicUsage)
+                        {
+                            //check for magic
+                            if (HumanAttacker.magicItem != null)
+                            {
+                                Item tome = HumanAttacker.magicItem;
+                                //if affect all monster
+                                if (tome.bodyPart == "MAGICALL")
+                                {
+                                    foreach (Monster monster in newBattle.monstQueue)
+                                    {
+                                        switch (tome.Attribute)
+                                        {
+                                            case ("STRENGTH"):
+                                                monster.Strength -= tome.Strength;
+                                                break;
+                                            case ("SPEED"):
+                                                monster.Speed -= tome.Strength;
+                                                break;
+                                            case ("DEFENSE"):
+                                                monster.Defense -= tome.Strength;
+                                                break;
+                                            case ("HP"):
+                                                monster.HitPoints -= tome.Strength;
+                                                break;
+
+                                        }
+                                    }
+                                }
+                                //for just direct to tank
+                                else if (tome.bodyPart == "MAGICDIRECT")
+                                {
+                                    switch (tome.Attribute)
+                                    {
+                                        case ("STRENGTH"):
+                                            newBattle.monstQueue.Peek().Strength -= tome.Strength;
+                                            break;
+                                        case ("SPEED"):
+                                            newBattle.monstQueue.Peek().Speed -= tome.Strength;
+                                            break;
+                                        case ("DEFENSE"):
+                                            newBattle.monstQueue.Peek().Defense -= tome.Strength;
+                                            break;
+                                        case ("HP"):
+                                            newBattle.monstQueue.Peek().HitPoints -= tome.Strength;
+                                            break;
+                                    }
+                                }
+                                //for decrementing usage
+                                if (Setting.itemUsage)
+                                {
+                                    tome.ItemCounter--;
+                                    //breaking mechanic
+                                    if (tome.ItemCounter==0)
+                                    {
+                                        HumanAttacker.magicItem = null;
+                                        newBattle.battleResult.postGame.Add(HumanAttacker.Name + " " + tome.Name + " has broke!");
+                                    }
+                                }
+                            }
+                        } 
+                        //do regular damage logic
+                        else
+                        {
+                            int damage = attackDamage(fightOrder.Peek(), newBattle.monstQueue.Peek());
+                            newBattle.monstQueue.Peek().HitPoints -= damage;
+                            newBattle.battleResult.battleOutput.Add("Monster Tank, " + newBattle.monstQueue.Peek().Name + ", took " + damage + " damage, now at " + newBattle.monstQueue.Peek().HitPoints);
+                        }
+
                         if (Setting.itemUsage)
                         {
                             //logic for decrement item usage
-                            Character HumanAttacker = (Character)fightOrder.Peek();
+                            HumanAttacker = (Character)fightOrder.Peek();
                             Item Weapon = HumanAttacker.strItem;
                             if (Weapon != null)
                             {
