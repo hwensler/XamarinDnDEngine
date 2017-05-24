@@ -8,10 +8,10 @@
         <ToolbarItem Name="Delete" Clicked="OnDeleteClick" />
     </ContentPage.ToolbarItems>
     <StackLayout Spacing="20" Padding="15">
-
+        <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding Mon.Image}" HorizontalOptions="Center"/>
         <Label Text="{Binding Mon.Name}" FontSize="Medium"             
-            VerticalOptions = "CenterAndExpand"
-            HorizontalOptions = "CenterAndExpand"/>
+            VerticalOptions = "Center"
+            HorizontalOptions = "Center"/>
         <Label Text="{Binding Mon.Description}" FontSize="Medium"/>
 
     </StackLayout>
