@@ -251,37 +251,44 @@ namespace App11.Models
                 return 0;
             }
 
-            //this converts your roll into the strength of the attack
-            int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
-            newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name + ", rolls " + newBattle.die);
+
 
             //this is for  critical hit
             else if (newBattle.die == 20)
             {
+                //do double damage
+                int criticalHit = (attacker.Strength + attacker.Level) * 2;
+
                 //critical hit output
                 newBattle.battleResult.battleOutput.Add("Finally! A critical hit!");
 
-                //calculate double the attack roll
-                attackRoll = attackRoll * 2;
 
                 //return attackroll as the damage done
-                return attackRoll;
+                return criticalHit;
+            }
+            
+            //else, return damage according to the default battle logic
+            else
+            {
+                //this converts your roll into the strength of the attack
+                int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
+                newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name + " rolls " + newBattle.die);
+
+                newBattle.die = newBattle.rand.Next(1, 21);
+                newBattle.battleResult.battleOutput.Add("Defender, " + defender.Name + ", rolls " + newBattle.die);
+                int defenseRoll = newBattle.die * (defender.Defense + defender.Level);
+
+                int damage = (attackRoll - defenseRoll) / 10;
+
+                //miss logic
+                if (damage < 0)
+                {
+                    damage = 0;
+                }
+                return damage;
+
             }
 
-            
-            
-            newBattle.die = newBattle.rand.Next(1, 21);
-            newBattle.battleResult.battleOutput.Add("Defender, " + defender.Name + ", rolls " + newBattle.die);
-            int defenseRoll = newBattle.die * (defender.Defense + defender.Level);
-            
-            int damage = (attackRoll - defenseRoll) / 10;
-            
-            //miss logic
-            if (damage < 0)
-            {
-                damage = 0;
-            }
-            return damage;
         }
 
         private Queue<Fighter> setOrder()
