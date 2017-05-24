@@ -87,7 +87,7 @@ namespace App11.Models
                             //since speed and armor are used for defence, decrement those
                             Item BodyArmor = HumanDefender.defItem;
                             Item SpeedItem = HumanDefender.speedItem;
-                            //if there is an item
+                            //if there is a body item
                             if (BodyArmor != null)
                             {
                                 BodyArmor.ItemCounter--;
@@ -144,13 +144,47 @@ namespace App11.Models
         private int attackDamage(Fighter attacker, Fighter defender)
         {
             newBattle.die = newBattle.rand.Next(1, 21);
+
             //for critical miss since items break before calculating damage
             if (newBattle.die == 1)
             {
                 newBattle.battleResult.battleOutput.Add("Oh no! a critical miss!");
-                //item breaking logic here
-                
-                //adjust character stats next
+
+                //Drop an item
+                Character attacker = (Character)newBattle.charQueue.Peek();
+
+                //first check if there are items
+                Item DefenseItem = attacker.defItem;
+                Item SpeedItem = attacker.speedItem;
+                Item AttackItem = attacker.strItem;
+                //TODO: ADD MAGIC ITEMS HERE
+
+                //If the character has an item
+                //TODO ADD MAGIC ITEM TO THIS 
+                if (DefenseItem != null || SpeedItem != null || AttackItem != null)
+                {
+                    //pick a random item
+                    int magicInt = newBattle.rand.Next(0, 2);
+
+                   //if magic int is 0, try and drop the defense item 
+                   if(magicInt == 0)
+                    {
+                        //and it has a defense item
+                        if(DefenseItem != null)
+                        {
+                            attacker.defItem = null;
+                        }
+                        //else if it has a speed item
+                        else if(SpeedItem != null)
+                        {
+                            attacker.speedItem = null;
+                        }
+                        //else if it has an attack item
+                        else if (AttackItem != null)
+                        {
+                            attacker.strItem = null;
+                        }
+                }
             }
             int attackRoll = newBattle.die * (attacker.Strength + attacker.Level);
             newBattle.battleResult.battleOutput.Add("Attacker, " + attacker.Name +", rolls " + newBattle.die);
