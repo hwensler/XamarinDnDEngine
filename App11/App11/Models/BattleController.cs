@@ -151,6 +151,8 @@ namespace App11.Models
                 newBattle.battleResult.battleOutput.Add("Oh no! a critical miss!");
 
                 //Drop an item
+
+                //first store the character
                 Character attackingChar = (Character)newBattle.charQueue.Peek();
 
                 //first check if there are items
@@ -172,17 +174,19 @@ namespace App11.Models
                         //and it has a defense item
                         if(DefenseItem != null)
                         {
-                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name);
-                            newBattle.charQueue.Peek().defItem = null;
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name + ".");
+                            attackingChar.defItem = null;
                         }
                         //else if it has a speed item
                         else if(SpeedItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.speedItem.Name + ".");
                             attackingChar.speedItem = null;
                         }
                         //else if it has an attack item
                         else if (AttackItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.strItem.Name + ".");
                             attackingChar.strItem = null;
                         }
                     }
@@ -193,18 +197,21 @@ namespace App11.Models
                         //and it has a speed item
                         if (SpeedItem != null)
                         {
+                           newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.speedItem.Name + ".");
                             attackingChar.speedItem = null;
                         }
 
                         //else if it has an attack item
                         else if (AttackItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.strItem.Name + ".");
                             attackingChar.strItem = null;
                         }
 
                         //else if it has a defense item
                         else if (DefenseItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name + ".");
                             attackingChar.defItem = null;
                         }
                        
@@ -216,18 +223,24 @@ namespace App11.Models
                         //and it has an attack item
                         if (AttackItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.strItem.Name + ".");
+
                             attackingChar.strItem = null;
                         }
 
                         //else if it has a defense item
                         else if (DefenseItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.defItem.Name + ".");
+
                             attackingChar.defItem = null;
                         }
 
                         ///else if it has a speed item
                         if (SpeedItem != null)
                         {
+                            newBattle.battleResult.battleOutput.Add(newBattle.charQueue.Peek().Name + "drops" + attackingChar.speedItem.Name + ".");
+
                             attackingChar.speedItem = null;
                         }
 
