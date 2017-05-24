@@ -29,7 +29,116 @@ namespace App11.Models
             }
             //create battle order using speed
             Queue<Fighter> fightOrder = setOrder();
+            if (Setting.battleEvents)
+            {
+                Random rand = new Random();
+                ServerEvent currEvent = Setting.eventList[rand.Next(0, Setting.eventList.Count)];
+                newBattle.battleResult.postGame.Add(currEvent.Description);
+                switch (currEvent.Target)
+                {
+                    case ("ALL"):
+                        foreach (Fighter fighter1 in fightOrder)
+                        {
+                            switch (currEvent.AttribMod)
+                            {
+                                case ("STRENGTH"):
+                                    fighter1.Strength += currEvent.Tier;
+                                    break;
+                                case ("SPEED"):
+                                    fighter1.Speed += currEvent.Tier;
+                                    break;
+                                case ("DEFENSE"):
+                                    fighter1.Defense += currEvent.Tier;
+                                    break;
+                                case ("HP"):
+                                    fighter1.HitPoints += currEvent.Tier;
+                                    
+                                    break;
+                            }
+                        }
+                        break;
+                    case ("CHARACTERALL"):
+                        foreach (Fighter fighter2 in newBattle.charQueue)
+                        {
+                            switch (currEvent.AttribMod)
+                            {
+                                case ("STRENGTH"):
+                                    fighter2.Strength += currEvent.Tier;
+                                    break;
+                                case ("SPEED"):
+                                    fighter2.Speed += currEvent.Tier;
+                                    break;
+                                case ("DEFENSE"):
+                                    fighter2.Defense += currEvent.Tier;
+                                    break;
+                                case ("HP"):
+                                    fighter2.HitPoints += currEvent.Tier;
 
+                                    break;
+                            }
+                        }
+                        break;
+                    case ("CHARACTERSINGLE"):
+                        Fighter fighter3 = newBattle.charQueue.Peek();
+                        switch (currEvent.AttribMod)
+                        {
+                            case ("STRENGTH"):
+                                fighter3.Strength += currEvent.Tier;
+                                break;
+                            case ("SPEED"):
+                                fighter3.Speed += currEvent.Tier;
+                                break;
+                            case ("DEFENSE"):
+                                fighter3.Defense += currEvent.Tier;
+                                break;
+                            case ("HP"):
+                                fighter3.HitPoints += currEvent.Tier;
+
+                                break;
+                        }
+                        break;
+                    case ("MONSTERAALL"):
+                        foreach (Fighter fighter4 in newBattle.monstQueue)
+                        {
+                            switch (currEvent.AttribMod)
+                            {
+                                case ("STRENGTH"):
+                                    fighter4.Strength += currEvent.Tier;
+                                    break;
+                                case ("SPEED"):
+                                    fighter4.Speed += currEvent.Tier;
+                                    break;
+                                case ("DEFENSE"):
+                                    fighter4.Defense += currEvent.Tier;
+                                    break;
+                                case ("HP"):
+                                    fighter4.HitPoints += currEvent.Tier;
+
+                                    break;
+                            }
+                        }
+                        break;
+                    case ("MONSTERSINGLE"):
+                        Fighter fighter5 = newBattle.monstQueue.Peek();
+                        switch (currEvent.AttribMod)
+                        {
+                            case ("STRENGTH"):
+                                fighter5.Strength += currEvent.Tier;
+                                break;
+                            case ("SPEED"):
+                                fighter5.Speed += currEvent.Tier;
+                                break;
+                            case ("DEFENSE"):
+                                fighter5.Defense += currEvent.Tier;
+                                break;
+                            case ("HP"):
+                                fighter5.HitPoints += currEvent.Tier;
+                                break;
+                        }
+                        break;
+
+                }
+            }
             //Now, FIGHT TO THE DEATH!
             while (newBattle.charQueue.Count != 0 && newBattle.monstQueue.Count != 0)
             {
