@@ -166,7 +166,7 @@ namespace App11.Models
                 if (DefenseItem != null || SpeedItem != null || AttackItem != null)
                 {
                     //pick a random item
-                    int critInt = newBattle.rand.Next(0, 2);
+                    int critInt = newBattle.rand.Next(0, 3);
 
                     //if magic int is 0, try and drop the defense item then the speed item then the attack item
                     if (critInt == 0)
@@ -249,6 +249,10 @@ namespace App11.Models
 
                 //return 0 for the critical miss
                 return 0;
+            }
+            else if(newBattle.die = 20)
+            {
+
             }
 
             
