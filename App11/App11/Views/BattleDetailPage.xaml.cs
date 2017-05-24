@@ -66,107 +66,125 @@ namespace App11.Views
                         }
                         if (i == charAwarded)
                         {
-                            if (battleResults.loot.Attribute == "Strength")
+                            if (battleResults.loot.bodyPart == "MAGICDIRECT" || battleResults.loot.bodyPart == "MAGICALL")
                             {
-                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
-                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
-                                if (currChar.strItem == null)
+                                if(currChar.magicItem != null)
                                 {
+                                    if (currChar.magicItem.Strength > battleResults.loot.Strength)
+                                    {
+                                        battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which targets monster "
+                                        + battleResults.loot.Attribute + ", reducing it by " + battleResults.loot.Strength);
 
-                                    currChar.strItem = battleResults.loot;
-                                    currChar.Strength += battleResults.loot.Strength;
-                                }
-                                else
-                                {
-                                    if (battleResults.loot.Strength > currChar.strItem.Strength)
-                                    {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
-                                            " takes it and discards their " + currChar.strItem.Name +".");
-                                        currChar.Strength -= currChar.strItem.Strength;
-                                        currChar.Strength += battleResults.loot.Strength;
-                                        currChar.strItem = battleResults.loot;
-                                        
-                                    }
-                                    else
-                                    {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name + 
-                                            " shakes their head in disgust and leaves it on the floor.");
+                                        currChar.magicItem = battleResults.loot;
                                     }
                                 }
+                                
+                                
                             }
-                            else if (battleResults.loot.Attribute == "Defense")
+                            else
                             {
-                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
-                                + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
-                                if (currChar.defItem == null)
+                                if (battleResults.loot.Attribute == "Strength")
                                 {
-                                    currChar.defItem = battleResults.loot;
-                                    currChar.Defense += battleResults.loot.Strength;
-                                }
-                                else
-                                {
-                                    if (battleResults.loot.Strength > currChar.defItem.Strength)
-                                    {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
-                                            " takes it and discards their " + currChar.defItem.Name + ".");
-                                        currChar.Defense -= currChar.defItem.Strength;
-                                        currChar.Defense += battleResults.loot.Strength;
-                                        currChar.defItem = battleResults.loot;
-
-                                    }
-                                    else
-                                    {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
-                                            " shakes their head in disgust and leaves it on the floor.");
-                                    }
-                                }
-                            }
-                            else if (battleResults.loot.Attribute == "Speed")
-                            {
-                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                    battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
                                     + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
-                                if (currChar.speedItem == null)
-                                {
-                                    currChar.speedItem = battleResults.loot;
-                                    currChar.Speed += battleResults.loot.Strength;
-                                }
-                                else
-                                {
-                                    if (battleResults.loot.Strength > currChar.speedItem.Strength)
+                                    if (currChar.strItem == null)
                                     {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
-                                            " takes it and discards their " + currChar.speedItem.Name + ".");
-                                        currChar.Speed -= currChar.speedItem.Strength;
-                                        currChar.Speed += battleResults.loot.Strength;
-                                        currChar.speedItem = battleResults.loot;
 
+                                        currChar.strItem = battleResults.loot;
+                                        currChar.Strength += battleResults.loot.Strength;
                                     }
                                     else
                                     {
-                                        battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
-                                            " shakes their head in disgust and leaves it on the floor.");
+                                        if (battleResults.loot.Strength > currChar.strItem.Strength)
+                                        {
+                                            battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                                " takes it and discards their " + currChar.strItem.Name + ".");
+                                            currChar.Strength -= currChar.strItem.Strength;
+                                            currChar.Strength += battleResults.loot.Strength;
+                                            currChar.strItem = battleResults.loot;
+
+                                        }
+                                        else
+                                        {
+                                            battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
+                                                " shakes their head in disgust and leaves it on the floor.");
+                                        }
                                     }
                                 }
-                            }
-                            else if (battleResults.loot.Attribute == "HP")
-                            {
-                                battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
-                                    + battleResults.loot.Strength);
-                                //healing items will be implemented here.
-                                if (currChar.HitPoints == currChar.maxHP)
+                                else if (battleResults.loot.Attribute == "Defense")
                                 {
-                                    battleResults.postGame.Add(currChar.Name +" is already full health!");
+                                    battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                    + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
+                                    if (currChar.defItem == null)
+                                    {
+                                        currChar.defItem = battleResults.loot;
+                                        currChar.Defense += battleResults.loot.Strength;
+                                    }
+                                    else
+                                    {
+                                        if (battleResults.loot.Strength > currChar.defItem.Strength)
+                                        {
+                                            battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                                " takes it and discards their " + currChar.defItem.Name + ".");
+                                            currChar.Defense -= currChar.defItem.Strength;
+                                            currChar.Defense += battleResults.loot.Strength;
+                                            currChar.defItem = battleResults.loot;
+
+                                        }
+                                        else
+                                        {
+                                            battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
+                                                " shakes their head in disgust and leaves it on the floor.");
+                                        }
+                                    }
                                 }
-                                else if (currChar.HitPoints + battleResults.loot.Strength >= currChar.maxHP)
+                                else if (battleResults.loot.Attribute == "Speed")
                                 {
-                                    currChar.HitPoints = currChar.maxHP;
-                                    battleResults.postGame.Add(currChar.Name + " is healed to full health!");
+                                    battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which increases "
+                                        + battleResults.loot.Attribute + " by " + battleResults.loot.Strength);
+                                    if (currChar.speedItem == null)
+                                    {
+                                        currChar.speedItem = battleResults.loot;
+                                        currChar.Speed += battleResults.loot.Strength;
+                                    }
+                                    else
+                                    {
+                                        if (battleResults.loot.Strength > currChar.speedItem.Strength)
+                                        {
+                                            battleResults.postGame.Add("The " + battleResults.loot.Name + " was an upgrade! " + currChar.Name +
+                                                " takes it and discards their " + currChar.speedItem.Name + ".");
+                                            currChar.Speed -= currChar.speedItem.Strength;
+                                            currChar.Speed += battleResults.loot.Strength;
+                                            currChar.speedItem = battleResults.loot;
+
+                                        }
+                                        else
+                                        {
+                                            battleResults.postGame.Add("The " + battleResults.loot.Name + " was too weak. " + currChar.Name +
+                                                " shakes their head in disgust and leaves it on the floor.");
+                                        }
+                                    }
                                 }
-                                else
+                                else if (battleResults.loot.Attribute == "HP")
                                 {
-                                    currChar.HitPoints += battleResults.loot.Strength;
-                                    battleResults.postGame.Add(currChar.Name + " is healed to " + currChar.HitPoints+"!");
-                                }
+                                    battleResults.postGame.Add(currChar.Name + " looted a " + battleResults.loot.Name + " which heals them by "
+                                        + battleResults.loot.Strength);
+                                    //healing items will be implemented here.
+                                    if (currChar.HitPoints == currChar.maxHP)
+                                    {
+                                        battleResults.postGame.Add(currChar.Name + " is already full health!");
+                                    }
+                                    else if (currChar.HitPoints + battleResults.loot.Strength >= currChar.maxHP)
+                                    {
+                                        currChar.HitPoints = currChar.maxHP;
+                                        battleResults.postGame.Add(currChar.Name + " is healed to full health!");
+                                    }
+                                    else
+                                    {
+                                        currChar.HitPoints += battleResults.loot.Strength;
+                                        battleResults.postGame.Add(currChar.Name + " is healed to " + currChar.HitPoints + "!");
+                                    }
+                                } 
                             }
                         }
                     }

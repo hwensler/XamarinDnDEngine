@@ -21,6 +21,7 @@ namespace App11.Models
         public Item strItem;
         public Item defItem;
         public Item speedItem;
+        public Item magicItem;
         public int maxHP;
 
        //items list in action!
@@ -116,10 +117,10 @@ namespace App11.Models
                 retInvent.Add("Speed Item: " + speedItem.Name + "\n"
                     + "Tier: " + speedItem.Strength + "\n\n");
             }
-            if (hpItem != null)
+            if (magicItem != null)
             {
-                retInvent.Add("Strength Item: " + hpItem.Name + "\n"
-                    + "Tier: " + hpItem.Strength + "\n\n");
+                retInvent.Add("Magic Item: " + magicItem.Name + "\n"
+                    + "Tier: " + magicItem.Strength + "\n\n");
             }
             return retInvent;
         }
@@ -145,6 +146,10 @@ namespace App11.Models
             if (speedItem != null)
             {
                 charInfo += "Speed Item: " + speedItem.Name + " " + speedItem.Strength + "\n";
+            }
+            if (magicItem != null)
+            {
+                charInfo += "Magic Item: " + magicItem.Name + " " + magicItem.Strength + "\n";
             }
             return charInfo;
 		}
