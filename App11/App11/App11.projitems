@@ -28,7 +28,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\BattleEffects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\JSONEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\JSONItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ServerEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServerItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Setting.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ItemsData.cs" />
