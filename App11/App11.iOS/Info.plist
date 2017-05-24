@@ -48,5 +48,15 @@
 		<string>Default-Portrait.png</string>
 		<string>Default-Portrait@2x.png</string>
 	</array>
+	<key>PropertyNSAppTransportSecurity</key>
+	<dict>
+		<key>ProperNSAllowsArbitraryLoadsty</key>
+		<true/>
+	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
