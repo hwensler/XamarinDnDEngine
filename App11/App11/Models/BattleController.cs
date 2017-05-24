@@ -289,7 +289,21 @@ namespace App11.Models
                 int defenseRoll = newBattle.die * (defender.Defense + defender.Level);
 
                 int damage = (attackRoll - defenseRoll) / 10;
-
+                //fist fighting logic
+                if (attacker.isHuman)
+                {
+                    Character humanFist = (Character)attacker;
+                    //limit damage to 2
+                    if (humanFist.strItem == null && damage > 2)
+                    {
+                        damage = 2;
+                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon, so they fist fight. They do " + damage + ".");
+                    }
+                    else if (humanFist.strItem == null)
+                    {
+                        newBattle.battleResult.battleOutput.Add(humanFist + " doesn't have a weapon, so they fist fight. They do " + damage + ".");
+                    }
+                }
                 //miss logic
                 if (damage < 0)
                 {
