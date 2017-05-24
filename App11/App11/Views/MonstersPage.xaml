@@ -15,13 +15,14 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
                             <!--This binds the name of the monster in view detail-->
+                            <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding Image}" HorizontalOptions="LayoutOptions.Start"/>
                             <Label Text="{Binding Name}"
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemTextStyle}"
                             FontSize="16"/>
-                            <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding Image}" HorizontalOptions="LayoutOptions.Start"/>
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

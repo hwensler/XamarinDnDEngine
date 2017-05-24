@@ -14,7 +14,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
+                            <StackLayout Padding="10" Orientation="Horizontal">
                                 <Image WidthRequest ="50" HeightRequest ="50"  Source="{Binding image}" HorizontalOptions="LayoutOptions.Start"/>
                                 <Label Text="{Binding Name}" HorizontalOptions="LayoutOptions.Fill" 
                                 LineBreakMode="NoWrap"
