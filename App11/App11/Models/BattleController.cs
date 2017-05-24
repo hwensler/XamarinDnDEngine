@@ -218,7 +218,7 @@ namespace App11.Models
             }
             else if (Setting.critHit)
             {
-                newBattle.die = 21;
+                newBattle.die = 20;
             }
 
             //for critical miss since items break before calculating damage
