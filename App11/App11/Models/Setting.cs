@@ -13,9 +13,12 @@ namespace App11.Models
         public static bool magicUsage = false;
         public static bool hpUsage = false;
         public static bool battleEvents = false;
+        public static bool randomEvents = false;
+        public static bool superEvents = false;
         public static bool useServerItems = false;
         public static bool randomItems = false;
         public static bool superItems = false;
         public static bool debugMode = false;
+        public static List<ServerEvent> eventList = new List<ServerEvent>();
     }
 }
