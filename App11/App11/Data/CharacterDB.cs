@@ -45,7 +45,8 @@ namespace App11
 
 				foreach (Character character in _characters)
 				{
-					await database.InsertAsync(character);
+                    character.Image = "http://www.iconninja.com/files/195/636/1001/man-with-sword-and-shield-icon.png";
+                    await database.InsertAsync(character);
 				}	
 			}
 		}
