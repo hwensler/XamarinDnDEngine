@@ -55,21 +55,26 @@ namespace App11.Models
                                 //if affect all monster
                                 if (tome.bodyPart == "MAGICALL")
                                 {
+                                    newBattle.battleResult.battleOutput.Add(HumanAttacker.Name + " uses " + tome.Name + "which affects all monsters!");
                                     foreach (Monster monster in newBattle.monstQueue)
                                     {
                                         switch (tome.Attribute)
                                         {
                                             case ("STRENGTH"):
                                                 monster.Strength -= tome.Strength;
+                                                newBattle.battleResult.battleOutput.Add(newBattle.monstQueue.Peek().Name + " loses " + tome.Strength + " " + tome.Attribute);
                                                 break;
                                             case ("SPEED"):
                                                 monster.Speed -= tome.Strength;
+                                                newBattle.battleResult.battleOutput.Add(newBattle.monstQueue.Peek().Name + " loses " + tome.Strength + " " + tome.Attribute);
                                                 break;
                                             case ("DEFENSE"):
                                                 monster.Defense -= tome.Strength;
+                                                newBattle.battleResult.battleOutput.Add(newBattle.monstQueue.Peek().Name + " loses " + tome.Strength + " " + tome.Attribute);
                                                 break;
                                             case ("HP"):
                                                 monster.HitPoints -= tome.Strength;
+                                                newBattle.battleResult.battleOutput.Add(newBattle.monstQueue.Peek().Name + " loses " + tome.Strength + " " + tome.Attribute);
                                                 break;
 
                                         }
@@ -78,6 +83,7 @@ namespace App11.Models
                                 //for just direct to tank
                                 else if (tome.bodyPart == "MAGICDIRECT")
                                 {
+                                    newBattle.battleResult.battleOutput.Add(HumanAttacker.Name + " uses " + tome.Name + "which affects " + newBattle.monstQueue.Peek().Name);
                                     switch (tome.Attribute)
                                     {
                                         case ("STRENGTH"):
@@ -93,6 +99,7 @@ namespace App11.Models
                                             newBattle.monstQueue.Peek().HitPoints -= tome.Strength;
                                             break;
                                     }
+                                    newBattle.battleResult.battleOutput.Add(newBattle.monstQueue.Peek().Name + " loses " + tome.Strength + " " + tome.Attribute);
                                 }
                                 //for decrementing usage
                                 if (Setting.itemUsage)
