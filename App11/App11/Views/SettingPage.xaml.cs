@@ -220,8 +220,8 @@ namespace App11.Views
         }
         public async Task<string> GetEventsAsync()
         {
-            int randomVal = Convert.ToInt32(Setting.randomItems);
-            int superVal = Convert.ToInt32(Setting.superItems);
+            int randomVal = Convert.ToInt32(Setting.randomEvents);
+            int superVal = Convert.ToInt32(Setting.superEvents);
 
             Dictionary<string, string> dictArr = new Dictionary<string, string>
             {
