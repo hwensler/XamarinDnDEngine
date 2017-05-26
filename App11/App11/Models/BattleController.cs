@@ -340,7 +340,8 @@ namespace App11.Models
             newBattle.die = newBattle.rand.Next(1, 21);
 
             //add if tree to alter if critical miss/hit is on
-            if (Setting.critMiss)
+            
+            if (Setting.critMiss && attacker.isHuman)
             {
                 newBattle.die = 1;
             }

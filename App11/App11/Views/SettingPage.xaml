@@ -34,7 +34,7 @@
                    x:Name ="SuperEventsText"
                    IsVisible="False"/>
             <Switch x:Name ="superEvents"
-                    Toggled ="superIt"
+                    Toggled ="superE"
                     IsVisible="False"/>
             <Label Text ="Server Items:"/>
             <Switch x:Name ="serverItems"
